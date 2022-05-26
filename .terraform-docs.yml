@@ -1,0 +1,11 @@
+formatter: markdown table
+sections:
+  show:
+    - providers
+    - resources
+sort:
+  enabled: true
+  by: required
+settings:
+  escape: false
+  indent: 3
