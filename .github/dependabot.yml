@@ -1,11 +1,7 @@
 version: 2.0
 updates:
   - package-ecosystem: terraform
-    directory: /global
-    schedule:
-      interval: daily
-  - package-ecosystem: terraform
-    directory: /regional
+    directory: /
     schedule:
       interval: daily
   - package-ecosystem: github-actions
