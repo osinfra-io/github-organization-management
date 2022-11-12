@@ -1,11 +1,19 @@
-# GitHub Provider
-# https://registry.terraform.io/providers/integrations/github/latest/docs
+# Required Providers
+# https://www.terraform.io/docs/language/providers/requirements.html#requiring-providers
 
 terraform {
   required_providers {
+
+    # Github Provider
+    # https://registry.terraform.io/providers/integrations/github/latest/docs
+
     github = {
       source = "integrations/github"
     }
+
+    # Random Provider
+    # https://registry.terraform.io/providers/hashicorp/random/latest/docs
+
     random = {
       source = "hashicorp/random"
     }
@@ -78,17 +86,16 @@ resource "github_repository" "this" {
   description                 = each.value.description
   has_downloads               = false
   has_issues                  = true
-  has_projects                = true
   has_wiki                    = false
   name                        = each.key
   squash_merge_commit_message = "BLANK"
   squash_merge_commit_title   = "PR_TITLE"
-  topics                      = each.value.topics
+  topics                      = concat(each.value.topics, ["github-actions", "infrastructure-as-code", "osinfra", "terraform"])
   visibility                  = "public"
   vulnerability_alerts        = true
 
   dynamic "template" {
-    for_each = each.value.template != "" ? [each.value.template] : []
+    for_each = each.value.template != null ? [each.value.template] : []
 
     content {
       owner      = "osinfra-io"

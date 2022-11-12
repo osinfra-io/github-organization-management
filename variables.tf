@@ -27,4 +27,22 @@ variable "members" {
 variable "repos" {
   description = "Map of repositories to create"
   type        = map(any)
+  default = {
+
+    # Use this repository to test the code
+
+    "github-repo-test" = {
+      description = "Test Repository"
+      template    = null
+      topics      = ["testing"]
+    }
+
+    # Keep the following repository in alphabetical order
+
+    "github-organization-management" = {
+      description = "This repository manages the osinfra.io GitHub organization."
+      template    = null
+      topics      = ["github"]
+    }
+  }
 }
