@@ -1,4 +1,4 @@
-# <img align="left" width="45" height="45" src="https://user-images.githubusercontent.com/1610100/201473529-5b458e18-dea7-47ee-a284-a09b857a7e7e.png"> GitHub Organization: osinfra.io
+# <img align="left" width="45" height="45" src="https://user-images.githubusercontent.com/1610100/201473670-e0e6bdeb-742f-4be1-a47a-3506309620a3.png"> GitHub Organization: osinfra.io
 
 This repository manages the osinfra.io GitHub organization.
 
