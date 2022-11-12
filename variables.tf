@@ -5,7 +5,8 @@ variable "admins" {
   description = "A set of admins to add to the organization"
   type        = set(string)
   default = [
-    "brettcurtis"
+    "brettcurtis",
+    "johnbooth"
   ]
 }
 
@@ -21,4 +22,27 @@ variable "members" {
   default = [
     "osinfra-sa",
   ]
+}
+
+variable "repos" {
+  description = "Map of repositories to create"
+  type        = map(any)
+  default = {
+
+    # Use this repository to test the code
+
+    "github-repo-test" = {
+      description = "Test Repository"
+      template    = null
+      topics      = ["testing"]
+    }
+
+    # Keep the following repository in alphabetical order
+
+    "github-organization-management" = {
+      description = "This repository manages the osinfra.io GitHub organization."
+      template    = null
+      topics      = ["github"]
+    }
+  }
 }
