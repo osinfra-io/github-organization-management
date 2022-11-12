@@ -5,7 +5,8 @@ variable "admins" {
   description = "A set of admins to add to the organization"
   type        = set(string)
   default = [
-    "brettcurtis"
+    "brettcurtis",
+    "johnbooth"
   ]
 }
 
@@ -21,4 +22,9 @@ variable "members" {
   default = [
     "osinfra-sa",
   ]
+}
+
+variable "repos" {
+  description = "Map of repositories to create"
+  type        = map(any)
 }

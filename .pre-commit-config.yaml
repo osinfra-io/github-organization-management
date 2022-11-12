@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.2.0
+    rev: v4.3.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -9,14 +9,14 @@ repos:
       - id: no-commit-to-branch
 
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: 2.0.1161
+    rev: 2.2.44
     hooks:
       - id: checkov
         verbose: true
         args: [--soft-fail]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.72.1
+    rev: v1.76.0
     hooks:
       - id: terraform_fmt
       - id: terraform_validate
@@ -29,7 +29,7 @@ repos:
           ]
 
   - repo: https://github.com/bridgecrewio/yor
-    rev: 0.1.144
+    rev: 0.1.152
     hooks:
       - id: yor
         name: yor
