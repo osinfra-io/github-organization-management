@@ -25,8 +25,6 @@ provider "github" {
   token = var.github_token
 }
 
-
-
 # Github Actions Secret Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret
 
@@ -90,7 +88,7 @@ resource "github_repository" "this" {
   name                        = each.key
   squash_merge_commit_message = "BLANK"
   squash_merge_commit_title   = "PR_TITLE"
-  topics                      = concat(each.value.topics, ["github-actions", "infrastructure-as-code", "osinfra", "terraform"])
+  topics                      = concat(each.value.topics, ["infrastructure-as-code", "osinfra"])
   visibility                  = "public"
   vulnerability_alerts        = true
 
