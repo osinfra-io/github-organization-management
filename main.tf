@@ -44,12 +44,12 @@ resource "github_actions_organization_secret" "this" {
 
 resource "github_branch_protection" "this" {
 
-  # checkov:skip=CKV_GIT_5: It's reasonable for a single code review to be required for a branch protection rule
+  # checkov:skip=CKV_GIT_5: It's reasonable for a single code review to be required for a branch protection rule.
 
   for_each = var.repositories
 
   pattern                         = "main"
-  enforce_admins                  = true
+  enforce_admins                  = false
   repository_id                   = github_repository.this[each.key].name
   require_conversation_resolution = true
   require_signed_commits          = true
@@ -75,7 +75,7 @@ resource "github_membership" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 
 resource "github_repository" "this" {
-  # checkov:skip=CKV_GIT_1: We want our repos to be public so that we can share them with the world
+  # checkov:skip=CKV_GIT_1: We want our repos to be public so that we can share them with the world.
   for_each = var.repositories
 
   allow_auto_merge            = false
