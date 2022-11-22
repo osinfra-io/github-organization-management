@@ -10,5 +10,3 @@ jobs:
   dependabot:
     name: Pull Request Approve and Merge
     uses: osinfra-io/github-misc-called-workflows/.github/workflows/dependabot.yml@main
-    secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
