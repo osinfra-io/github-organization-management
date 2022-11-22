@@ -26,30 +26,33 @@ provider "github" {
 }
 
 # Github Actions Secret Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret
 
-resource "github_actions_secret" "gpg_passphrase" {
-  # checkov:skip=CKV_GIT_4: ADD REASON
-  for_each = var.repos
+resource "github_actions_organization_secret" "this" {
 
-  plaintext_value = random_password.gpg_passphrase[each.key].result
-  repository      = github_repository.this[each.key].name
-  secret_name     = "GPG_PASSPHRASE"
+  # checkov:skip=CKV_GIT_4: Look into this in #11
+
+  for_each = var.organization_secrets
+
+  plaintext_value = random_password.this[each.key].result
+  secret_name     = each.key
+  visibility      = each.value.visibility
 }
 
 # Github Branch Protection Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection
 
 resource "github_branch_protection" "this" {
-  # checkov:skip=CKV_GIT_5: ADD REASON
-  # checkov:skip=CKV_GIT_6: ADD REASON
-  for_each = var.repos
+
+  # checkov:skip=CKV_GIT_5: It's reasonable for a single code review to be required for a branch protection rule.
+
+  for_each = var.repositories
 
   pattern                         = "main"
-  enforce_admins                  = true
+  enforce_admins                  = false
   repository_id                   = github_repository.this[each.key].name
   require_conversation_resolution = true
-  require_signed_commits          = false
+  require_signed_commits          = true
 
   required_pull_request_reviews {
     dismiss_stale_reviews           = true
@@ -72,8 +75,8 @@ resource "github_membership" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 
 resource "github_repository" "this" {
-  # checkov:skip=CKV_GIT_1: We want our repos to be public so that we can share them with the world
-  for_each = var.repos
+  # checkov:skip=CKV_GIT_1: We want our repos to be public so that we can share them with the world.
+  for_each = var.repositories
 
   allow_auto_merge            = false
   allow_merge_commit          = false
@@ -105,9 +108,8 @@ resource "github_repository" "this" {
 # Random Password Resource
 # https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password
 
-resource "random_password" "gpg_passphrase" {
-  for_each = var.repos
-
-  length  = 32
-  special = false
+resource "random_password" "this" {
+  for_each = var.organization_secrets
+  length   = 32
+  special  = false
 }

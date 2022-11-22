@@ -23,7 +23,18 @@ variable "members" {
   default     = []
 }
 
-variable "repos" {
+variable "organization_secrets" {
+  description = "Map of secrets to add to the organization"
+  type        = map(any)
+  default = {
+    "GPG_PASSPHRASE" = {
+      description = "GPG Passphrase used to encrypt plan.out files"
+      visibility  = "all"
+    }
+  }
+}
+
+variable "repositories" {
   description = "Map of repositories to create"
   type        = map(any)
   default = {
