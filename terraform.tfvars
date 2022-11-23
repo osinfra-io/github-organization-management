@@ -38,8 +38,8 @@ repositories = {
   }
 
   "local-development-setup" = {
-    description = "Development environment setup scripts for Infrastructure as Code (IaC)."
-    topics      = ["docker"]
+    description = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
+    topics      = ["docker", "local-development", "terraform"]
   }
 
   "gitbook-docs" = {
@@ -49,11 +49,11 @@ repositories = {
 
   "github-kitchen-terraform-action" = {
     description = "Kitchen-Terraform GitHub Action."
-    topics      = ["github", "github-actions"]
+    topics      = ["github", "github-actions", "terraform", "chef-inspec", "kitchen-terraform"]
   }
 
   "github-misc-called-workflows" = {
-    description = "Miscellaneous Reusable GitHub Called Workflows."
+    description = "Miscellaneous Reusable GitHub Called Workflow examples."
     topics      = ["github", "github-actions"]
   }
 
@@ -63,87 +63,87 @@ repositories = {
   }
 
   "github-organization-management" = {
-    description = "This repository manages the osinfra.io GitHub organization."
-    topics      = ["github"]
+    description = "Infrastructure as Code (IaC) example for a GitHub organization."
+    topics      = ["github", "terraform"]
   }
 
   "github-terraform-codespace" = {
-    description = "GitHub Codespace for Terraform Infrastructure as Code (IaC) Development."
+    description = "GitHub Codespace example for Terraform Infrastructure as Code (IaC) Development."
     topics      = ["github", "github-codespaces", "terraform"]
   }
 
   "github-terraform-gcp-called-workflows" = {
-    description = "Reusable GitHub Called Workflows for Terraform and Google Cloud Platform."
+    description = "Reusable GitHub Called Workflow examples for Terraform and Google Cloud Platform."
     topics      = ["github", "github-actions", "terraform"]
   }
 
   "google-cloud-hierarchy" = {
-    description = "IaC for Google Cloud Platform Hierarchy."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Hierarchy."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-logging" = {
-    description = "IaC for Google Cloud Platform logging."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform logging."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-observability" = {
-    description = "IaC for Google Cloud Platform observability."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform observability."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-services" = {
-    description = "IaC for Google Cloud Platform services."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform services."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-terraform" = {
-    description = "IaC for Google Cloud Platform Terraform backend."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform backend."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-workload-identity" = {
-    description = "IaC for Google Cloud Platform workload identity."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform workload identity."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "terraform-google-cloud-dns" = {
-    description = "Terraform example module for creating a Google Cloud Platform Cloud DNS."
+    description = "Terraform example module for Google Cloud Platform Cloud DNS."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "terraform-google-cloud-nat" = {
-    description = "Terraform example module for creating a Google Cloud Platform Cloud NAT."
+    description = "Terraform example module for Google Cloud Platform Cloud NAT."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "terraform-google-cloud-sql" = {
-    description = "Terraform example module for creating a Google Cloud Platform Cloud SQL instance."
+    description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "terraform-google-kubernetes-engine" = {
-    description = "Terraform example module for creating a Google Cloud Platform Kubernetes Engine cluster."
+    description = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "terraform-google-project" = {
-    description = "Terraform example module for creating a Google Cloud Platform project."
+    description = "Terraform example module for Google Cloud Platform project."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "terraform-google-storage-bucket" = {
-    description = "Terraform example module for creating a Google Cloud Platform Storage bucket."
+    description = "Terraform example module for Google Cloud Platform Storage bucket."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "terraform-google-subnet" = {
-    description = "Terraform example module for creating a Google Cloud Platform subnet."
+    description = "Terraform example module for Google Cloud Platform subnet."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "terraform-google-vpc" = {
-    description = "Terraform example module for creating a Google Cloud Platform VPC."
+    description = "Terraform example module for Google Cloud Platform VPC."
     topics      = ["google-cloud-platform", "terraform"]
   }
 }
