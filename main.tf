@@ -52,6 +52,7 @@ resource "github_branch_protection" "this" {
   enforce_admins                  = false
   repository_id                   = github_repository.this[each.key].name
   require_conversation_resolution = true
+  required_linear_history         = true
   require_signed_commits          = true
 
   required_pull_request_reviews {
