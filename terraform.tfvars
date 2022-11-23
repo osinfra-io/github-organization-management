@@ -49,7 +49,7 @@ repositories = {
 
   "github-kitchen-terraform-action" = {
     description = "Kitchen-Terraform GitHub Action."
-    topics      = ["github", "github-actions"]
+    topics      = ["github", "github-actions", "terraform", "chef-inspec", "kitchen-terraform"]
   }
 
   "github-misc-called-workflows" = {
@@ -64,7 +64,7 @@ repositories = {
 
   "github-organization-management" = {
     description = "Infrastructure as Code (IaC) example for GitHub organization."
-    topics      = ["github"]
+    topics      = ["github", "terraform"]
   }
 
   "github-terraform-codespace" = {
