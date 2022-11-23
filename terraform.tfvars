@@ -38,7 +38,7 @@ repositories = {
   }
 
   "local-development-setup" = {
-    description = "Development environment setup scripts for Infrastructure as Code (IaC)."
+    description = "Development environment setup scripts example for Infrastructure as Code (IaC)."
     topics      = ["docker"]
   }
 
@@ -53,7 +53,7 @@ repositories = {
   }
 
   "github-misc-called-workflows" = {
-    description = "Miscellaneous Reusable GitHub Called Workflows."
+    description = "Miscellaneous Reusable GitHub Called Workflows example."
     topics      = ["github", "github-actions"]
   }
 
@@ -63,47 +63,47 @@ repositories = {
   }
 
   "github-organization-management" = {
-    description = "This repository manages the osinfra.io GitHub organization."
+    description = "Infrastructure as Code (IaC) example for GitHub organization."
     topics      = ["github"]
   }
 
   "github-terraform-codespace" = {
-    description = "GitHub Codespace for Terraform Infrastructure as Code (IaC) Development."
+    description = "GitHub Codespace example for Terraform Infrastructure as Code (IaC) Development."
     topics      = ["github", "github-codespaces", "terraform"]
   }
 
   "github-terraform-gcp-called-workflows" = {
-    description = "Reusable GitHub Called Workflows for Terraform and Google Cloud Platform."
+    description = "Reusable GitHub Called Workflows example for Terraform and Google Cloud Platform."
     topics      = ["github", "github-actions", "terraform"]
   }
 
   "google-cloud-hierarchy" = {
-    description = "IaC for Google Cloud Platform Hierarchy."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Hierarchy."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-logging" = {
-    description = "IaC for Google Cloud Platform logging."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform logging."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-observability" = {
-    description = "IaC for Google Cloud Platform observability."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform observability."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-services" = {
-    description = "IaC for Google Cloud Platform services."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform services."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-terraform" = {
-    description = "IaC for Google Cloud Platform Terraform backend."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform backend."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
   "google-cloud-workload-identity" = {
-    description = "IaC for Google Cloud Platform workload identity."
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform workload identity."
     topics      = ["google-cloud-platform", "terraform"]
   }
 
