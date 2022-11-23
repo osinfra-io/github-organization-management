@@ -75,7 +75,9 @@ resource "github_membership" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 
 resource "github_repository" "this" {
+
   # checkov:skip=CKV_GIT_1: We want our repos to be public so that we can share them with the world.
+
   for_each = var.repositories
 
   allow_auto_merge            = false
@@ -92,7 +94,7 @@ resource "github_repository" "this" {
   squash_merge_commit_message = "BLANK"
   squash_merge_commit_title   = "PR_TITLE"
   topics                      = concat(each.value.topics, ["infrastructure-as-code", "osinfra"])
-  visibility                  = "public"
+  visibility                  = each.value.visibility
   vulnerability_alerts        = true
 
   dynamic "template" {

@@ -19,7 +19,7 @@ Tools in use:
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider_github) | 5.8.0 |
+| <a name="provider_github"></a> [github](#provider_github) | 5.9.0 |
 | <a name="provider_random"></a> [random](#provider_random) | 3.4.3 |
 
 ### Resources
