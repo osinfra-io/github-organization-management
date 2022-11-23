@@ -1,0 +1,18 @@
+name: Add To GitHub Projects
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  add-to-osinfra-project:
+    name: Open Source Infrastructure (as Code)
+    uses: osinfra-io/github-misc-called-workflows/.github/workflows/add-to-project.yml@main
+    with:
+     project_id: 1
+    secrets:
+     add_to_project_pat: ${{ secrets.ADD_TO_PROJECT_PAT }}

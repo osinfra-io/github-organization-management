@@ -2,11 +2,9 @@ name: Dependabot
 
 on: pull_request_target
 
-permissions:
-  pull-requests: write
-  contents: write
-
 jobs:
   dependabot:
-    name: Pull Request Approve and Merge
+    name: Dependabot
     uses: osinfra-io/github-misc-called-workflows/.github/workflows/dependabot.yml@main
+    secrets:
+      dependabot_token: ${{ secrets.GITHUB_TOKEN }}
