@@ -1,8 +1,8 @@
 # <img align="left" width="45" height="45" src="https://user-images.githubusercontent.com/1610100/201473670-e0e6bdeb-742f-4be1-a47a-3506309620a3.png"> GitHub Organization: osinfra.io
 
-**[GitHub Actions](https://github.com/osinfra-io/github-organization-managment/actions):**
+**[GitHub Actions](https://github.com/osinfra-io/github-organization-management/actions):**
 
-[![Dependabot](https://github.com/osinfra-io/github-organization-managment/actions/workflows/dependabot.yml/badge.svg)](https://github.com/osinfra-io/github-organization-managment/actions/workflows/dependabot.yml)
+[![Dependabot](https://github.com/osinfra-io/github-organization-management/actions/workflows/dependabot.yml/badge.svg)](https://github.com/osinfra-io/github-organization-management/actions/workflows/dependabot.yml)
 
 **[Bridgecrew](https://www.bridgecrew.cloud/projects?types=Passed&repository=osinfra-io%2Fgithub-organization-management&branch=main):**
 
