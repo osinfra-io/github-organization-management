@@ -91,6 +91,7 @@ resource "github_repository" "this" {
   has_downloads               = false
   has_issues                  = true
   has_wiki                    = false
+  license_template            = "gpl-2.0"
   name                        = each.key
   squash_merge_commit_message = "BLANK"
   squash_merge_commit_title   = "PR_TITLE"
