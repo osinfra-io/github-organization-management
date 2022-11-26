@@ -102,6 +102,11 @@ repositories = {
     topics      = ["google-cloud-platform", "terraform"]
   }
 
+  "google-cloud-terraform-module-testing" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform module testing."
+    topics      = ["google-cloud-platform", "terraform", "testing"]
+  }
+
   "google-cloud-workload-identity" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform workload identity."
     topics      = ["google-cloud-platform", "terraform"]
