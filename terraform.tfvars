@@ -82,6 +82,11 @@ repositories = {
     topics      = ["google-cloud-platform", "terraform"]
   }
 
+  "google-cloud-kitchen-terraform" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Kitchen-Terraform testing."
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform", "testing"]
+  }
+
   "google-cloud-logging" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform logging."
     topics      = ["google-cloud-platform", "terraform"]
@@ -97,14 +102,9 @@ repositories = {
     topics      = ["google-cloud-platform", "terraform"]
   }
 
-  "google-cloud-terraform" = {
+  "google-cloud-terraform-backend" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform backend."
     topics      = ["google-cloud-platform", "terraform"]
-  }
-
-  "google-cloud-terraform-module-testing" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform module testing."
-    topics      = ["google-cloud-platform", "terraform", "testing"]
   }
 
   "google-cloud-workload-identity" = {
@@ -114,41 +114,41 @@ repositories = {
 
   "terraform-google-cloud-dns" = {
     description = "Terraform example module for Google Cloud Platform Cloud DNS."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 
   "terraform-google-cloud-nat" = {
     description = "Terraform example module for Google Cloud Platform Cloud NAT."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 
   "terraform-google-cloud-sql" = {
     description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 
   "terraform-google-kubernetes-engine" = {
     description = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 
   "terraform-google-project" = {
     description = "Terraform example module for Google Cloud Platform project."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 
   "terraform-google-storage-bucket" = {
     description = "Terraform example module for Google Cloud Platform Storage bucket."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 
   "terraform-google-subnet" = {
     description = "Terraform example module for Google Cloud Platform subnet."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 
   "terraform-google-vpc" = {
     description = "Terraform example module for Google Cloud Platform VPC."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 }
