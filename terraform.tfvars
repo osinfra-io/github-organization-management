@@ -43,8 +43,9 @@ repositories = {
   }
 
   "gitbook-docs" = {
-    description = "GitBook documentation for the osinfra.io organization."
-    topics      = ["gitbook"]
+    description              = "GitBook documentation for the osinfra.io organization."
+    enable_branch_protection = false
+    topics                   = ["gitbook"]
   }
 
   "github-kitchen-terraform-action" = {

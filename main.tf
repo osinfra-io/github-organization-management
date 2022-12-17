@@ -46,7 +46,7 @@ resource "github_branch_protection" "this" {
 
   # checkov:skip=CKV_GIT_5: It's reasonable for a single code review to be required for a branch protection rule.
 
-  for_each = var.repositories
+  for_each = local.branch_protection
 
   pattern                         = "main"
   enforce_admins                  = false
