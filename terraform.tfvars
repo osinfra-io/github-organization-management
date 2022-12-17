@@ -12,6 +12,7 @@ organization_secrets = {
 }
 
 repositories = {
+
   # Use this repository to test changes in the github_repository terraform resource
 
   "github-repo-test" = {
