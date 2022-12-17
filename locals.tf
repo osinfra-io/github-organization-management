@@ -13,7 +13,7 @@ locals {
   # repository map if the repository map contains the key enable_branch_protection and the value is true.
 
   branch_protection = {
-    for repositories_key, repository in var.repositories : repositories_key => repository if repository.enable_branch_protection
+    for repository_key, repository in var.repositories : repository_key => repository if repository.enable_branch_protection
   }
 
   # This will iterate over the members list and create a map with the key being the user and the value being admin.
