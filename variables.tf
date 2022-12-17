@@ -29,9 +29,10 @@ variable "organization_secrets" {
 variable "repositories" {
   description = "Map of repositories to create"
   type = map(object({
-    description = string
-    template    = optional(string)
-    topics      = optional(list(string))
+    description              = string
+    enable_branch_protection = optional(bool, true)
+    template                 = optional(string)
+    topics                   = optional(list(string))
 
     # In most cases, the visibility of your organizations repository should be private.
     # However, we are keeping our code public to encourage others to learn from our work.
