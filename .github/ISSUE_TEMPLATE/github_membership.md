@@ -1,0 +1,51 @@
+name: GitHub Membership
+description: For adding new members to the organization
+title: "Membership Request"
+labels: ["enhancement"]
+assignees: ["osinfra-io/github-platform-team"]
+
+- octocat
+body:
+- type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to request a membership at Open Source Infrastructure (as Code)!
+- type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+- type: textarea
+    id: github-username
+    attributes:
+      label: What is your GitHub username?
+      description: Note this should be your GitHub username, not your email address.
+      placeholder: octocat
+    validations:
+      required: true
+- type: checkboxes
+    id: role
+    attributes:
+      label: Requested Ownership Role
+      description: Check here if you would like to be an owner of the organization.
+      options:
+        - label: Owner
+          required: false
+- type: textarea
+    id: comments
+    attributes:
+      label: Additional Comments
+      description: Anything else you'd like to add?
+      validations:
+      required: false
+- type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/osinfra-io/.github/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
