@@ -1,0 +1,81 @@
+name: GitHub Repository
+description: Service interface for adding GitHub repositories to the organization
+title: Repository Request
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the following details to request a new repository in the Open Source Infrastructure (as Code) organization.
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: email@example.com
+    validations:
+      required: true
+
+  - type: input
+    id: github-repository-name
+    attributes:
+      label: What do you want to name your repository?
+      description: Note this should follow the naming conventions for GitHub repositories.
+      placeholder: prefix-repository-name
+    validations:
+      required: true
+
+  - type: input
+    id: github-repository-description
+    attributes:
+      label: Describe your repository.
+      description: Please provide a short description of your repository.
+      placeholder: This repository is for ...
+    validations:
+      required: true
+
+  - type: input
+    id: github-repository-topics
+    attributes:
+      label: Do you want to add any topics to your repository?
+      description: "Note the following topics are added by default: Infrastructure-as-code, osinfra"
+      placeholder: terraform, github-actions, ...
+    validations:
+      required: false
+
+  - type: input
+    id: github-repository-template
+    attributes:
+      label: Should this repository be created from a template?
+      description: This will create a new repository from a template repository.
+      placeholder: template-repository-name
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: github-branch-protection
+    attributes:
+      label: Disable branch protection?
+      description: This will disable branch protection for the repository.
+      options:
+        - label: "True"
+          required: false
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: Additional Comments
+      description: Anything else you'd like to add?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/osinfra-io/.github/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

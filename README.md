@@ -21,6 +21,7 @@ Simple but comprehensive information for the platform provides a single point of
 ### Service interfaces
 
 - `github_membership` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement&template=github-membership.yml&title=Membership+Request)
+- `github_repository` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement&template=github-repository.yml&title=Repositoy+Request)
 
 ### Response times
 
@@ -56,7 +57,7 @@ Contact via any of these:
 
 Open Source Infrastructure (as code) is a decentralized infrastructure development model that focuses on open collaboration applying relative lessons learned from software development practices that organizations can use internally at scale. - [Open Source Infrastructure (as Code)](https://www.osinfra.io)
 
-To avoid slowing down [stream-aligned teams](https://teamtopologies.com/key-concepts), we want to open up the possibility for contributions. The Open Source Infrastructure (as Code) model allows team members external to the platform team to contribute with only a slight increase in cognitive load. This section is for developers who want to contribute to this repository describing the tools used, the skills, and the knowledge required, along with Terraform documentation.
+To avoid slowing down [stream-aligned](https://teamtopologies.com/key-concepts) teams, we want to open up the possibility for contributions. The Open Source Infrastructure (as Code) model allows team members external to the platform team to contribute with only a slight increase in cognitive load. This section is for developers who want to contribute to this repository describing the tools used, the skills, and the knowledge required, along with Terraform documentation.
 
 See the documentation for setting up a local development environment [here](https://docs.osinfra.io/development-setup).
 
