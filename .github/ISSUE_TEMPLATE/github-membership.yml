@@ -17,3 +17,11 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: true
+  - type: textarea
+    id: github-username
+    attributes:
+      label: What is your GitHub username?
+      description: Note this should be your GitHub username, not your email address.
+      placeholder: octocat
+    validations:
+      required: true
