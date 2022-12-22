@@ -1,9 +1,8 @@
 name: GitHub Membership
 description: Service interface for adding GitHub members to the organization
-title: "Membership Request"
+title: Membership Request
 labels: ["enhancement"]
 
-- octocat
 body:
 - type: markdown
     attributes:
