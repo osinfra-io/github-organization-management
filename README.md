@@ -8,11 +8,11 @@
 
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/osinfra-io/github-organization-management/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=osinfra-io%2Fgithub-organization-management&benchmark=INFRASTRUCTURE+SECURITY)
 
-## Repository details
+## <img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209028188-b880baa5-cf8f-44c7-bdb5-f2c788ccd013.png"> Repository details
 
 This repository manages the osinfra.io GitHub organization.
 
-### Services Documentation
+### Services documentation
 
 - [docs.osinfra.io](https://docs.osinfra.io/github/organization-management)
 
@@ -38,19 +38,19 @@ This repository manages the osinfra.io GitHub organization.
 
 Contact exclusively via:
 
-- Google Chat - Channel: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
+- Google Chat: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
 - Phone number:
 
 #### To ask for support or provide feedback
 
 Contact via any of these:
 
-- Google Chat - Channel: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
+- Google Chat: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
 - Email address: [github-platform-team@osinfra.io](mailto:github-platform-team@osinfra.io)
 - Phone number:
 - Office hours: `Weekdays 5:00 PM EST - 10:00 PM EST` `Weekends 8:00 AM EST - 5:00 PM EST`
 
-## Development
+## <img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209029142-410349b7-4b22-40a9-9d4d-729f07e2b4a2.png"> Development
 
 See the documentation for setting up a local development environment [here](https://docs.osinfra.io).
 
@@ -61,7 +61,7 @@ Tools in use:
 - [pre-commit-terraform](https://github.com/antonbabenko/pre-commit-terraform)
 - [terraform-docs](https://github.com/terraform-docs/terraform-docs)
 
-## Terraform Documentation
+## Terraform documentation
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ### Providers
 
