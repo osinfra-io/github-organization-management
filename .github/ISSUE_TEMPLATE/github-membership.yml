@@ -33,10 +33,10 @@ body:
       options:
         - label: Owner
           required: false
-   - type: textarea
-     id: comments
-     attributes:
-       label: Additional Comments
-       description: Anything else you'd like to add?
-     validations:
-       required: false
+  - type: textarea
+    id: comments
+    attributes:
+      label: Additional Comments
+      description: Anything else you'd like to add?
+    validations:
+      required: false
