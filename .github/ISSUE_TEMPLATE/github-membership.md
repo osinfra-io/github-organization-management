@@ -7,7 +7,6 @@ assignees: ''
 
 ---
 
-- octocat
 body:
 - type: markdown
     attributes:
