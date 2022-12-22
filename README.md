@@ -54,7 +54,11 @@ Contact via any of these:
 
 ## <img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209029142-410349b7-4b22-40a9-9d4d-729f07e2b4a2.png"> Development
 
-See the documentation for setting up a local development environment [here](https://docs.osinfra.io).
+Open Source Infrastructure (as code) is a decentralized infrastructure development model that focuses on open collaboration applying relative lessons learned from software development practices that organizations can use internally at scale. - [Open Source Infrastructure (as Code)](https://www.osinfra.io)
+
+This section is for developers who want to contribute to this repository, the tools used, the skills and knowledge required, and Terraform documentation.
+
+See the documentation for setting up a local development environment [here](https://docs.osinfra.io/development-setup).
 
 Tools in use:
 
