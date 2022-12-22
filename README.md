@@ -18,15 +18,15 @@ This repository manages the osinfra.io GitHub organization.
 
 ### Service interfaces
 
-- Link to `github_membership` service interface: [Issue](.github/ISSUE_TEMPLATE/github_membership.md)
+- `github_membership` service interface: [Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=osinfra-io/github-platform-team&labels=enhancement&template=github_membership.md)
 
 ### Response times
 
 - Responsible platform team name: [github-platform-team](https://github.com/orgs/osinfra-io/teams/github-platform-team)
-- Platform team response time for incidents: 60 minutes
-- Platform team response time for other incidents: 120 minutes
-- Platform team response time for support:  60 minutes
-- Platform team response time for feedback: 30 minutes
+- Platform team response time for incidents: `60 minutes`
+- Platform team response time for other incidents: `120 minutes`
+- Platform team response time for support:  `60 minutes`
+- Platform team response time for feedback: `30 minutes`
 
 ### Roadmap
 
@@ -39,17 +39,16 @@ This repository manages the osinfra.io GitHub organization.
 Contact exclusively via:
 
 - Google Chat - Channel: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
-- Phone - Phone number:
+- Phone number:
 
 #### To ask for support or provide feedback
 
 Contact via any of these:
 
 - Google Chat - Channel: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
-- Email - Email address: github-platform-team@osinfra-sa
-- Phone - Phone number:
-- Office hours - Day and time of the week:
-- Monday-Friday 5:00 PM EST - 10:00 PM EST
+- Email address: [github-platform-team@osinfra.io](mailto:github-platform-team@osinfra.io)
+- Phone number:
+- Office hours: Monday-Friday `5:00 PM EST - 10:00 PM EST` Saturday-Sunday `8:00 AM EST - 5:00 PM EST`
 
 ## Development
 
