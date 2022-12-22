@@ -38,5 +38,5 @@ body:
      attributes:
        label: Additional Comments
        description: Anything else you'd like to add?
-       validations:
+     validations:
        required: false
