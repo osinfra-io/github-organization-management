@@ -8,13 +8,11 @@
 
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/osinfra-io/github-organization-management/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=osinfra-io%2Fgithub-organization-management&benchmark=INFRASTRUCTURE+SECURITY)
 
+This repository is an example of a collection of sensible defaults for managing your GitHub organization using [Terraform](https://www.terraform.io), concepts from [Team Topologies](https://teamtopologies.com/), and practices learned from software development.
+
 ## <img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209028188-b880baa5-cf8f-44c7-bdb5-f2c788ccd013.png"> Team Topologies
 
-Simple but comprehensive information for the platform provides a single point of entry for anyone wanting to know more about the services, report an issue or find out the current status, roadmap, and so on. - [Team Topologies](https://itrevolution.com/book/team-topologies/)
-
-## Repository details
-
-This repository manages the osinfra.io GitHub organization.
+Simple but comprehensive information for the platform provides a single point of entry for anyone wanting to know more about the services, report an issue or find out the current status, roadmap, and so on. - [Team Topologies: Thin Platform Template](https://github.com/TeamTopologies/Thin-Platform-template)
 
 ### Services documentation
 
@@ -34,7 +32,7 @@ This repository manages the osinfra.io GitHub organization.
 
 ### Roadmap
 
-- Link to service roadmap: [GitHub Project](https://github.com/orgs/osinfra-io/projects/5/views/1)
+- Link to roadmap: [GitHub Project](https://github.com/orgs/osinfra-io/projects/5/views/1)
 
 ### Communication channels
 
@@ -64,6 +62,15 @@ Tools in use:
 - [pre-commit](https://github.com/pre-commit/pre-commit)
 - [pre-commit-terraform](https://github.com/antonbabenko/pre-commit-terraform)
 - [terraform-docs](https://github.com/terraform-docs/terraform-docs)
+
+## Skills and Knowledge
+
+Links to documentation and other resources required to develop and iterate in this repository successfully.
+
+- [Encrypted secrets for an organization](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-an-organization)
+- [Branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branchess)
+- [Organization membership](https://docs.github.com/en/organizations/managing-membership-in-your-organization)
+- [Repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories)
 
 ## Terraform documentation
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
