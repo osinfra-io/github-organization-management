@@ -6,7 +6,8 @@ labels: ["enhancement"]
 body:
 - type: markdown
     attributes:
-      value: "Thanks for taking the time to request a membership at Open Source Infrastructure (as Code)!"
+      value: |
+      "Thanks for taking the time to request a membership at Open Source Infrastructure as Code!"
 - type: input
     id: contact
     attributes:
