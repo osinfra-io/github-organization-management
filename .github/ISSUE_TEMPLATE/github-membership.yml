@@ -32,7 +32,8 @@ body:
       description: Check here if you would like to be an owner of the organization.
       options:
         - label: Owner
-          required: false
+     validation:
+        required: false
   - type: textarea
     id: comments
     attributes:
