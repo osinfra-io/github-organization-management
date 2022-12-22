@@ -52,7 +52,7 @@ Contact via any of these:
 - Google Chat: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
 - Email address: [github-platform-team@osinfra.io](mailto:github-platform-team@osinfra.io)
 - Phone number:
-- Office hours: `Weekdays 5:00 PM EST - 10:00 PM EST` `Weekends 8:00 AM EST - 5:00 PM EST`
+- Office hours (EST): `Weekdays 5:00 PM - 10:00 PM` `Weekends 8:00 AM - 5:00 PM`
 
 ## <img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209029142-410349b7-4b22-40a9-9d4d-729f07e2b4a2.png"> Development
 
