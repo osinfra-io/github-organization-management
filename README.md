@@ -22,11 +22,11 @@ This repository manages the osinfra.io GitHub organization.
 
 ### Response times
 
-- Responsible platform team name: [github-platform-team](https://github.com/orgs/osinfra-io/teams/github-platform-team)
-- Platform team response time for incidents: `60 minutes`
-- Platform team response time for other incidents: `120 minutes`
-- Platform team response time for support:  `60 minutes`
-- Platform team response time for feedback: `30 minutes`
+- Responsible team: [GitHub Platform Team](https://github.com/orgs/osinfra-io/teams/github-platform-team)
+- Response time for incidents: `60 minutes`
+- Response time for other incidents: `120 minutes`
+- Response time for support:  `60 minutes`
+- Response time for feedback: `30 minutes`
 
 ### Roadmap
 
@@ -48,7 +48,7 @@ Contact via any of these:
 - Google Chat - Channel: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
 - Email address: [github-platform-team@osinfra.io](mailto:github-platform-team@osinfra.io)
 - Phone number:
-- Office hours: Monday-Friday `5:00 PM EST - 10:00 PM EST` Saturday-Sunday `8:00 AM EST - 5:00 PM EST`
+- Office hours: `Weekdays 5:00 PM EST - 10:00 PM EST` `Weekends 8:00 AM EST - 5:00 PM EST`
 
 ## Development
 
