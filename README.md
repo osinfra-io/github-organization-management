@@ -8,9 +8,9 @@
 
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/osinfra-io/github-organization-management/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=osinfra-io%2Fgithub-organization-management&benchmark=INFRASTRUCTURE+SECURITY)
 
-## <a href="https://github.com/TeamTopologies/Thin-Platform-template"><img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209028188-b880baa5-cf8f-44c7-bdb5-f2c788ccd013.png"> Team Topologies
+## <img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209028188-b880baa5-cf8f-44c7-bdb5-f2c788ccd013.png"> Team Topologies
 
-Simple but comprehensive information for the platform provides a single point of entry for anyone wanting to know more about the services, report an issue or find out the current status, roadmap, and so on.
+Simple but comprehensive information for the platform provides a single point of entry for anyone wanting to know more about the services, report an issue or find out the current status, roadmap, and so on. - [Team Topologies](https://itrevolution.com/book/team-topologies/)
 
 ## Repository details
 
