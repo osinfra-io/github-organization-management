@@ -17,7 +17,7 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: true
-  - type: textarea
+  - type: input
     id: github-username
     attributes:
       label: What is your GitHub username?
@@ -25,3 +25,11 @@ body:
       placeholder: octocat
     validations:
       required: true
+  - type: checkboxes
+    id: role
+    attributes:
+      label: Requested Ownership Role
+      description: Check here if you would like to be an owner of the organization.
+      options:
+        - label: Owner
+          required: false
