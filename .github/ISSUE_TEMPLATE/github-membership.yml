@@ -28,8 +28,15 @@ body:
   - type: checkboxes
     id: role
     attributes:
-      label: Requested Ownership Role
+      label: Request Ownership Role
       description: Check here if you would like to be an owner of the organization.
       options:
         - label: Owner
           required: false
+   - type: textarea
+     id: comments
+     attributes:
+       label: Additional Comments
+       description: Anything else you'd like to add?
+       validations:
+       required: false
