@@ -18,7 +18,7 @@ This repository manages the osinfra.io GitHub organization.
 
 ### Service interfaces
 
-- `github_membership` service interface: [Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=osinfra-io/github-platform-team&labels=enhancement&template=github_membership.md)
+- `github_membership` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=osinfra-io/github-platform-team&labels=enhancement&template=github_membership.md)
 
 ### Response times
 
