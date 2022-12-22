@@ -1,6 +1,5 @@
 admins = [
   "brettcurtis",
-  "johnbooth",
   "osinfra-sa"
 ]
 
