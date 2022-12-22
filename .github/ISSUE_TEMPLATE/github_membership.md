@@ -1,11 +1,10 @@
 name: GitHub Membership
-description: For adding new members to the organization
-title: "Membership Request"
+description: Service interface for adding GitHub members to the organization
+title: Membership Request
 labels: ["enhancement"]
-assignees: ["osinfra-io/github-platform-team"]
 
-- octocat
 body:
+
 - type: markdown
     attributes:
       value: |
@@ -18,7 +17,7 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: true
-- type: textarea
+- type: input
     id: github-username
     attributes:
       label: What is your GitHub username?
@@ -29,7 +28,7 @@ body:
 - type: checkboxes
     id: role
     attributes:
-      label: Requested Ownership Role
+      label: Request Ownership Role
       description: Check here if you would like to be an owner of the organization.
       options:
         - label: Owner
@@ -39,7 +38,7 @@ body:
     attributes:
       label: Additional Comments
       description: Anything else you'd like to add?
-      validations:
+    validations:
       required: false
 - type: checkboxes
     id: terms
