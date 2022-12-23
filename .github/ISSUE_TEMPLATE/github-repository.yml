@@ -50,12 +50,12 @@ body:
     validations:
       required: true
   - type: checkboxes
-    id: role
+    id: github-branch-protection
     attributes:
-      label: Request Ownership Role
-      description: Check here if you would like to be an owner of the organization.
+      label: Disable branch protection?
+      description: This will disable branch protection for the repository.
       options:
-        - label: Owner
+        - label: "True"
           required: false
   - type: textarea
     id: comments
