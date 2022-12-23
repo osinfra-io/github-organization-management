@@ -10,7 +10,7 @@
 
 This repository is an example of a collection of sensible defaults for managing your GitHub organization using [Terraform](https://www.terraform.io), concepts from [Team Topologies](https://teamtopologies.com/), and practices learned from software development.
 
-## <img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209028188-b880baa5-cf8f-44c7-bdb5-f2c788ccd013.png"> Team Topologies
+## <img align="left" width="35" height="35" src="https://user-images.githubusercontent.com/1610100/209340481-2a74c148-f10d-4192-8eae-c88645663824.png"> Team Topologies
 
 Simple but comprehensive information for the platform provides a single point of entry for anyone wanting to know more about the services, report an issue or find out the current status, roadmap, and so on. - [Team Topologies: Thin Platform Template](https://github.com/TeamTopologies/Thin-Platform-template)
 
