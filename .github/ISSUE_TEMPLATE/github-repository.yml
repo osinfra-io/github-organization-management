@@ -1,6 +1,6 @@
 name: GitHub Repository
 description: Service interface for adding GitHub repositories to the organization
-title: Repository Request
+title: Add repository
 labels: ["enhancement"]
 
 body:
@@ -12,7 +12,7 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Contact Details
+      label: What is your contact details?
       description: How can we get in touch with you if we need more info?
       placeholder: email@example.com
     validations:
@@ -22,7 +22,7 @@ body:
     id: github-repository-name
     attributes:
       label: What do you want to name your repository?
-      description: Note this should follow the naming conventions for GitHub repositories.
+      description: This should follow the naming conventions for GitHub repositories.
       placeholder: prefix-repository-name
     validations:
       required: true
@@ -40,7 +40,7 @@ body:
     id: github-repository-topics
     attributes:
       label: Do you want to add any topics to your repository?
-      description: "Note the following topics are added by default: Infrastructure-as-code, osinfra"
+      description: "Note the following topics are added by default: infrastructure-as-code, osinfra"
       placeholder: terraform, github-actions, ...
     validations:
       required: false
@@ -57,8 +57,8 @@ body:
   - type: checkboxes
     id: github-branch-protection
     attributes:
-      label: Disable branch protection?
-      description: This will disable branch protection for the repository.
+      label: Do you want to disable branch protection?
+      description: This will disable branch protection for the repository. This is useful for repositories that are used for testing or other non-important purposes.
       options:
         - label: "True"
           required: false
@@ -66,15 +66,15 @@ body:
   - type: textarea
     id: comments
     attributes:
-      label: Additional Comments
-      description: Anything else you'd like to add?
+     label: Do you have any additional comments?
+     description: Anything else you'd like to add that would help us understand your request better?
     validations:
       required: false
 
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
+      label: Code of Conduct.
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/osinfra-io/.github/blob/main/CODE_OF_CONDUCT.md)
       options:
         - label: I agree to follow this project's Code of Conduct
