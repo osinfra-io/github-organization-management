@@ -80,7 +80,7 @@ repositories = {
 
   "google-cloud-hierarchy" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Hierarchy."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "google-cloud-landing-zone-platform", "terraform"]
   }
 
   "google-cloud-kitchen-terraform" = {
@@ -88,9 +88,9 @@ repositories = {
     topics      = ["google-cloud-platform", "kitchen-terraform", "terraform", "testing"]
   }
 
-  "google-cloud-logging" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform logging."
-    topics      = ["google-cloud-platform", "terraform"]
+  "google-cloud-audit-logging" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform audit logging."
+    topics      = ["google-cloud-platform", "google-cloud-landing-zone-platform", "terraform"]
   }
 
   "google-cloud-observability" = {
@@ -105,12 +105,12 @@ repositories = {
 
   "google-cloud-terraform-backend" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform backend."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "google-cloud-landing-zone-platform", "terraform"]
   }
 
   "google-cloud-workload-identity" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform workload identity."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics      = ["google-cloud-platform", "google-cloud-landing-zone-platform", "terraform"]
   }
 
   "terraform-google-cloud-dns" = {
