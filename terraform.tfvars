@@ -154,24 +154,57 @@ repositories = {
   }
 }
 
-teams = {
+team_parents = {
   "google-cloud-platform" = {
-    description = "Google Cloud Platform members and maintainers."
-    child_teams = [
-      "google-cloud-platform-admins",
-      "google-cloud-platform-reviewers"
-    ]
+    description = "Google Cloud Platform members and maintainers and repositories"
+
+
+    maintainers = ["brettcurtis"]
+    members     = []
   }
 
   "github-platform" = {
-    description = "GitHub Platform members and maintainers."
-    child_teams = [
-      "github-platform-admins",
-      "github-platform-reviewers"
-    ]
+    description = "GitHub Platform members, maintainers and repositories"
+    child_teams = {
+
+    }
+
+    maintainers = ["brettcurtis"]
+    members     = []
   }
 
   "owners" = {
     description = "Owners of the osinfra.io organization."
+    maintainers = ["brettcurtis"]
+    members     = []
+  }
+}
+
+team_children = {
+  "google-cloud-platform-repository-admins" = {
+    description     = "Google Cloud Platform repository admins."
+    parent_team_key = "google-cloud-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "google-cloud-platform-reviewers" = {
+    description     = "Google Cloud Platform reviewers."
+    parent_team_key = "google-cloud-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+  "github-platform-repository-admins" = {
+    description     = "GitHub Platform repository admins."
+    parent_team_key = "github-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "github-platform-reviewers" = {
+    description     = "GitHub Platform reviewers."
+    parent_team_key = "github-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
   }
 }

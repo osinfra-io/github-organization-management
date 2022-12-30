@@ -41,12 +41,23 @@ variable "repositories" {
   }))
 }
 
-variable "teams" {
-  description = "Map of teams with child teams to create"
+variable "team_parents" {
+  description = "Map of parent teams to create"
   type = map(object({
     create_default_maintainer_team = optional(bool, false)
     description                    = string
-    child_teams                    = optional(list(string), [])
+    maintainers                    = optional(set(string), [])
+    members                        = optional(set(string), [])
     privacy                        = optional(string, "closed")
+  }))
+}
+
+variable "team_children" {
+  description = "Map of child teams to create"
+  type = map(object({
+    description     = string
+    maintainers     = optional(set(string), [])
+    members         = optional(set(string), [])
+    parent_team_key = string
   }))
 }

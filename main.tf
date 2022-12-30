@@ -126,7 +126,7 @@ resource "github_repository" "this" {
 # curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io/teams
 
 resource "github_team" "parent" {
-  for_each = var.teams
+  for_each = var.team_parents
 
   name        = each.key
   description = each.value.description
@@ -134,11 +134,63 @@ resource "github_team" "parent" {
 }
 
 resource "github_team" "children" {
-  for_each = local.child_teams
+  for_each = var.team_children
 
+  description    = each.value.description
   name           = each.key
-  parent_team_id = github_team.parent[each.value.team].id
-  privacy        = github_team.parent[each.value.team].privacy
+  parent_team_id = github_team.parent[each.value.parent_team_key].id
+  privacy        = github_team.parent[each.value.parent_team_key].privacy
+}
+
+# GitHub Team Membership Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_members
+
+resource "github_team_members" "parent" {
+  for_each = var.team_parents
+
+  team_id = github_team.parent[each.key].id
+
+  dynamic "members" {
+    for_each = each.value.members
+
+    content {
+      username = members.value
+      role     = "member"
+    }
+  }
+
+  dynamic "members" {
+    for_each = each.value.maintainers
+
+    content {
+      username = members.value
+      role     = "maintainer"
+    }
+  }
+}
+
+resource "github_team_members" "children" {
+  for_each = var.team_children
+
+  team_id = github_team.children[each.key].id
+
+  dynamic "members" {
+    for_each = each.value.members
+
+    content {
+      username = members.value
+      role     = "member"
+    }
+  }
+
+  dynamic "members" {
+    for_each = each.value.maintainers
+
+    content {
+      username = members.value
+      role     = "maintainer"
+    }
+  }
 }
 
 # Random Password Resource
