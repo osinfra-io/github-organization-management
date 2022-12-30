@@ -281,8 +281,8 @@ team_children = {
     repositories    = ["github-organization-management"]
   }
 
-  "github-platform-reviewers" = {
-    description     = "This team is responsible for GitHub Platform code reviews and workflow approvals."
+  "github-platform-approvers" = {
+    description     = "This team is responsible for GitHub Platform workflow approvals."
     parent_team_key = "github-platform"
     maintainers     = ["brettcurtis"]
     members         = []
