@@ -40,3 +40,13 @@ variable "repositories" {
     visibility = optional(string, "public")
   }))
 }
+
+variable "teams" {
+  description = "Map of teams with child teams to create"
+  type = map(object({
+    create_default_maintainer_team = optional(bool, false)
+    description                    = string
+    child_teams                    = optional(list(string), [])
+    privacy                        = optional(string, "closed")
+  }))
+}

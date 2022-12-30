@@ -25,6 +25,13 @@ provider "github" {
   token = var.github_token
 }
 
+# GitHub Organization Teams Data Source
+# https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/organization_team
+
+data "github_organization_teams" "this" {
+  root_teams_only = true
+}
+
 # Github Actions Secret Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret
 
@@ -107,6 +114,31 @@ resource "github_repository" "this" {
       repository = template.value
     }
   }
+}
+
+# Github Team Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team
+
+# If you need to import a team, you can do so with the following command:
+# terraform import github_team.this\[\"google-cloud-platform\"\] <team_id>
+
+# To get the team ids, you can run the following curl command with a token that has the read:org scope against your own organization.
+# curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io/teams
+
+resource "github_team" "parent" {
+  for_each = var.teams
+
+  name        = each.key
+  description = each.value.description
+  privacy     = each.value.privacy
+}
+
+resource "github_team" "children" {
+  for_each = local.child_teams
+
+  name           = each.key
+  parent_team_id = github_team.parent[each.value.team].id
+  privacy        = github_team.parent[each.value.team].privacy
 }
 
 # Random Password Resource

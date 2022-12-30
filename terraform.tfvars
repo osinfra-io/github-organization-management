@@ -153,3 +153,25 @@ repositories = {
     topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
   }
 }
+
+teams = {
+  "google-cloud-platform" = {
+    description = "Google Cloud Platform members and maintainers."
+    child_teams = [
+      "google-cloud-platform-admins",
+      "google-cloud-platform-reviewers"
+    ]
+  }
+
+  "github-platform" = {
+    description = "GitHub Platform members and maintainers."
+    child_teams = [
+      "github-platform-admins",
+      "github-platform-reviewers"
+    ]
+  }
+
+  "owners" = {
+    description = "Owners of the osinfra.io organization."
+  }
+}
