@@ -3,15 +3,15 @@
 
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: github-actions
 
     # NOTE: The "/" here is for checking for workflow files in .github/workflows
 
-    directory: "/"
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
 
   - package-ecosystem: terraform
-    directory: "/"
+    directory: /
     schedule:
       interval: daily
