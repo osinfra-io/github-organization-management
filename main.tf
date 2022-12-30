@@ -25,13 +25,6 @@ provider "github" {
   token = var.github_token
 }
 
-# GitHub Organization Teams Data Source
-# https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/organization_team
-
-data "github_organization_teams" "this" {
-  root_teams_only = true
-}
-
 # Github Actions Secret Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret
 
