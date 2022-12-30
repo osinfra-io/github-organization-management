@@ -25,7 +25,7 @@ Simple but comprehensive information for the platform provides a single point of
 
 ### Response times
 
-- Responsible team: [GitHub Platform Team](https://github.com/orgs/osinfra-io/teams/github-platform-team)
+- Responsible team: [Platform Team: GitHub](https://github.com/orgs/osinfra-io/teams/platform-github)
 - Response time for incidents: `60 minutes`
 - Response time for other incidents: `120 minutes`
 - Response time for support:  `60 minutes`
@@ -49,7 +49,7 @@ Contact exclusively via:
 Contact via any of these:
 
 - Google Chat: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
-- Email address: [github-platform-team@osinfra.io](mailto:github-platform-team@osinfra.io)
+- Email address: [platform-github@osinfra.io](mailto:platform-github@osinfra.io)
 - Phone number:
 - Office hours (EST): `Weekdays 5:00 PM - 10:00 PM` `Weekends 8:00 AM - 5:00 PM`
 
@@ -72,10 +72,11 @@ Tools in use:
 
 Links to documentation and other resources required to develop and iterate in this repository successfully.
 
-- [Encrypted secrets for an organization](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-an-organization)
 - [Branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branchess)
+- [Encrypted secrets for an organization](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-an-organization)
 - [Organization membership](https://docs.github.com/en/organizations/managing-membership-in-your-organization)
 - [Repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories)
+- [Teams](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/managing-teams-in-your-organization)
 
 ## Terraform documentation
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
@@ -97,6 +98,7 @@ No modules.
 | [github_actions_organization_secret.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret) | resource |
 | [github_branch_protection.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
 | [github_membership.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership) | resource |
+| [github_organization_security_manager.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_security_manager) | resource |
 | [github_organization_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings) | resource |
 | [github_repository.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_team.children](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) | resource |

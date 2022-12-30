@@ -80,6 +80,7 @@ repositories = {
     description = "Infrastructure as Code (IaC) example for a GitHub organization."
     topics = [
       "github",
+      "platform-team",
       "terraform"
     ]
   }
@@ -107,6 +108,7 @@ repositories = {
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
+      "platform-team",
       "terraform"
     ]
   }
@@ -151,6 +153,7 @@ repositories = {
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
+      "platform-team",
       "terraform"
     ]
   }
@@ -160,6 +163,7 @@ repositories = {
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
+      "platform-team",
       "terraform"
     ]
   }
@@ -238,9 +242,9 @@ repositories = {
 }
 
 team_children = {
-  "google-cloud-platform-landing-zone-repository-admins" = {
-    description     = "This team is responsible for Google Cloud Landing Zone Platform repository administration."
-    parent_team_key = "google-cloud-landing-zone-platform"
+  "platform-google-cloud-landing-zone-repository-admins" = {
+    description     = "Platform Team: responsible for Google Cloud Landing Zone repository administration."
+    parent_team_key = "platform-google-cloud-landing-zone"
     permission      = "admin"
     maintainers     = ["brettcurtis"]
     members         = []
@@ -252,46 +256,61 @@ team_children = {
     ]
   }
 
-  "google-cloud-platform-landing-zone-approvers-nonprod" = {
-    description     = "This team is responsible for Google Cloud Landing Zone Platform workflow approvals in the Non-Production environments."
-    parent_team_key = "google-cloud-landing-zone-platform"
+  "platform-google-cloud-landing-zone-approvers-nonprod" = {
+    description     = "Platform Team: responsible for Google Cloud Landing Zone workflow approvals in the Non-Production environments."
+    parent_team_key = "platform-google-cloud-landing-zone"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "google-cloud-platform-landing-zone-approvers-prod" = {
-    description     = "This team is responsible for Google Cloud Landing Zone Platform workflow approvals in the Production environment."
-    parent_team_key = "google-cloud-landing-zone-platform"
+  "platform-google-cloud-landing-zone-approvers-prod" = {
+    description     = "Platform Team: responsible for Google Cloud Landing Zone workflow approvals in the Production environment."
+    parent_team_key = "platform-google-cloud-landing-zone"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "google-cloud-platform-landing-zone-approvers-sb" = {
-    description     = "This team is responsible for Google Cloud Landing Zone Platform workflow approvals in the Sandbox environment."
-    parent_team_key = "google-cloud-landing-zone-platform"
+  "platform-google-cloud-landing-zone-approvers-sb" = {
+    description     = "Platform Team: responsible for Google Cloud Landing Zone workflow approvals in the Sandbox environment."
+    parent_team_key = "platform-google-cloud-landing-zone"
     maintainers     = ["brettcurtis"]
     members         = []
   }
-  "github-platform-repository-admins" = {
-    description     = "This team is responsible for GitHub Platform repository administration."
-    parent_team_key = "github-platform"
+  "platform-github-repository-admins" = {
+    description     = "Platform Team: responsible for GitHub repository administration."
+    parent_team_key = "platform-github"
     permission      = "admin"
     maintainers     = ["brettcurtis"]
     members         = []
     repositories    = ["github-organization-management"]
   }
 
-  "github-platform-approvers" = {
-    description     = "This team is responsible for GitHub Platform workflow approvals."
-    parent_team_key = "github-platform"
+  "platform-github-approvers" = {
+    description     = "Platform Team: responsible for GitHub workflow approvals."
+    parent_team_key = "platform-github"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 }
 
 team_parents = {
-  "google-cloud-landing-zone-platform" = {
-    description = "This team is responsible the Google Cloud Landing Zone Platform and code reviews."
+  "owners" = {
+    description = "Owners of the osinfra.io organization."
+    maintainers = ["brettcurtis"]
+    members     = []
+  }
+
+  "platform-github" = {
+    description               = "Platform Team: responsible for the GitHub organization and code reviews."
+    maintainers               = ["brettcurtis"]
+    members                   = []
+    permission                = "push"
+    repositories              = ["github-organization-management"]
+    review_request_delegation = true
+  }
+
+  "platform-google-cloud-landing-zone" = {
+    description = "Platform Team: responsible the Google Cloud Landing Zone and code reviews."
     maintainers = ["brettcurtis"]
     members     = []
     permission  = "push"
@@ -304,17 +323,8 @@ team_parents = {
     review_request_delegation = true
   }
 
-  "github-platform" = {
-    description               = "This team is responsible for the GitHub Platform and code reviews."
-    maintainers               = ["brettcurtis"]
-    members                   = []
-    permission                = "push"
-    repositories              = ["github-organization-management"]
-    review_request_delegation = true
-  }
-
-  "owners" = {
-    description = "Owners of the osinfra.io organization."
+  "enabling-security" = {
+    description = "Enabling Team: responsible for the overall security of the GitHub organization and helping stream-aligned teams to overcome obstacles."
     maintainers = ["brettcurtis"]
     members     = []
   }
