@@ -125,7 +125,7 @@ resource "github_repository" "this" {
 # To get the team ids, you can run the following curl command with a token that has the read:org scope against your own organization.
 # curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io/teams
 
-resource "github_team" "parent" {
+resource "github_team" "parents" {
   for_each = var.team_parents
 
   name        = each.key
@@ -138,17 +138,17 @@ resource "github_team" "children" {
 
   description    = each.value.description
   name           = each.key
-  parent_team_id = github_team.parent[each.value.parent_team_key].id
-  privacy        = github_team.parent[each.value.parent_team_key].privacy
+  parent_team_id = github_team.parents[each.value.parent_team_key].id
+  privacy        = github_team.parents[each.value.parent_team_key].privacy
 }
 
 # GitHub Team Membership Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_members
 
-resource "github_team_members" "parent" {
+resource "github_team_members" "parents" {
   for_each = var.team_parents
 
-  team_id = github_team.parent[each.key].id
+  team_id = github_team.parents[each.key].id
 
   dynamic "members" {
     for_each = each.value.members
@@ -191,6 +191,40 @@ resource "github_team_members" "children" {
       role     = "maintainer"
     }
   }
+}
+
+# Github Team Repository Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository
+
+resource "github_team_repository" "children" {
+  for_each = local.child_team_repositories
+
+  team_id    = github_team.children[each.value.team_child].id
+  repository = github_repository.this[each.value.repository].name
+  permission = each.value.permission
+}
+
+resource "github_team_repository" "parents" {
+  for_each = local.parent_team_repositories
+
+  team_id    = github_team.parents[each.value.team_parent].id
+  repository = github_repository.this[each.value.repository].name
+  permission = each.value.permission
+}
+
+# GitHub Team Settings Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_settings
+
+resource "github_team_settings" "this" {
+  for_each = local.review_request_delegation
+
+  review_request_delegation {
+    algorithm    = "LOAD_BALANCE"
+    member_count = 2
+    notify       = false
+  }
+
+  team_id = github_team.parents[each.key].id
 }
 
 # Random Password Resource

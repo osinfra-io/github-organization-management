@@ -39,7 +39,11 @@ repositories = {
 
   "local-development-setup" = {
     description = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
-    topics      = ["docker", "local-development", "terraform"]
+    topics = [
+      "docker",
+      "local-development",
+      "terraform"
+    ]
   }
 
   "gitbook-docs" = {
@@ -50,12 +54,21 @@ repositories = {
 
   "github-kitchen-terraform-action" = {
     description = "Kitchen-Terraform GitHub Action."
-    topics      = ["github", "github-actions", "terraform", "chef-inspec", "kitchen-terraform"]
+    topics = [
+      "chef-inspec",
+      "github",
+      "github-actions",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 
   "github-misc-called-workflows" = {
     description = "Miscellaneous Reusable GitHub Called Workflow examples."
-    topics      = ["github", "github-actions"]
+    topics = [
+      "github",
+      "github-actions"
+    ]
   }
 
   "github-organization-discussions" = {
@@ -65,92 +78,162 @@ repositories = {
 
   "github-organization-management" = {
     description = "Infrastructure as Code (IaC) example for a GitHub organization."
-    topics      = ["github", "terraform"]
+    topics = [
+      "github",
+      "terraform"
+    ]
   }
 
   "github-terraform-codespace" = {
     description = "GitHub Codespace example for Terraform Infrastructure as Code (IaC) Development."
-    topics      = ["github", "github-codespaces", "terraform"]
+    topics = [
+      "github",
+      "github-codespaces",
+      "terraform"
+    ]
   }
 
   "github-terraform-gcp-called-workflows" = {
     description = "Reusable GitHub Called Workflow examples for Terraform and Google Cloud Platform."
-    topics      = ["github", "github-actions", "terraform"]
+    topics = [
+      "github",
+      "github-actions",
+      "terraform"
+    ]
   }
 
   "google-cloud-hierarchy" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Hierarchy."
-    topics      = ["google-cloud-platform", "google-cloud-landing-zone-platform", "terraform"]
+    topics = [
+      "google-cloud-landing-zone-platform",
+      "google-cloud-platform",
+      "terraform"
+    ]
   }
 
   "google-cloud-kitchen-terraform" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Kitchen-Terraform testing."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform", "testing"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform",
+      "testing"
+    ]
   }
 
   "google-cloud-audit-logging" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform audit logging."
-    topics      = ["google-cloud-platform", "google-cloud-landing-zone-platform", "terraform"]
+    topics = [
+      "google-cloud-landing-zone-platform",
+      "google-cloud-platform",
+      "terraform"
+    ]
   }
 
   "google-cloud-observability" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform observability."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "terraform"
+    ]
   }
 
   "google-cloud-services" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform services."
-    topics      = ["google-cloud-platform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "terraform"
+    ]
   }
 
   "google-cloud-terraform-backend" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform backend."
-    topics      = ["google-cloud-platform", "google-cloud-landing-zone-platform", "terraform"]
+    topics = [
+      "google-cloud-landing-zone-platform",
+      "google-cloud-platform",
+      "terraform"
+    ]
   }
 
   "google-cloud-workload-identity" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform workload identity."
-    topics      = ["google-cloud-platform", "google-cloud-landing-zone-platform", "terraform"]
+    topics = [
+      "google-cloud-landing-zone-platform",
+      "google-cloud-platform",
+      "terraform"
+    ]
   }
 
   "terraform-google-cloud-dns" = {
     description = "Terraform example module for Google Cloud Platform Cloud DNS."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 
   "terraform-google-cloud-nat" = {
     description = "Terraform example module for Google Cloud Platform Cloud NAT."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 
   "terraform-google-cloud-sql" = {
     description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 
   "terraform-google-kubernetes-engine" = {
     description = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 
   "terraform-google-project" = {
     description = "Terraform example module for Google Cloud Platform project."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 
   "terraform-google-storage-bucket" = {
     description = "Terraform example module for Google Cloud Platform Storage bucket."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 
   "terraform-google-subnet" = {
     description = "Terraform example module for Google Cloud Platform subnet."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 
   "terraform-google-vpc" = {
     description = "Terraform example module for Google Cloud Platform VPC."
-    topics      = ["google-cloud-platform", "kitchen-terraform", "terraform"]
+    topics = [
+      "google-cloud-platform",
+      "kitchen-terraform",
+      "terraform"
+    ]
   }
 }
 
@@ -158,12 +241,33 @@ team_children = {
   "google-cloud-platform-landing-zone-repository-admins" = {
     description     = "This team is responsible for Google Cloud Landing Zone Platform repository administration."
     parent_team_key = "google-cloud-landing-zone-platform"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+    repositories = [
+      "google-cloud-audit-logging",
+      "google-cloud-terraform-backend",
+      "google-cloud-workload-identity",
+      "google-cloud-hierarchy"
+    ]
+  }
+
+  "google-cloud-platform-landing-zone-approvers-nonprod" = {
+    description     = "This team is responsible for Google Cloud Landing Platform workflow approvals in the Non-Production environments."
+    parent_team_key = "google-cloud-landing-zone-platform"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "google-cloud-platform-landing-zone-reviewers" = {
-    description     = "This team is responsible for Google Cloud Landing Platform code reviews and workflow approvals."
+  "google-cloud-platform-landing-zone-approvers-prod" = {
+    description     = "This team is responsible for Google Cloud Landing Platform workflow approvals in the Production environment."
+    parent_team_key = "google-cloud-landing-zone-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "google-cloud-platform-landing-zone-approvers-sb" = {
+    description     = "This team is responsible for Google Cloud Landing Platform workflow approvals in the Sandbox environment."
     parent_team_key = "google-cloud-landing-zone-platform"
     maintainers     = ["brettcurtis"]
     members         = []
@@ -171,8 +275,10 @@ team_children = {
   "github-platform-repository-admins" = {
     description     = "This team is responsible for GitHub Platform repository administration."
     parent_team_key = "github-platform"
+    permission      = "admin"
     maintainers     = ["brettcurtis"]
     members         = []
+    repositories    = ["github-organization-management"]
   }
 
   "github-platform-reviewers" = {
@@ -185,15 +291,26 @@ team_children = {
 
 team_parents = {
   "google-cloud-landing-zone-platform" = {
-    description = "This team is responsible the Google Cloud Landing Zone Platform."
+    description = "This team is responsible the Google Cloud Landing Zone Platform and code reviews."
     maintainers = ["brettcurtis"]
     members     = []
+    permission  = "push"
+    repositories = [
+      "google-cloud-audit-logging",
+      "google-cloud-terraform-backend",
+      "google-cloud-workload-identity",
+      "google-cloud-hierarchy"
+    ]
+    review_request_delegation = true
   }
 
   "github-platform" = {
-    description = "This team is responsible for the GitHub Platform."
-    maintainers = ["brettcurtis"]
-    members     = []
+    description               = "This team is responsible for the GitHub Platform and code reviews."
+    maintainers               = ["brettcurtis"]
+    members                   = []
+    permission                = "push"
+    repositories              = ["github-organization-management"]
+    review_request_delegation = true
   }
 
   "owners" = {
