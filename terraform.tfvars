@@ -154,21 +154,44 @@ repositories = {
   }
 }
 
+team_children = {
+  "google-cloud-platform-landing-zone-repository-admins" = {
+    description     = "This team is responsible for Google Cloud Landing Zone Platform repository administration."
+    parent_team_key = "google-cloud-landing-zone-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "google-cloud-platform-landing-zone-reviewers" = {
+    description     = "This team is responsible for Google Cloud Landing Platform code reviews and workflow approvals."
+    parent_team_key = "google-cloud-landing-zone-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+  "github-platform-repository-admins" = {
+    description     = "This team is responsible for GitHub Platform repository administration."
+    parent_team_key = "github-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "github-platform-reviewers" = {
+    description     = "This team is responsible for GitHub Platform code reviews and workflow approvals."
+    parent_team_key = "github-platform"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+}
+
 team_parents = {
-  "google-cloud-platform" = {
-    description = "Google Cloud Platform members and maintainers and repositories"
-
-
+  "google-cloud-landing-zone-platform" = {
+    description = "This team is responsible the Google Cloud Landing Zone Platform."
     maintainers = ["brettcurtis"]
     members     = []
   }
 
   "github-platform" = {
-    description = "GitHub Platform members, maintainers and repositories"
-    child_teams = {
-
-    }
-
+    description = "This team is responsible for the GitHub Platform."
     maintainers = ["brettcurtis"]
     members     = []
   }
@@ -177,34 +200,5 @@ team_parents = {
     description = "Owners of the osinfra.io organization."
     maintainers = ["brettcurtis"]
     members     = []
-  }
-}
-
-team_children = {
-  "google-cloud-platform-repository-admins" = {
-    description     = "Google Cloud Platform repository admins."
-    parent_team_key = "google-cloud-platform"
-    maintainers     = ["brettcurtis"]
-    members         = []
-  }
-
-  "google-cloud-platform-reviewers" = {
-    description     = "Google Cloud Platform reviewers."
-    parent_team_key = "google-cloud-platform"
-    maintainers     = ["brettcurtis"]
-    members         = []
-  }
-  "github-platform-repository-admins" = {
-    description     = "GitHub Platform repository admins."
-    parent_team_key = "github-platform"
-    maintainers     = ["brettcurtis"]
-    members         = []
-  }
-
-  "github-platform-reviewers" = {
-    description     = "GitHub Platform reviewers."
-    parent_team_key = "github-platform"
-    maintainers     = ["brettcurtis"]
-    members         = []
   }
 }

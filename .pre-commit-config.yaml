@@ -12,7 +12,7 @@ repos:
       - id: no-commit-to-branch
 
   - repo: https://github.com/bridgecrewio/checkov
-    rev: 2.2.220
+    rev: 2.2.221
     hooks:
       - id: checkov
         verbose: true
