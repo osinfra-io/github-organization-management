@@ -71,6 +71,13 @@ resource "github_membership" "this" {
   username = each.key
 }
 
+# Github Organization Security Manager Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_security_manager
+
+resource "github_organization_security_manager" "this" {
+  team_slug = github_team.parents["enabling-security"].slug
+}
+
 # Github Organization Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization
 
