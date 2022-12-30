@@ -6,6 +6,12 @@ variable "admins" {
   type        = set(string)
 }
 
+variable "billing_email" {
+  description = "The billing email address for the organization"
+  type        = string
+  sensitive   = true
+}
+
 variable "github_token" {
   description = "The GitHub token used for managing the organization"
   type        = string

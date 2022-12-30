@@ -97,6 +97,7 @@ No modules.
 | [github_actions_organization_secret.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret) | resource |
 | [github_branch_protection.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
 | [github_membership.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership) | resource |
+| [github_organization_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings) | resource |
 | [github_repository.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_team.children](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) | resource |
 | [github_team.parents](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) | resource |
@@ -112,6 +113,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_admins"></a> [admins](#input_admins) | A set of admins to add to the organization | `set(string)` | n/a | yes |
+| <a name="input_billing_email"></a> [billing_email](#input_billing_email) | The billing email address for the organization | `string` | n/a | yes |
 | <a name="input_github_token"></a> [github_token](#input_github_token) | The GitHub token used for managing the organization | `string` | n/a | yes |
 | <a name="input_organization_secrets"></a> [organization_secrets](#input_organization_secrets) | Map of secrets to add to the organization | <pre>map(object({<br>    description = string<br>    visibility  = string<br>  }))</pre> | n/a | yes |
 | <a name="input_repositories"></a> [repositories](#input_repositories) | Map of repositories to create | <pre>map(object({<br>    description              = string<br>    enable_branch_protection = optional(bool, true)<br>    template                 = optional(string)<br>    topics                   = optional(list(string))<br><br>    # In most cases, the visibility of your organizations repository should be private.<br>    # However, we are keeping our code public to encourage others to learn from our work.<br><br>    visibility = optional(string, "public")<br>  }))</pre> | n/a | yes |
