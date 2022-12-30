@@ -3,10 +3,6 @@
 
 terraform {
   required_providers {
-
-    # Github Provider
-    # https://registry.terraform.io/providers/integrations/github/latest/docs
-
     github = {
       source = "integrations/github"
     }
@@ -19,6 +15,9 @@ terraform {
     }
   }
 }
+
+# Github Provider
+# https://registry.terraform.io/providers/integrations/github/latest/docs
 
 provider "github" {
   owner = "osinfra-io"
