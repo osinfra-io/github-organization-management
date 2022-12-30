@@ -253,21 +253,21 @@ team_children = {
   }
 
   "google-cloud-platform-landing-zone-approvers-nonprod" = {
-    description     = "This team is responsible for Google Cloud Landing Platform workflow approvals in the Non-Production environments."
+    description     = "This team is responsible for Google Cloud Landing Zone Platform workflow approvals in the Non-Production environments."
     parent_team_key = "google-cloud-landing-zone-platform"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
   "google-cloud-platform-landing-zone-approvers-prod" = {
-    description     = "This team is responsible for Google Cloud Landing Platform workflow approvals in the Production environment."
+    description     = "This team is responsible for Google Cloud Landing Zone Platform workflow approvals in the Production environment."
     parent_team_key = "google-cloud-landing-zone-platform"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
   "google-cloud-platform-landing-zone-approvers-sb" = {
-    description     = "This team is responsible for Google Cloud Landing Platform workflow approvals in the Sandbox environment."
+    description     = "This team is responsible for Google Cloud Landing Zone Platform workflow approvals in the Sandbox environment."
     parent_team_key = "google-cloud-landing-zone-platform"
     maintainers     = ["brettcurtis"]
     members         = []
