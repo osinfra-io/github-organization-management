@@ -40,3 +40,28 @@ variable "repositories" {
     visibility = optional(string, "public")
   }))
 }
+
+variable "team_children" {
+  description = "Map of child teams to create"
+  type = map(object({
+    description     = string
+    maintainers     = optional(set(string), [])
+    members         = optional(set(string), [])
+    permission      = optional(string, null)
+    parent_team_key = string
+    repositories    = optional(set(string), [])
+  }))
+}
+
+variable "team_parents" {
+  description = "Map of parent teams to create"
+  type = map(object({
+    description               = string
+    maintainers               = optional(set(string), [])
+    members                   = optional(set(string), [])
+    permission                = optional(string, null)
+    privacy                   = optional(string, "closed")
+    repositories              = optional(set(string), [])
+    review_request_delegation = optional(bool, false)
+  }))
+}

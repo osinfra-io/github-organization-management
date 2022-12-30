@@ -3,10 +3,6 @@
 
 terraform {
   required_providers {
-
-    # Github Provider
-    # https://registry.terraform.io/providers/integrations/github/latest/docs
-
     github = {
       source = "integrations/github"
     }
@@ -19,6 +15,9 @@ terraform {
     }
   }
 }
+
+# Github Provider
+# https://registry.terraform.io/providers/integrations/github/latest/docs
 
 provider "github" {
   owner = "osinfra-io"
@@ -107,6 +106,117 @@ resource "github_repository" "this" {
       repository = template.value
     }
   }
+}
+
+# Github Team Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team
+
+# If you need to import a team, you can do so with the following command:
+# terraform import github_team.this\[\"google-cloud-platform\"\] <team_id>
+
+# To get the team ids, you can run the following curl command with a token that has the read:org scope against your own organization.
+# curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io/teams
+
+resource "github_team" "parents" {
+  for_each = var.team_parents
+
+  name        = each.key
+  description = each.value.description
+  privacy     = each.value.privacy
+}
+
+resource "github_team" "children" {
+  for_each = var.team_children
+
+  description    = each.value.description
+  name           = each.key
+  parent_team_id = github_team.parents[each.value.parent_team_key].id
+  privacy        = github_team.parents[each.value.parent_team_key].privacy
+}
+
+# GitHub Team Membership Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_members
+
+resource "github_team_members" "parents" {
+  for_each = var.team_parents
+
+  team_id = github_team.parents[each.key].id
+
+  dynamic "members" {
+    for_each = each.value.members
+
+    content {
+      username = members.value
+      role     = "member"
+    }
+  }
+
+  dynamic "members" {
+    for_each = each.value.maintainers
+
+    content {
+      username = members.value
+      role     = "maintainer"
+    }
+  }
+}
+
+resource "github_team_members" "children" {
+  for_each = var.team_children
+
+  team_id = github_team.children[each.key].id
+
+  dynamic "members" {
+    for_each = each.value.members
+
+    content {
+      username = members.value
+      role     = "member"
+    }
+  }
+
+  dynamic "members" {
+    for_each = each.value.maintainers
+
+    content {
+      username = members.value
+      role     = "maintainer"
+    }
+  }
+}
+
+# Github Team Repository Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository
+
+resource "github_team_repository" "children" {
+  for_each = local.child_team_repositories
+
+  team_id    = github_team.children[each.value.team_child].id
+  repository = github_repository.this[each.value.repository].name
+  permission = each.value.permission
+}
+
+resource "github_team_repository" "parents" {
+  for_each = local.parent_team_repositories
+
+  team_id    = github_team.parents[each.value.team_parent].id
+  repository = github_repository.this[each.value.repository].name
+  permission = each.value.permission
+}
+
+# GitHub Team Settings Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_settings
+
+resource "github_team_settings" "this" {
+  for_each = local.review_request_delegation
+
+  review_request_delegation {
+    algorithm    = "LOAD_BALANCE"
+    member_count = 2
+    notify       = false
+  }
+
+  team_id = github_team.parents[each.key].id
 }
 
 # Random Password Resource
