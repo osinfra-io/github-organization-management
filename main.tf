@@ -136,7 +136,7 @@ resource "github_repository" "this" {
   name                        = each.key
   squash_merge_commit_message = "BLANK"
   squash_merge_commit_title   = "PR_TITLE"
-  topics                      = concat(each.value.topics, ["infrastructure-as-code", "osinfra"])
+  topics                      = each.value.topics
   visibility                  = each.value.visibility
   vulnerability_alerts        = true
 
