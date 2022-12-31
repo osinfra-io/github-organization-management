@@ -41,7 +41,9 @@ repositories = {
     description = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
     topics = [
       "docker",
+      "infrastructure-as-code",
       "local-development",
+      "osinfra",
       "terraform"
     ]
   }
@@ -58,7 +60,9 @@ repositories = {
       "chef-inspec",
       "github",
       "github-actions",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }
@@ -80,6 +84,8 @@ repositories = {
     description = "Infrastructure as Code (IaC) example for a GitHub organization."
     topics = [
       "github",
+      "infrastructure-as-code",
+      "osinfra",
       "platform-team",
       "terraform"
     ]
@@ -90,6 +96,8 @@ repositories = {
     topics = [
       "github",
       "github-codespaces",
+      "infrastructure-as-code",
+      "osinfra",
       "terraform"
     ]
   }
@@ -99,6 +107,8 @@ repositories = {
     topics = [
       "github",
       "github-actions",
+      "infrastructure-as-code",
+      "osinfra",
       "terraform"
     ]
   }
@@ -108,6 +118,8 @@ repositories = {
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
       "platform-team",
       "terraform"
     ]
@@ -117,7 +129,9 @@ repositories = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Kitchen-Terraform testing."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform",
       "testing"
     ]
@@ -128,6 +142,8 @@ repositories = {
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
       "terraform"
     ]
   }
@@ -136,6 +152,8 @@ repositories = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform observability."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
       "terraform"
     ]
   }
@@ -144,6 +162,8 @@ repositories = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform services."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
       "terraform"
     ]
   }
@@ -153,6 +173,8 @@ repositories = {
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
       "platform-team",
       "terraform"
     ]
@@ -163,6 +185,8 @@ repositories = {
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
       "platform-team",
       "terraform"
     ]
@@ -172,7 +196,9 @@ repositories = {
     description = "Terraform example module for Google Cloud Platform Cloud DNS."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }
@@ -181,7 +207,9 @@ repositories = {
     description = "Terraform example module for Google Cloud Platform Cloud NAT."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }
@@ -190,7 +218,9 @@ repositories = {
     description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }
@@ -199,7 +229,9 @@ repositories = {
     description = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }
@@ -208,7 +240,9 @@ repositories = {
     description = "Terraform example module for Google Cloud Platform project."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }
@@ -217,7 +251,9 @@ repositories = {
     description = "Terraform example module for Google Cloud Platform Storage bucket."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }
@@ -226,7 +262,9 @@ repositories = {
     description = "Terraform example module for Google Cloud Platform subnet."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }
@@ -235,7 +273,9 @@ repositories = {
     description = "Terraform example module for Google Cloud Platform VPC."
     topics = [
       "google-cloud-platform",
+      "infrastructure-as-code",
       "kitchen-terraform",
+      "osinfra",
       "terraform"
     ]
   }

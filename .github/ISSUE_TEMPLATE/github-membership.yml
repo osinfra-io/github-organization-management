@@ -1,7 +1,9 @@
 name: GitHub Membership
 description: Service interface for adding GitHub members to the organization
 title: Add member
-labels: ["enhancement"]
+labels:
+  - enhancement
+  - good first issue
 
 body:
   - type: markdown
@@ -10,44 +12,62 @@ body:
         Please fill out the following details to request membership to the Open Source Infrastructure (as Code) organization.
 
   - type: input
-    id: contact
+    id: email-address
     attributes:
-      label: What is your contact details?
+      label: "Email address:"
       description: How can we get in touch with you if we need more info?
       placeholder: email@example.com
     validations:
       required: true
 
   - type: input
-    id: github-username
+    id: github-team-name
     attributes:
-      label: What is your GitHub username?
-      description: This should be your GitHub username, not your email address.
-      placeholder: octocat
+      label: "Team name:"
+      description: This should follow the GitHub [naming conventions](https://docs.osinfra.io/github/naming-conventions) and will be created if it does not exist.
+      placeholder: stream-aligned-team-name
     validations:
       required: true
 
   - type: checkboxes
     id: role
     attributes:
-      label: Do you require owner access?
-      description: Check here if you would like to be an owner of the organization and received approval by an existing owner.
+      label: "Team maintainer:"
+      description: Check here if you would like to be maintainer of the team and received approval by an existing maintainer. You will be added by default if this is a new team.
       options:
-        - label: Owner
+        - label: Team maintainer
           required: false
+
+  - type: checkboxes
+    id: repository-admin
+    attributes:
+      label: "Repository Administrator:"
+      description: Check here if you would like to be an administrator of the team and received approval by an existing administrator. You will be added by default if this is a new team.
+      options:
+        - label: Team maintainer
+          required: false
+
+  - type: input
+    id: github-username
+    attributes:
+      label: "Username:"
+      description: This should be your GitHub username, not your email address.
+      placeholder: octocat
+    validations:
+      required: true
 
   - type: textarea
     id: comments
     attributes:
-      label: Do you have any additional comments?
-      description: Anything else you'd like to add that would help us understand your request better?
+     label: "Additional comments:"
+     description: Anything else you'd like to add that would help us understand your request better?
     validations:
       required: false
 
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct.
+      label: "Code of Conduct:"
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/osinfra-io/.github/blob/main/CODE_OF_CONDUCT.md)
       options:
         - label: I agree to follow this project's Code of Conduct
