@@ -30,14 +30,14 @@ body:
       required: true
 
   - type: checkboxes
-    id: role
+    id: role-repository-permissions
     attributes:
-      label: "Team maintainer:"
-      description: Check here if you would like to be maintainer of the team and received approval by an existing maintainer. You will be added by default if this is a new team.
+      label: "Team role and repository permissions:"
+      description: Check the boxes that apply. You will be added to both by default if this is a new team.
       options:
-         - label: Team maintainer
+         - label: "Team role: maintainer"
            required: false
-         - label: Repository administrator
+         - label: "Repository permission: administrator"
            required: false
           
   - type: input
