@@ -35,8 +35,7 @@ body:
       label: "Team maintainer:"
       description: Check here if you would like to be maintainer of the team and received approval by an existing maintainer. You will be added by default if this is a new team.
       options:
-        - label: Team maintainer
-          required: false
+         - required: false
 
   - type: checkboxes
     id: repository-admin
@@ -44,9 +43,8 @@ body:
       label: "Repository Administrator:"
       description: Check here if you would like to be an administrator of the team and received approval by an existing administrator. You will be added by default if this is a new team.
       options:
-        - label: Team maintainer
-          required: false
-
+        - required: false
+          
   - type: input
     id: github-username
     attributes:
