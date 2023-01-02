@@ -20,8 +20,8 @@ Simple but comprehensive information for the platform provides a single point of
 
 ### Service interfaces
 
-- `github_membership` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement&template=github-membership.yml&title=Membership+Request)
-- `github_repository` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement&template=github-repository.yml&title=Repositoy+Request)
+- `github_membership` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement%2Cgood+first+issue&template=github-membership.yml&title=Add+member)
+- `github_repository` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement%2Cgood+first+issue&template=github-repository.yml&title=Add+repository)
 
 ### Response times
 
