@@ -2,6 +2,7 @@ name: Production
 
 on:
   workflow_dispatch:
+  pull_request:
   push:
     branches:
       - main
@@ -16,7 +17,7 @@ jobs:
       checkout_ref: ${{ github.ref }}
       github_environment: "Production Infrastructure: Global"
       service_account: organization-github-actions@shared-terraform-tfa8-prod.iam.gserviceaccount.com
-      terraform_state_bucket: shared-terraform-tfa8-prod-hierarchy
+      terraform_state_bucket: shared-terraform-tfa8-prod-organization
       terraform_version: 1.3.7
       terraform_workspace: global-production
       workload_identity_provider: projects/680727702081/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
