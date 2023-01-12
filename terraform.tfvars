@@ -89,6 +89,9 @@ repositories = {
       "platform-team",
       "terraform"
     ]
+    push_restrictions = [
+      "osinfra-io/platform-github"
+    ]
   }
 
   "github-terraform-codespace" = {

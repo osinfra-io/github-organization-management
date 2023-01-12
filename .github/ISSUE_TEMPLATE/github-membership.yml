@@ -39,7 +39,7 @@ body:
            required: false
          - label: "Repository permission: administrator"
            required: false
-          
+
   - type: input
     id: github-username
     attributes:
