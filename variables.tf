@@ -47,6 +47,12 @@ variable "repositories" {
   }))
 }
 
+variable "required_status_checks_contexts" {
+  description = "The list of status checks to require in order to merge into this branch"
+  type        = list(string)
+  default     = []
+}
+
 variable "team_children" {
   description = "Map of child teams to create"
   type = map(object({

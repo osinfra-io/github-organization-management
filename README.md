@@ -122,6 +122,7 @@ No modules.
 | <a name="input_team_children"></a> [team_children](#input_team_children) | Map of child teams to create | <pre>map(object({<br>    description     = string<br>    maintainers     = optional(set(string), [])<br>    members         = optional(set(string), [])<br>    permission      = optional(string, null)<br>    parent_team_key = string<br>    repositories    = optional(set(string), [])<br>  }))</pre> | n/a | yes |
 | <a name="input_team_parents"></a> [team_parents](#input_team_parents) | Map of parent teams to create | <pre>map(object({<br>    description               = string<br>    maintainers               = optional(set(string), [])<br>    members                   = optional(set(string), [])<br>    permission                = optional(string, null)<br>    privacy                   = optional(string, "closed")<br>    repositories              = optional(set(string), [])<br>    review_request_delegation = optional(bool, false)<br>  }))</pre> | n/a | yes |
 | <a name="input_members"></a> [members](#input_members) | A set of members to add to the organization | `set(string)` | `[]` | no |
+| <a name="input_required_status_checks_contexts"></a> [required_status_checks_contexts](#input_required_status_checks_contexts) | The list of status checks to require in order to merge into this branch | `list(string)` | `[]` | no |
 
 ### Outputs
 

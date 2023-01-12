@@ -59,6 +59,11 @@ resource "github_branch_protection" "this" {
     require_code_owner_reviews      = true
     required_approving_review_count = 1
   }
+
+  required_status_checks {
+    contexts = concat(["Bridgecrew / Code analysis"], var.required_status_checks_contexts)
+    strict   = true
+  }
 }
 
 # GitHub Membership Resource
