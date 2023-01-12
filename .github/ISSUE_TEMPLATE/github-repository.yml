@@ -57,6 +57,24 @@ body:
       required: false
 
   - type: input
+    id: github-repository-branch-protection-push-restrictions
+    attributes:
+      label: "Push restrictions:"
+      description: The list of actor Names/IDs that may push to the branch. Actor names must either begin with a "/" for users or the organization name followed by a "/" for teams.
+      placeholder: osinfra-io/stream-aligned-team1, osinfra-io/platform-team1, ...
+    validations:
+      required: false
+
+  - type: input
+    id: github-repository-branch-protection-required-status-checks-contexts
+    attributes:
+      label: "Required status checks:"
+      description: The status checks to require in order to merge into this branch.
+      placeholder: Unit Tests, ...
+    validations:
+      required: false
+
+  - type: input
     id: github-repository-template
     attributes:
       label: "Template repository:"
