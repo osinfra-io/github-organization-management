@@ -35,22 +35,18 @@ variable "organization_secrets" {
 variable "repositories" {
   description = "Map of repositories to create"
   type = map(object({
-    description              = string
-    enable_branch_protection = optional(bool, true)
-    template                 = optional(string)
-    topics                   = optional(list(string))
+    description                     = string
+    enable_branch_protection        = optional(bool, true)
+    push_restrictions               = optional(list(string), [])
+    required_status_checks_contexts = optional(list(string), [])
+    template                        = optional(string)
+    topics                          = optional(list(string))
 
     # In most cases, the visibility of your organizations repository should be private.
     # However, we are keeping our code public to encourage others to learn from our work.
 
     visibility = optional(string, "public")
   }))
-}
-
-variable "required_status_checks_contexts" {
-  description = "The list of status checks to require in order to merge into this branch"
-  type        = list(string)
-  default     = []
 }
 
 variable "team_children" {

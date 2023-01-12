@@ -47,8 +47,9 @@ resource "github_branch_protection" "this" {
 
   for_each = local.branch_protection
 
-  pattern                         = "main"
   enforce_admins                  = false
+  pattern                         = "main"
+  push_restrictions               = each.value.push_restrictions
   repository_id                   = github_repository.this[each.key].name
   require_conversation_resolution = true
   required_linear_history         = true
@@ -61,7 +62,7 @@ resource "github_branch_protection" "this" {
   }
 
   required_status_checks {
-    contexts = concat(["Bridgecrew / Code analysis"], var.required_status_checks_contexts)
+    contexts = concat(["Bridgecrew / Code analysis"], each.value.required_status_checks_contexts)
     strict   = true
   }
 }
