@@ -228,12 +228,13 @@ repositories = {
     ]
   }
 
-  "terraform-google-kubernetes-engine" = {
-    description = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
+  "terraform-google-kubernetes-engine-autopilot" = {
+    description = "Terraform example module for Google Cloud Platform Kubernetes Engine Autopilot cluster."
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
       "kitchen-terraform",
+      "kubernetes",
       "osinfra",
       "terraform"
     ]

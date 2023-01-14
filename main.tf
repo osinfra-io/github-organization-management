@@ -132,12 +132,15 @@ resource "github_repository" "this" {
   allow_merge_commit          = false
   allow_rebase_merge          = false
   allow_squash_merge          = true
+  allow_update_branch         = true
   archive_on_destroy          = true
   delete_branch_on_merge      = true
   description                 = each.value.description
   has_downloads               = false
   has_issues                  = true
+  has_projects                = true
   has_wiki                    = false
+  homepage_url                = "https://www.osinfra.io"
   license_template            = "gpl-2.0"
   name                        = each.key
   squash_merge_commit_message = "BLANK"
