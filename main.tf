@@ -146,7 +146,7 @@ resource "github_repository" "this" {
 
   security_and_analysis {
     advanced_security {
-      status = {}
+      status = each.value.visibility == "private" ? "disabled" : "enabled"
     }
     secret_scanning {
       status = "enabled"
