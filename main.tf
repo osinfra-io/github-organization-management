@@ -128,21 +128,34 @@ resource "github_repository" "this" {
 
   for_each = var.repositories
 
-  allow_auto_merge            = false
-  allow_merge_commit          = false
-  allow_rebase_merge          = false
-  allow_squash_merge          = true
-  allow_update_branch         = true
-  archive_on_destroy          = true
-  delete_branch_on_merge      = true
-  description                 = each.value.description
-  has_downloads               = false
-  has_issues                  = true
-  has_projects                = true
-  has_wiki                    = false
-  homepage_url                = "https://www.osinfra.io"
-  license_template            = "gpl-2.0"
-  name                        = each.key
+  allow_auto_merge       = false
+  allow_merge_commit     = false
+  allow_rebase_merge     = false
+  allow_squash_merge     = true
+  allow_update_branch    = true
+  archive_on_destroy     = true
+  delete_branch_on_merge = true
+  description            = each.value.description
+  has_downloads          = false
+  has_issues             = true
+  has_projects           = true
+  has_wiki               = false
+  homepage_url           = "https://www.osinfra.io"
+  license_template       = "gpl-2.0"
+  name                   = each.key
+
+  security_and_analysis {
+    advanced_security {
+      status = each.value.visibility == "private" ? "enabled" : "disabled"
+    }
+    secret_scanning {
+      status = "enabled"
+    }
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
+
   squash_merge_commit_message = "BLANK"
   squash_merge_commit_title   = "PR_TITLE"
   topics                      = each.value.topics
