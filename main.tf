@@ -145,8 +145,9 @@ resource "github_repository" "this" {
   name                   = each.key
 
   security_and_analysis {
-    advanced_security
+    advanced_security {
       status = {}
+    }
     secret_scanning {
       status = "enabled"
     }
