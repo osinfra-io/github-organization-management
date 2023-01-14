@@ -12,13 +12,6 @@ organization_secrets = {
 
 repositories = {
 
-  # Use this repository to test changes in the github_repository terraform resource
-
-  "github-repo-test" = {
-    description = "Test Repository"
-    topics      = ["testing"]
-  }
-
   # Keep the following repositories in alphabetical order
 
   ".github" = {
