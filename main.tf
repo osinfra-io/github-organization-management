@@ -13,6 +13,13 @@ terraform {
     random = {
       source = "hashicorp/random"
     }
+
+    # Time Provider
+    # https://registry.terraform.io/providers/hashicorp/time/latest/docs
+
+    time = {
+      source = "hashicorp/time"
+    }
   }
 }
 
@@ -290,4 +297,15 @@ resource "random_password" "this" {
   for_each = var.organization_secrets
   length   = 32
   special  = false
+
+  keepers = {
+    rotation_time = time_rotating.this.rotation_rfc3339
+  }
+}
+
+# Time Rotating Resource
+# https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/rotating
+
+resource "time_rotating" "this" {
+  rotation_days = 5
 }
