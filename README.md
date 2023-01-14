@@ -86,6 +86,7 @@ Links to documentation and other resources required to develop and iterate in th
 |------|---------|
 | <a name="provider_github"></a> [github](#provider_github) | 5.14.0 |
 | <a name="provider_random"></a> [random](#provider_random) | 3.4.3 |
+| <a name="provider_time"></a> [time](#provider_time) | 0.9.1 |
 
 ### Modules
 
@@ -109,6 +110,7 @@ No modules.
 | [github_team_repository.parents](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
 | [github_team_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_settings) | resource |
 | [random_password.this](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
+| [time_rotating.this](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/rotating) | resource |
 
 ### Inputs
 
