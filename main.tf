@@ -31,6 +31,21 @@ provider "github" {
   token = var.github_token
 }
 
+# GitHub Actions Organization Permissions Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_permissions
+
+resource "github_actions_organization_permissions" "this" {
+  allowed_actions = "selected"
+
+  allowed_actions_config {
+    github_owned_allowed = true
+    verified_allowed     = false
+  }
+
+  enabled_repositories = "all"
+}
+
+
 # Github Actions Secret Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret
 
