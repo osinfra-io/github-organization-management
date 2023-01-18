@@ -39,7 +39,14 @@ resource "github_actions_organization_permissions" "this" {
 
   allowed_actions_config {
     github_owned_allowed = true
-    verified_allowed     = false
+
+    patterns_allowed = [
+      "dependabot/fetch-metadata@*",
+      "google-github-actions/auth@*",
+      "hashicorp/setup-terraform@*"
+    ]
+
+    verified_allowed = false
   }
 
   enabled_repositories = "all"
