@@ -41,6 +41,7 @@ resource "github_actions_organization_permissions" "this" {
     github_owned_allowed = true
 
     patterns_allowed = [
+      "dependabot/fetch-metadata@*",
       "google-github-actions/auth@*",
       "hashicorp/setup-terraform@*"
     ]
