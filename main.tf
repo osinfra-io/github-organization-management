@@ -42,7 +42,7 @@ resource "github_actions_organization_permissions" "this" {
 
     patterns_allowed = [
       "dependabot/*",
-      "docker/*"
+      "docker/*",
       "google-github-actions/*",
       "hashicorp/*"
     ]
