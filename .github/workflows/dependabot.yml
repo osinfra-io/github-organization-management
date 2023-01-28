@@ -6,3 +6,5 @@ jobs:
   dependabot:
     name: Dependabot
     uses: osinfra-io/github-misc-called-workflows/.github/workflows/dependabot.yml@main
+    secrets:
+      pr_approve_and_merge_pat: ${{ secrets.PR_APPROVE_AND_MERGE_PAT }}
