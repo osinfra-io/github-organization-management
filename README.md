@@ -20,8 +20,8 @@ This repository is an example of IaC for managing a GitHub organization using [T
 
 ### Service interfaces
 
-- `github_membership` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement%2Cgood+first+issue&template=github-membership.yml&title=Add+member)
-- `github_repository` service interface: [GitHub Issue](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement%2Cgood+first+issue&template=github-repository.yml&title=Add+repository)
+- [Add or update membership](https:)
+- [Add or update repository](https:)
 
 ### Response times
 
@@ -84,7 +84,7 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider_github) | 5.15.0 |
+| <a name="provider_github"></a> [github](#provider_github) | 5.16.0 |
 | <a name="provider_random"></a> [random](#provider_random) | 3.4.3 |
 | <a name="provider_time"></a> [time](#provider_time) | 0.9.1 |
 
