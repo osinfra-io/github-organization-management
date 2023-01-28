@@ -1,6 +1,6 @@
-name: GitHub Membership
-description: Service interface for adding GitHub members to the organization
-title: Add member
+name: Add or update membership
+description: Service interface for adding or updating a membership in the Open Source Infrastructure (as Code) organization.
+title: Add or update membership
 labels:
   - enhancement
   - good first issue
@@ -9,7 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please fill out the following details to request membership to the Open Source Infrastructure (as Code) organization.
+        Please fill out the following details to add or update a membership in the Open Source Infrastructure (as Code) organization.
 
   - type: input
     id: email-address

@@ -114,8 +114,8 @@ resource "github_organization_security_manager" "this" {
   team_slug = github_team.parents["enabling-security"].slug
 }
 
-# Github Organization Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization
+# Github Organization Settings Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings
 
 resource "github_organization_settings" "this" {
 
@@ -145,6 +145,7 @@ resource "github_organization_settings" "this" {
   members_can_create_repositories                          = true
   members_can_fork_private_repositories                    = false
   name                                                     = "osinfra.io (Alpha)"
+  secret_scanning_enabled_for_new_repositories             = true
   twitter_username                                         = "osinfra"
   web_commit_signoff_required                              = false
 }
@@ -158,7 +159,7 @@ resource "github_repository" "this" {
 
   for_each = var.repositories
 
-  allow_auto_merge       = false
+  allow_auto_merge       = true
   allow_merge_commit     = false
   allow_rebase_merge     = false
   allow_squash_merge     = true
