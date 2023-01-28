@@ -20,12 +20,12 @@ This repository is an example of IaC for managing a GitHub organization using [T
 
 ### Service interfaces
 
-- [Add or update membership](https:)
-- [Add or update repository](https:)
+- [Add or update membership](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement%2Cgood+first+issue&template=add-update-membership.yml&title=Add+or+update+membership)
+- [Add or update repository](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement%2Cgood+first+issue&template=add-update-repository.yml&title=Add+or+update+repository)
 
 ### Response times
 
-- Responsible team: [Platform Team: GitHub](https://github.com/orgs/osinfra-io/teams/platform-github)
+- Responsible team: [Platform: GitHub](https://github.com/orgs/osinfra-io/teams/platform-github)
 - Response time for incidents: `60 minutes`
 - Response time for other incidents: `120 minutes`
 - Response time for support:  `60 minutes`
