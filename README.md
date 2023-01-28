@@ -25,7 +25,7 @@ This repository is an example of IaC for managing a GitHub organization using [T
 
 ### Response times
 
-- Responsible team: [Platform: GitHub](https://github.com/orgs/osinfra-io/teams/platform-github)
+- Responsible team: [Platform - GitHub](https://github.com/orgs/osinfra-io/teams/platform-github)
 - Response time for incidents: `60 minutes`
 - Response time for other incidents: `120 minutes`
 - Response time for support:  `60 minutes`
@@ -41,14 +41,14 @@ This repository is an example of IaC for managing a GitHub organization using [T
 
 Contact exclusively via:
 
-- Google Chat: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
+- Google Chat: [Platform - GitHub](https://chat.google.com/room/AAAAtn2s2j8?cls=7)
 - Phone number:
 
 #### To ask for support or provide feedback
 
 Contact via any of these:
 
-- Google Chat: [GitHub](https://chat.google.com/room/AAAAPvNvpeM?cls=7)
+- Google Chat: [Platform - GitHub](https://chat.google.com/room/AAAAtn2s2j8?cls=7)
 - Email address: [platform-github@osinfra.io](mailto:platform-github@osinfra.io)
 - Phone number:
 - Office hours (EST): `Weekdays 5:00 PM - 10:00 PM` `Weekends 8:00 AM - 5:00 PM`
