@@ -92,7 +92,7 @@ resource "github_branch_protection" "this" {
   }
 
   required_status_checks {
-    contexts = concat(["Bridgecrew / Code analysis"], each.value.required_status_checks_contexts)
+    contexts = each.value.required_status_checks_contexts
     strict   = true
   }
 }
