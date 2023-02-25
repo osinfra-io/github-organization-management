@@ -15,11 +15,11 @@ jobs:
     with:
       checkout_ref: ${{ github.ref }}
       github_environment: "Production Infrastructure: Global"
-      service_account: organization-github-actions@shared-terraform-tfa8-prod.iam.gserviceaccount.com
-      terraform_state_bucket: shared-terraform-tfa8-prod-organization
-      terraform_version: 1.3.7
+      service_account: plt-gh-organization-github@ptl-lz-terraform-tf62-prod.iam.gserviceaccount.com
+      terraform_state_bucket: plt-gh-organization-e194-prod
+      terraform_version: 1.3.9
       terraform_workspace: global-production
-      workload_identity_provider: projects/680727702081/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
+      workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
     secrets:
       gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
       terraform_plan_secret_args: -var="billing_email=${{ secrets.BILLING_EMAIL }}" -var="github_token=${{ secrets.ORGANIZATION_MANAGEMENT_WORKFLOW }}"

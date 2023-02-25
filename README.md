@@ -84,7 +84,7 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider_github) | 5.16.0 |
+| <a name="provider_github"></a> [github](#provider_github) | 5.18.0 |
 | <a name="provider_random"></a> [random](#provider_random) | 3.4.3 |
 | <a name="provider_time"></a> [time](#provider_time) | 0.9.1 |
 
