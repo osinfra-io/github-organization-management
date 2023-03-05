@@ -336,6 +336,7 @@ team_children = {
     maintainers     = ["brettcurtis"]
     members         = []
   }
+
   "platform-github-repository-admins" = {
     description     = "Platform Team: responsible for GitHub repository administration."
     parent_team_key = "platform-github"
@@ -344,10 +345,10 @@ team_children = {
     members         = []
 
     repositories = [
-      "github-kitchen-terraform-actions",
+      "github-kitchen-terraform-action",
       "github-misc-called-workflows",
       "github-organization-management",
-      "github-terraform-codespaces",
+      "github-terraform-codespace",
       "github-terraform-gcp-called-workflows"
     ]
   }
@@ -374,10 +375,10 @@ team_parents = {
     permission  = "push"
 
     repositories = [
-      "github-kitchen-terraform-actions",
+      "github-kitchen-terraform-action",
       "github-misc-called-workflows",
       "github-organization-management",
-      "github-terraform-codespaces",
+      "github-terraform-codespace",
       "github-terraform-gcp-called-workflows"
     ]
 
