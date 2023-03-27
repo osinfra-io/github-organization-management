@@ -59,7 +59,6 @@ See the documentation for setting up a local development environment [here](http
 
 Tools in use:
 
-- [checkov](https://github.com/bridgecrewio/checkov)
 - [pre-commit](https://github.com/pre-commit/pre-commit)
 - [pre-commit-terraform](https://github.com/antonbabenko/pre-commit-terraform)
 - [terraform-docs](https://github.com/terraform-docs/terraform-docs)
@@ -80,7 +79,7 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider_github) | 5.18.0 |
+| <a name="provider_github"></a> [github](#provider_github) | 5.18.3 |
 | <a name="provider_random"></a> [random](#provider_random) | 3.4.3 |
 | <a name="provider_time"></a> [time](#provider_time) | 0.9.1 |
 
