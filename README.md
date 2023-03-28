@@ -29,7 +29,7 @@ This repository is an example of IaC for managing a GitHub organization using [T
 
 ### Roadmap
 
-- Link to roadmap: [GitHub Project](https://github.com/orgs/osinfra-io/projects/5/views/1)
+- Link to roadmap: [GitHub Project](https://github.com/orgs/osinfra-io/projects/1/views/8)
 
 ### Communication channels
 
