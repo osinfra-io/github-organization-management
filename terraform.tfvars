@@ -16,18 +16,40 @@ repositories = {
 
   ".github" = {
     description = "A Special Repository."
-    topics      = ["github"]
+    topics = [
+      "github",
+      "github-organization-management-platform",
+      "osinfra",
+      "platform-team"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
+    ]
   }
 
   ".github-private" = {
     description = "A Special Repository."
-    topics      = ["github"]
-    visibility  = "private"
+    topics = [
+      "github",
+      "github-organization-management-platform",
+      "osinfra",
+      "platform-team"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
+    ]
+
+    visibility = "private"
   }
 
   "diagrams" = {
     description = "Diagrams using diagrams.net a free and open source cross-platform graph drawing software."
-    topics      = ["diagrams"]
+    topics = [
+      "diagrams",
+      "osinfra"
+    ]
   }
 
   "local-development-setup" = {
@@ -45,7 +67,10 @@ repositories = {
   "gitbook-docs" = {
     description              = "GitBook documentation for the osinfra.io organization."
     enable_branch_protection = false
-    topics                   = ["gitbook"]
+    topics = [
+      "gitbook",
+      "osinfra"
+    ]
   }
 
   "github-kitchen-terraform-action" = {
@@ -55,10 +80,16 @@ repositories = {
       "chef-inspec",
       "github",
       "github-actions",
+      "github-organization-management-platform",
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
+      "platform-team",
       "terraform"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
     ]
   }
 
@@ -67,13 +98,29 @@ repositories = {
 
     topics = [
       "github",
-      "github-actions"
+      "github-actions",
+      "github-organization-management-platform",
+      "osinfra",
+      "platform-team"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
     ]
   }
 
   "github-organization-discussions" = {
     description = "This repository is for osinfra.io GitHub organization discussions."
-    topics      = ["github"]
+    topics = [
+      "github",
+      "github-organization-management-platform",
+      "osinfra",
+      "platform-team"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
+    ]
   }
 
   "github-organization-management" = {
@@ -81,6 +128,7 @@ repositories = {
 
     topics = [
       "github",
+      "github-organization-management-platform",
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
@@ -98,9 +146,15 @@ repositories = {
     topics = [
       "github",
       "github-codespaces",
+      "github-organization-management-platform",
       "infrastructure-as-code",
       "osinfra",
+      "platform-team",
       "terraform"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
     ]
   }
 
@@ -110,9 +164,15 @@ repositories = {
     topics = [
       "github",
       "github-actions",
+      "github-organization-management-platform",
       "infrastructure-as-code",
       "osinfra",
+      "platform-team",
       "terraform"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
     ]
   }
 
@@ -127,18 +187,28 @@ repositories = {
       "platform-team",
       "terraform"
     ]
+
+    push_restrictions = [
+      "osinfra-io/platform-google-cloud-landing-zone"
+    ]
   }
 
   "google-cloud-kitchen-terraform" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Kitchen-Terraform testing."
 
     topics = [
+      "google-cloud-landing-zone-platform",
       "google-cloud-platform",
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
+      "platform-team",
       "terraform",
       "testing"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
 
@@ -150,7 +220,12 @@ repositories = {
       "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
+      "platform-team",
       "terraform"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
 
@@ -187,6 +262,10 @@ repositories = {
       "platform-team",
       "terraform"
     ]
+
+    push_restrictions = [
+      "osinfra-io/platform-google-cloud-landing-zone"
+    ]
   }
 
   "google-cloud-workload-identity" = {
@@ -200,6 +279,10 @@ repositories = {
       "platform-team",
       "terraform"
     ]
+
+    push_restrictions = [
+      "osinfra-io/platform-google-cloud-landing-zone"
+    ]
   }
 
   "terraform-google-cloud-dns" = {
@@ -210,7 +293,8 @@ repositories = {
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
-      "terraform"
+      "terraform",
+      "terraform-child-module"
     ]
   }
 
@@ -222,7 +306,8 @@ repositories = {
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
-      "terraform"
+      "terraform",
+      "terraform-child-module"
     ]
   }
 
@@ -234,7 +319,8 @@ repositories = {
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
-      "terraform"
+      "terraform",
+      "terraform-child-module"
     ]
   }
 
@@ -247,7 +333,8 @@ repositories = {
       "kitchen-terraform",
       "kubernetes",
       "osinfra",
-      "terraform"
+      "terraform",
+      "terraform-child-module"
     ]
   }
 
@@ -259,7 +346,8 @@ repositories = {
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
-      "terraform"
+      "terraform",
+      "terraform-child-module"
     ]
   }
 
@@ -271,7 +359,8 @@ repositories = {
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
-      "terraform"
+      "terraform",
+      "terraform-child-module"
     ]
   }
 
@@ -283,7 +372,8 @@ repositories = {
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
-      "terraform"
+      "terraform",
+      "terraform-child-module"
     ]
   }
 
@@ -295,7 +385,8 @@ repositories = {
       "infrastructure-as-code",
       "kitchen-terraform",
       "osinfra",
-      "terraform"
+      "terraform",
+      "terraform-child-module"
     ]
   }
 }

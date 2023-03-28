@@ -7,17 +7,17 @@ on:
       - main
     paths-ignore:
       - "**.md"
-      
+
 # For reusable workflows, the permissions setting for id-token should be set to write at the
 # caller workflow level or in the specific job that calls the reusable workflow.
 
 permissions:
   id-token: write
-  
+
 jobs:
   global_infra:
     name: "Global"
-    uses: osinfra-io/github-terraform-called-workflows/.github/workflows/plan-and-apply.yml@v0.1.0
+    uses: osinfra-io/github-terraform-called-workflows/.github/workflows/plan-and-apply.yml@v0.1.1
     with:
       checkout_ref: ${{ github.ref }}
       github_environment: "Production Infrastructure: Global"
