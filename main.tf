@@ -44,7 +44,8 @@ resource "github_actions_organization_permissions" "this" {
       "dependabot/*",
       "docker/*",
       "google-github-actions/*",
-      "hashicorp/*"
+      "hashicorp/*",
+      "infracost/*"
     ]
 
     verified_allowed = false
