@@ -124,7 +124,8 @@ repositories = {
   }
 
   "github-organization-management" = {
-    description = "Infrastructure as Code (IaC) example for a GitHub organization."
+    description     = "Infrastructure as Code (IaC) example for a GitHub organization."
+    has_discussions = true
 
     topics = [
       "github",

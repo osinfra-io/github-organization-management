@@ -169,6 +169,7 @@ resource "github_repository" "this" {
   delete_branch_on_merge = true
   description            = each.value.description
   has_downloads          = false
+  has_discussions        = each.value.has_discussions
   has_issues             = true
   has_projects           = true
   has_wiki               = false
