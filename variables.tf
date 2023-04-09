@@ -37,6 +37,7 @@ variable "repositories" {
   type = map(object({
     description                     = string
     enable_branch_protection        = optional(bool, true)
+    has_discussions                 = optional(bool, false)
     push_restrictions               = optional(list(string), [])
     required_status_checks_contexts = optional(list(string), [])
     template                        = optional(string)

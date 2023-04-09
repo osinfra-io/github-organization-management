@@ -16,6 +16,7 @@ repositories = {
 
   ".github" = {
     description = "A Special Repository."
+
     topics = [
       "github",
       "github-organization-management-platform",
@@ -30,6 +31,7 @@ repositories = {
 
   ".github-private" = {
     description = "A Special Repository."
+
     topics = [
       "github",
       "github-organization-management-platform",
@@ -46,6 +48,7 @@ repositories = {
 
   "diagrams" = {
     description = "Diagrams using diagrams.net a free and open source cross-platform graph drawing software."
+
     topics = [
       "diagrams",
       "osinfra"
@@ -67,6 +70,7 @@ repositories = {
   "gitbook-docs" = {
     description              = "GitBook documentation for the osinfra.io organization."
     enable_branch_protection = false
+
     topics = [
       "gitbook",
       "osinfra"
@@ -110,7 +114,9 @@ repositories = {
   }
 
   "github-organization-discussions" = {
-    description = "This repository is for osinfra.io GitHub organization discussions."
+    description     = "This repository is for osinfra.io GitHub organization discussions."
+    has_discussions = true
+
     topics = [
       "github",
       "github-organization-management-platform",
