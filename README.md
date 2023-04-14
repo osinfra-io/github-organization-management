@@ -37,14 +37,14 @@ This repository is an example of IaC for managing a GitHub organization using [T
 
 Contact exclusively via:
 
-- Google Chat: [Platform - GitHub](https://chat.google.com/room/AAAAtn2s2j8?cls=7)
+- Discord: [Platform - GitHub](https://discord.gg/GuGvwN7U4X)
 - Phone number:
 
 #### To ask for support or provide feedback
 
 Contact via any of these:
 
-- Google Chat: [Platform - GitHub](https://chat.google.com/room/AAAAtn2s2j8?cls=7)
+- Discord: [Platform - GitHub](https://discord.gg/GuGvwN7U4X)
 - Email address: [platform-github@osinfra.io](mailto:platform-github@osinfra.io)
 - Phone number:
 - Office hours (EST): `Weekdays 5:00 PM - 10:00 PM` `Weekends 8:00 AM - 5:00 PM`
