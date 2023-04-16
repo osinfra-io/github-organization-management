@@ -23,7 +23,7 @@ jobs:
       environment: production
       github_environment: "Production Infrastructure: Global"
       service_account: plt-gh-organization-github@ptl-lz-terraform-tf62-prod.iam.gserviceaccount.com
-      terraform_plan_args: -var-file=production.tfvars
+      terraform_plan_args: -var-file=tfvars/production.tfvars
       terraform_state_bucket: plt-gh-organization-e194-prod
       terraform_version: ${{ vars.TERRAFORM_VERSION }}
       terraform_workspace: global-production
