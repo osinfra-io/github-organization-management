@@ -20,12 +20,16 @@ jobs:
     uses: osinfra-io/github-terraform-called-workflows/.github/workflows/plan-and-apply.yml@v0.1.4
     with:
       checkout_ref: ${{ github.ref }}
+      environment: production
       github_environment: "Production Infrastructure: Global"
       service_account: plt-gh-organization-github@ptl-lz-terraform-tf62-prod.iam.gserviceaccount.com
+      terraform_plan_args: -var-file=production.tfvars
       terraform_state_bucket: plt-gh-organization-e194-prod
       terraform_version: ${{ vars.TERRAFORM_VERSION }}
       terraform_workspace: global-production
+      working_directory: global/infra
       workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
     secrets:
       gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
-      terraform_plan_secret_args: -var="billing_email=${{ secrets.BILLING_EMAIL }}" -var="github_token=${{ secrets.ORGANIZATION_MANAGEMENT_WORKFLOW }}"
+      infracost_api_key: ${{ secrets.INFRACOST_API_KEY }}
+      terraform_plan_secret_args: -var=billing_email=${{ secrets.BILLING_EMAIL }} -var=github_token=${{ secrets.ORGANIZATION_MANAGEMENT_WORKFLOW }}
