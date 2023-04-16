@@ -74,24 +74,5 @@ Links to documentation and other resources required to develop and iterate in th
 - [Teams](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/managing-teams-in-your-organization)
 
 ## Terraform documentation
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-### Providers
 
-No providers.
-
-### Modules
-
-No modules.
-
-### Resources
-
-No resources.
-
-### Inputs
-
-No inputs.
-
-### Outputs
-
-No outputs.
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+[Global Infrastructure](global/infra/README.md)
