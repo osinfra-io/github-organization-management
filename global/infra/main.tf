@@ -126,29 +126,32 @@ resource "github_organization_settings" "this" {
   # To get the organization id, you can run the following curl command with a token that has the read:org scope against your existing organization.
   # curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io
 
-  billing_email                                            = var.billing_email
-  blog                                                     = "https://www.osinfra.io"
-  default_repository_permission                            = "read"
-  dependabot_alerts_enabled_for_new_repositories           = true
-  dependency_graph_enabled_for_new_repositories            = true
-  dependabot_security_updates_enabled_for_new_repositories = true
-  description                                              = "Open Source Infrastructure (as Code)"
-  email                                                    = "help@osinfra.io"
-  has_organization_projects                                = true
-  has_repository_projects                                  = false
-  location                                                 = "United States of America"
-  members_can_create_internal_repositories                 = false
-  members_can_create_pages                                 = true
-  members_can_create_private_pages                         = true
-  members_can_create_private_repositories                  = true
-  members_can_create_public_pages                          = true
-  members_can_create_public_repositories                   = true
-  members_can_create_repositories                          = true
-  members_can_fork_private_repositories                    = false
-  name                                                     = "osinfra.io (Alpha)"
-  secret_scanning_enabled_for_new_repositories             = true
-  twitter_username                                         = "osinfra"
-  web_commit_signoff_required                              = false
+  advanced_security_enabled_for_new_repositories               = true
+  billing_email                                                = var.billing_email
+  blog                                                         = "https://www.osinfra.io"
+  company                                                      = "Open Source Infrastructure (as Code)"
+  default_repository_permission                                = "read"
+  dependabot_alerts_enabled_for_new_repositories               = true
+  dependency_graph_enabled_for_new_repositories                = true
+  dependabot_security_updates_enabled_for_new_repositories     = true
+  description                                                  = "Open Source Infrastructure (as Code)"
+  email                                                        = "help@osinfra.io"
+  has_organization_projects                                    = true
+  has_repository_projects                                      = true
+  location                                                     = "United States of America"
+  members_can_create_internal_repositories                     = false
+  members_can_create_pages                                     = true
+  members_can_create_private_pages                             = true
+  members_can_create_private_repositories                      = true
+  members_can_create_public_pages                              = true
+  members_can_create_public_repositories                       = true
+  members_can_create_repositories                              = true
+  members_can_fork_private_repositories                        = false
+  name                                                         = "osinfra.io (Alpha)"
+  secret_scanning_enabled_for_new_repositories                 = true
+  secret_scanning_push_protection_enabled_for_new_repositories = true
+  twitter_username                                             = "osinfra"
+  web_commit_signoff_required                                  = false
 }
 
 # Github Repository Resource
@@ -160,35 +163,21 @@ resource "github_repository" "this" {
 
   for_each = var.repositories
 
-  allow_auto_merge       = true
-  allow_merge_commit     = false
-  allow_rebase_merge     = false
-  allow_squash_merge     = true
-  allow_update_branch    = true
-  archive_on_destroy     = true
-  delete_branch_on_merge = true
-  description            = each.value.description
-  has_downloads          = false
-  has_discussions        = each.value.has_discussions
-  has_issues             = true
-  has_projects           = true
-  has_wiki               = false
-  homepage_url           = "https://www.osinfra.io"
-  license_template       = "gpl-2.0"
-  name                   = each.key
-
-  security_and_analysis {
-    advanced_security {
-      status = each.value.visibility == "private" ? "disabled" : "enabled"
-    }
-    secret_scanning {
-      status = "enabled"
-    }
-    secret_scanning_push_protection {
-      status = "enabled"
-    }
-  }
-
+  allow_auto_merge            = true
+  allow_merge_commit          = false
+  allow_rebase_merge          = false
+  allow_squash_merge          = true
+  allow_update_branch         = true
+  archive_on_destroy          = true
+  delete_branch_on_merge      = true
+  description                 = each.value.description
+  has_downloads               = false
+  has_discussions             = each.value.has_discussions
+  has_issues                  = true
+  has_wiki                    = false
+  homepage_url                = "https://www.osinfra.io"
+  license_template            = "gpl-2.0"
+  name                        = each.key
   squash_merge_commit_message = "BLANK"
   squash_merge_commit_title   = "PR_TITLE"
   topics                      = each.value.topics
