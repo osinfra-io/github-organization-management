@@ -304,19 +304,6 @@ repositories = {
     ]
   }
 
-  "terraform-google-cloud-nat" = {
-    description = "Terraform example module for Google Cloud Platform Cloud NAT."
-
-    topics = [
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "kitchen-terraform",
-      "osinfra",
-      "terraform",
-      "terraform-child-module"
-    ]
-  }
-
   "terraform-google-cloud-sql" = {
     description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
 
@@ -359,19 +346,6 @@ repositories = {
 
   "terraform-google-storage-bucket" = {
     description = "Terraform example module for Google Cloud Platform Storage bucket."
-
-    topics = [
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "kitchen-terraform",
-      "osinfra",
-      "terraform",
-      "terraform-child-module"
-    ]
-  }
-
-  "terraform-google-subnet" = {
-    description = "Terraform example module for Google Cloud Platform subnet."
 
     topics = [
       "google-cloud-platform",
