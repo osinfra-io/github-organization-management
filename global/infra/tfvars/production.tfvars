@@ -303,7 +303,7 @@ repositories = {
       "terraform-child-module"
     ]
   }
-  
+
   "terraform-google-cloud-nat" = {
     description = "Terraform example module for Google Cloud Platform Cloud NAT."
 
@@ -316,7 +316,7 @@ repositories = {
       "terraform-child-module"
     ]
   }
-  
+
   "terraform-google-cloud-sql" = {
     description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
 
@@ -356,7 +356,7 @@ repositories = {
       "terraform-child-module"
     ]
   }
-  
+
   "terraform-google-project" = {
     description = "Terraform example module for Google Cloud Platform project."
 
@@ -407,9 +407,10 @@ team_children = {
 
     repositories = [
       "google-cloud-audit-logging",
+      "google-cloud-hierarchy",
+      "google-cloud-services",
       "google-cloud-terraform-backend",
-      "google-cloud-workload-identity",
-      "google-cloud-hierarchy"
+      "google-cloud-workload-identity"
     ]
   }
 
@@ -490,9 +491,10 @@ team_parents = {
 
     repositories = [
       "google-cloud-audit-logging",
+      "google-cloud-hierarchy",
+      "google-cloud-services",
       "google-cloud-terraform-backend",
-      "google-cloud-workload-identity",
-      "google-cloud-hierarchy"
+      "google-cloud-workload-identity"
     ]
 
     review_request_delegation = true
