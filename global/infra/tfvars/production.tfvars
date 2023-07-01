@@ -246,8 +246,8 @@ repositories = {
     ]
   }
 
-  "google-cloud-services" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform services."
+  "google-cloud-shared-resources" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform shared resources."
 
     topics = [
       "google-cloud-platform",
