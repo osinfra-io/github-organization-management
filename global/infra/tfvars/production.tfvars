@@ -408,7 +408,8 @@ team_children = {
     repositories = [
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
-      "google-cloud-services",
+      "google-cloud-kitchen-terraform",
+      "google-cloud-shared-resources",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity"
     ]
@@ -492,7 +493,8 @@ team_parents = {
     repositories = [
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
-      "google-cloud-services",
+      "google-cloud-kitchen-terraform",
+      "google-cloud-shared-resources",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity"
     ]
