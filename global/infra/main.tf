@@ -159,8 +159,6 @@ resource "github_organization_settings" "this" {
 
 resource "github_repository" "this" {
 
-  # checkov:skip=CKV_GIT_1: We want our repos to be public so that we can share them with the world.
-
   for_each = var.repositories
 
   allow_auto_merge            = true
@@ -177,6 +175,7 @@ resource "github_repository" "this" {
   has_projects                = true
   has_wiki                    = false
   homepage_url                = "https://www.osinfra.io"
+  is_template                 = each.value.is_template
   license_template            = "gpl-2.0"
   name                        = each.key
   squash_merge_commit_message = "BLANK"

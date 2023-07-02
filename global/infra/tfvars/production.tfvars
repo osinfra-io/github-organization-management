@@ -146,6 +146,24 @@ repositories = {
     ]
   }
 
+  "github-terraform-child-module-template" = {
+    description = "Terraform child module template for GitHub repositories."
+    is_template = true
+
+    topics = [
+      "github",
+      "github-organization-management-platform",
+      "infrastructure-as-code",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
+    ]
+  }
+
   "github-terraform-codespace" = {
     description = "GitHub Codespace example for Terraform Infrastructure as Code (IaC) Development."
 
@@ -171,6 +189,25 @@ repositories = {
       "github",
       "github-actions",
       "github-organization-management-platform",
+      "infrastructure-as-code",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-github"
+    ]
+  }
+
+  "github-terraform-gcp-root-module-template" = {
+    description = "Terraform Google Cloud Platform root module template for GitHub repositories."
+    is_template = true
+
+    topics = [
+      "github",
+      "github-organization-management-platform",
+      "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
@@ -450,8 +487,10 @@ team_children = {
       "github-misc-called-workflows",
       "github-organization-management",
       "github-organization-discussions",
+      "github-terraform-child-module-template",
       "github-terraform-codespace",
-      "github-terraform-gcp-called-workflows"
+      "github-terraform-gcp-called-workflows",
+      "github-terraform-gcp-root-module-template"
     ]
   }
 
@@ -482,9 +521,11 @@ team_parents = {
       "github-kitchen-terraform-action",
       "github-misc-called-workflows",
       "github-organization-discussions",
+      "github-terraform-child-module-template",
       "github-organization-management",
       "github-terraform-codespace",
-      "github-terraform-gcp-called-workflows"
+      "github-terraform-gcp-called-workflows",
+      "github-terraform-gcp-root-module-template"
     ]
 
     review_request_delegation = true
