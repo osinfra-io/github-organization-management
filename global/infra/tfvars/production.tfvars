@@ -444,9 +444,12 @@ team_children = {
     members         = []
 
     repositories = [
+      ".github",
+      ".github-private",
       "github-kitchen-terraform-action",
       "github-misc-called-workflows",
       "github-organization-management",
+      "github-organization-discussions",
       "github-terraform-codespace",
       "github-terraform-gcp-called-workflows"
     ]
@@ -474,8 +477,11 @@ team_parents = {
     permission  = "push"
 
     repositories = [
+      ".github",
+      ".github-private",
       "github-kitchen-terraform-action",
       "github-misc-called-workflows",
+      "github-organization-discussions",
       "github-organization-management",
       "github-terraform-codespace",
       "github-terraform-gcp-called-workflows"
