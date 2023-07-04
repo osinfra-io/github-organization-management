@@ -283,7 +283,7 @@ repositories = {
     ]
   }
 
-  "google-cloud-shared-resources" = {
+  "google-cloud-networking" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform shared resources."
 
     topics = [
@@ -446,7 +446,7 @@ team_children = {
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
       "google-cloud-kitchen-terraform",
-      "google-cloud-shared-resources",
+      "google-cloud-networking",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity"
     ]
@@ -541,7 +541,7 @@ team_parents = {
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
       "google-cloud-kitchen-terraform",
-      "google-cloud-shared-resources",
+      "google-cloud-networking",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity"
     ]
