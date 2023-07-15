@@ -1,4 +1,4 @@
-# <img align="left" width="45" height="45" src="https://user-images.githubusercontent.com/1610100/201473670-e0e6bdeb-742f-4be1-a47a-3506309620a3.png"> GitHub Organization: osinfra.io
+# <img align="left" width="45" height="45" src="https://github.com/osinfra-io/github-organization-management/assets/1610100/2d305949-da04-4fa7-9b03-b880b400929a"> GitHub Organization: osinfra.io
 
 **[GitHub Actions](https://github.com/osinfra-io/github-organization-management/actions):**
 
