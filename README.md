@@ -28,7 +28,6 @@ See the documentation for setting up a local development environment [here](http
 
 ### 🛠️ Tools
 
-- [infracost](https://github.com/infracost/infracost)
 - [pre-commit](https://github.com/pre-commit/pre-commit)
 - [pre-commit-terraform](https://github.com/antonbabenko/pre-commit-terraform)
 - [terraform-docs](https://github.com/terraform-docs/terraform-docs)
@@ -37,11 +36,11 @@ See the documentation for setting up a local development environment [here](http
 
 Links to documentation and other resources required to develop and iterate in this repository successfully.
 
-- [storage buckets](https://cloud.google.com/storage/docs/key-terms#buckets)
-- [cloud identity groups](https://cloud.google.com/identity/docs/concepts/groups)
-- [service accounts](https://cloud.google.com/iam/docs/service-accounts)
-- [iam roles](https://cloud.google.com/iam/docs/understanding-roles)
-- [terraform backend type gcs](https://developer.hashicorp.com/terraform/language/settings/backends/gcs)
+- [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branchess)
+- [encrypted secrets for an organization](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-an-organization)
+- [organization membership](https://docs.github.com/en/organizations/managing-membership-in-your-organization)
+- [repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories)
+- [teams](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/managing-teams-in-your-organization)
 
 ### 📓 Terraform Documentation
 
