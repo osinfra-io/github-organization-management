@@ -13,9 +13,6 @@ This repository is an example of IaC for managing a GitHub organization using [T
 - Documentation: [docs.osinfra.io](https://docs.osinfra.io/github/organization-management)
 - Service Interfaces: [github.com](https://github.com/osinfra-io/github-organization-management/issues/new/choose)
 
-- [Add or update membership](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement%2Cgood+first+issue&template=add-update-membership.yml&title=Add+or+update+membership)
-- [Add or update repository](https://github.com/osinfra-io/github-organization-management/issues/new?assignees=&labels=enhancement%2Cgood+first+issue&template=add-update-repository.yml&title=Add+or+update+repository)
-
 ## <img align="left" width="35" height="35" src="https://github.com/osinfra-io/github-organization-management/assets/1610100/39d6ae3b-ccc2-42db-92f1-276a5bc54e65"> Development
 
 Our focus is on the core fundamental practice of cloud engineering, Infrastructure as Code.
