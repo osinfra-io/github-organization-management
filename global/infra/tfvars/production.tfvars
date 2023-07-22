@@ -328,6 +328,20 @@ repositories = {
     ]
   }
 
+  "terraform-datadog-google-integration" = {
+    description = "Terraform example module for Datadog Google Cloud Platform integration."
+
+    topics = [
+      "datadog",
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "kitchen-terraform",
+      "osinfra",
+      "terraform",
+      "terraform-child-module"
+    ]
+  }
+
   "terraform-google-cloud-dns" = {
     description = "Terraform example module for Google Cloud Platform Cloud DNS."
 
