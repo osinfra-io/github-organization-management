@@ -43,6 +43,7 @@ resource "github_actions_organization_permissions" "this" {
     patterns_allowed = [
       "dependabot/*",
       "docker/*",
+      "github/*",
       "githubsecuritylab/*",
       "google-github-actions/*",
       "hashicorp/*",
@@ -60,9 +61,6 @@ resource "github_actions_organization_permissions" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret
 
 resource "github_actions_organization_secret" "this" {
-
-  # checkov:skip=CKV_GIT_4: Look into this in #11
-
   for_each = var.organization_secrets
 
   plaintext_value = random_password.this[each.key].result
@@ -74,9 +72,6 @@ resource "github_actions_organization_secret" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection
 
 resource "github_branch_protection" "this" {
-
-  # checkov:skip=CKV_GIT_5: It's reasonable for a single code review to be required for a branch protection rule.
-
   for_each = local.branch_protection
 
   enforce_admins                  = false
@@ -158,7 +153,6 @@ resource "github_organization_settings" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 
 resource "github_repository" "this" {
-
   for_each = var.repositories
 
   allow_auto_merge            = true
