@@ -530,7 +530,7 @@ team_children = {
   }
 
   "stream-customer-acquisition-repository-admins" = {
-    description     = "Stream Team: responsible for Customer Acquisition repository administration."
+    description     = "Stream Aligned Team: responsible for Customer Acquisition repository administration."
     parent_team_key = "stream-customer-acquisition"
     permission      = "admin"
     maintainers     = ["brettcurtis"]
@@ -542,21 +542,21 @@ team_children = {
   }
 
   "stream-customer-acquisition-approvers-nonprod" = {
-    description     = "Stream Team: responsible for Customer Acquisition workflow approvals in the Non-Production environments."
+    description     = "Stream Aligned Team: responsible for Customer Acquisition workflow approvals in the Non-Production environments."
     parent_team_key = "stream-customer-acquisition"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
   "stream-customer-acquisition-approvers-prod" = {
-    description     = "Stream Team: responsible for Customer Acquisition workflow approvals in the Production environment."
+    description     = "Stream Aligned Team: responsible for Customer Acquisition workflow approvals in the Production environment."
     parent_team_key = "stream-customer-acquisition"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
   "stream-customer-acquisition-approvers-sb" = {
-    description     = "Stream Team: responsible for Customer Acquisition workflow approvals in the Sandbox environment."
+    description     = "Stream Aligned Team: responsible for Customer Acquisition workflow approvals in the Sandbox environment."
     parent_team_key = "stream-customer-acquisition"
     maintainers     = ["brettcurtis"]
     members         = []
