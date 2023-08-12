@@ -135,10 +135,10 @@ resource "github_organization_settings" "this" {
   has_repository_projects                                      = true
   location                                                     = "United States of America"
   members_can_create_internal_repositories                     = false
-  members_can_create_pages                                     = true
-  members_can_create_private_pages                             = true
+  members_can_create_pages                                     = false
+  members_can_create_private_pages                             = false
   members_can_create_private_repositories                      = true
-  members_can_create_public_pages                              = true
+  members_can_create_public_pages                              = false
   members_can_create_public_repositories                       = true
   members_can_create_repositories                              = true
   members_can_fork_private_repositories                        = false
