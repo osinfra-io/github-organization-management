@@ -9,7 +9,7 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 5.29.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | 5.33.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
 | <a name="provider_time"></a> [time](#provider\_time) | 0.9.1 |
 

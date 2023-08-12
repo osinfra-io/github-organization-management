@@ -46,6 +46,20 @@ repositories = {
     visibility = "private"
   }
 
+  "ca-k8s-infra" = {
+    description = "Kubernetes Infrastructure as Code (IaC) example for the Customer Acquisition stream-aligned team."
+
+    topics = [
+      "kubernetes",
+      "customer-acquisition",
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
+      "stream-aligned-team",
+      "terraform"
+    ]
+  }
+
   "diagrams" = {
     description = "Diagrams using diagrams.net a free and open source cross-platform graph drawing software."
 
@@ -381,8 +395,8 @@ repositories = {
     ]
   }
 
-  "terraform-google-kubernetes-engine-autopilot" = {
-    description = "Terraform example module for Google Cloud Platform Kubernetes Engine Autopilot cluster."
+  "terraform-google-kubernetes-engine" = {
+    description = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
 
     topics = [
       "google-cloud-platform",
@@ -487,6 +501,13 @@ team_children = {
     members         = []
   }
 
+  "platform-github-approvers" = {
+    description     = "Platform Team: responsible for GitHub workflow approvals."
+    parent_team_key = "platform-github"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
   "platform-github-repository-admins" = {
     description     = "Platform Team: responsible for GitHub repository administration."
     parent_team_key = "platform-github"
@@ -508,9 +529,35 @@ team_children = {
     ]
   }
 
-  "platform-github-approvers" = {
-    description     = "Platform Team: responsible for GitHub workflow approvals."
-    parent_team_key = "platform-github"
+  "stream-customer-acquisition-repository-admins" = {
+    description     = "Stream Team: responsible for Customer Acquisition repository administration."
+    parent_team_key = "stream-customer-acquisition"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "ca-k8s-infra"
+    ]
+  }
+
+  "stream-customer-acquisition-approvers-nonprod" = {
+    description     = "Stream Team: responsible for Customer Acquisition workflow approvals in the Non-Production environments."
+    parent_team_key = "stream-customer-acquisition"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "stream-customer-acquisition-approvers-prod" = {
+    description     = "Stream Team: responsible for Customer Acquisition workflow approvals in the Production environment."
+    parent_team_key = "stream-customer-acquisition"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "stream-customer-acquisition-approvers-sb" = {
+    description     = "Stream Team: responsible for Customer Acquisition workflow approvals in the Sandbox environment."
+    parent_team_key = "stream-customer-acquisition"
     maintainers     = ["brettcurtis"]
     members         = []
   }
@@ -561,6 +608,17 @@ team_parents = {
     ]
 
     review_request_delegation = true
+  }
+
+  "stream-customer-acquisition" = {
+    description = "Stream Aligned Team: responsible for the Customer Acquisition stream and code reviews."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "ca-k8s-infra"
+    ]
   }
 
   "enabling-security" = {
