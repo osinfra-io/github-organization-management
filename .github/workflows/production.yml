@@ -32,4 +32,7 @@ jobs:
     secrets:
       gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
       infracost_api_key: ${{ secrets.INFRACOST_API_KEY }}
-      terraform_plan_secret_args: -var=billing_email=${{ secrets.BILLING_EMAIL }} -var=github_token=${{ secrets.ORGANIZATION_MANAGEMENT_WORKFLOW }}
+      terraform_plan_secret_args: >-
+        -var=billing_email=${{ secrets.BILLING_EMAIL }}
+        -var=datadog_webhook_api_key=${{ secrets.DATADOG_WEBHOOK_API_KEY }}
+        -var=github_token=${{ secrets.ORGANIZATION_MANAGEMENT_WORKFLOW }}
