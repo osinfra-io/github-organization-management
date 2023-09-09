@@ -7,7 +7,7 @@ locals {
     for user in var.admins : user => "admin"
   }
 
-  branch_protection = {
+  branch_protections = {
     for repository_key, repository in var.repositories : repository_key => repository if repository.enable_branch_protection
   }
 
@@ -22,6 +22,10 @@ locals {
         }
       ]
   ]) : "${repository.team_child}-${repository.repository}" => repository }
+
+  datadog_webhooks = {
+    for repository_key, repository in var.repositories : repository_key => repository if repository.enable_datadog_webhook
+  }
 
   members = {
     for user in var.members : user => "member"
@@ -39,7 +43,7 @@ locals {
       ]
   ]) : "${repository.team_parent}-${repository.repository}" => repository }
 
-  review_request_delegation = {
+  review_request_delegations = {
     for team_parent_key, team_parent in var.team_parents : team_parent_key => team_parent if team_parent.review_request_delegation
   }
 

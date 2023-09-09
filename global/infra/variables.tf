@@ -12,6 +12,12 @@ variable "billing_email" {
   sensitive   = true
 }
 
+variable "datadog_webhook_api_key" {
+  description = "The Datadog API key used for creating webhooks"
+  type        = string
+  sensitive   = true
+}
+
 variable "github_token" {
   description = "The GitHub token used for managing the organization"
   type        = string
@@ -37,6 +43,7 @@ variable "repositories" {
   type = map(object({
     description                     = string
     enable_branch_protection        = optional(bool, true)
+    enable_datadog_webhook          = optional(bool, true)
     has_discussions                 = optional(bool, false)
     is_template                     = optional(bool, false)
     push_restrictions               = optional(list(string), [])

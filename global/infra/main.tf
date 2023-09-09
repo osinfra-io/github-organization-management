@@ -72,7 +72,7 @@ resource "github_actions_organization_secret" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection
 
 resource "github_branch_protection" "this" {
-  for_each = local.branch_protection
+  for_each = local.branch_protections
 
   enforce_admins                  = false
   pattern                         = "main"
@@ -188,6 +188,36 @@ resource "github_repository" "this" {
   }
 }
 
+# Github Repository Webhook Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_webhook
+
+resource "github_repository_webhook" "datadog" {
+  for_each = local.datadog_webhooks
+
+  active = true
+
+  configuration {
+    content_type = "json"
+    insecure_ssl = false
+    url          = "https://app.datadoghq.com/intake/webhook/github?api_key=${var.datadog_webhook_api_key}"
+  }
+
+  events = [
+    "commit_comment",              # This event occurs when there is activity relating to commit comments.
+    "create",                      # This event occurs when a Git branch or tag is created.
+    "issue_comment",               # This event occurs when there is activity relating to a comment on an issue or pull request.
+    "issues",                      # This event occurs when there is activity relating to an issue.
+    "pull_request",                # This event occurs when there is activity on a pull request.
+    "pull_request_review_comment", # This event occurs when there is activity relating to a pull request review comment.
+    "push",                        # This event occurs when there is a push to a repository branch.
+    "repository",                  # This event occurs when there is activity relating to repositories.
+    "security_and_analysis",       # This event occurs when code security and analysis features are enabled or disabled for a repository.
+    "team_add",                    # This event occurs when a team is added to a repository.
+  ]
+
+  repository = each.key
+}
+
 # Github Team Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team
 
@@ -288,7 +318,7 @@ resource "github_team_repository" "parents" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_settings
 
 resource "github_team_settings" "this" {
-  for_each = local.review_request_delegation
+  for_each = local.review_request_delegations
 
   review_request_delegation {
     algorithm    = "LOAD_BALANCE"

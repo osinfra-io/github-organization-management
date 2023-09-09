@@ -15,7 +15,8 @@ repositories = {
   # Keep the following repositories in alphabetical order
 
   ".github" = {
-    description = "A Special Repository."
+    description            = "A Special Repository."
+    enable_datadog_webhook = false
 
     topics = [
       "github",
@@ -30,7 +31,8 @@ repositories = {
   }
 
   ".github-private" = {
-    description = "A Special Repository."
+    description            = "A Special Repository."
+    enable_datadog_webhook = false
 
     topics = [
       "github",
@@ -61,7 +63,8 @@ repositories = {
   }
 
   "diagrams" = {
-    description = "Diagrams using diagrams.net a free and open source cross-platform graph drawing software."
+    description            = "Diagrams using diagrams.net a free and open source cross-platform graph drawing software."
+    enable_datadog_webhook = false
 
     topics = [
       "diagrams",
@@ -69,21 +72,10 @@ repositories = {
     ]
   }
 
-  "local-development-setup" = {
-    description = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
-
-    topics = [
-      "docker",
-      "infrastructure-as-code",
-      "local-development",
-      "osinfra",
-      "terraform"
-    ]
-  }
-
   "gitbook-docs" = {
     description              = "GitBook documentation for the osinfra.io organization."
     enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "gitbook",
@@ -128,8 +120,9 @@ repositories = {
   }
 
   "github-organization-discussions" = {
-    description     = "This repository is for osinfra.io GitHub organization discussions."
-    has_discussions = true
+    description            = "This repository is for osinfra.io GitHub organization discussions."
+    enable_datadog_webhook = false
+    has_discussions        = true
 
     topics = [
       "github",
@@ -161,8 +154,9 @@ repositories = {
   }
 
   "github-terraform-child-module-template" = {
-    description = "Terraform child module template for GitHub repositories."
-    is_template = true
+    description            = "Terraform child module template for GitHub repositories."
+    enable_datadog_webhook = false
+    is_template            = true
 
     topics = [
       "github",
@@ -179,7 +173,8 @@ repositories = {
   }
 
   "github-terraform-codespace" = {
-    description = "GitHub Codespace example for Terraform Infrastructure as Code (IaC) Development."
+    description            = "GitHub Codespace example for Terraform Infrastructure as Code (IaC) Development."
+    enable_datadog_webhook = false
 
     topics = [
       "github",
@@ -215,8 +210,9 @@ repositories = {
   }
 
   "github-terraform-gcp-root-module-template" = {
-    description = "Terraform Google Cloud Platform root module template for GitHub repositories."
-    is_template = true
+    description            = "Terraform Google Cloud Platform root module template for GitHub repositories."
+    enable_datadog_webhook = false
+    is_template            = true
 
     topics = [
       "github",
@@ -286,17 +282,6 @@ repositories = {
     ]
   }
 
-  "google-cloud-observability" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform observability."
-
-    topics = [
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "osinfra",
-      "terraform"
-    ]
-  }
-
   "google-cloud-networking" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform networking resources."
 
@@ -339,6 +324,19 @@ repositories = {
 
     push_restrictions = [
       "osinfra-io/platform-google-cloud-landing-zone"
+    ]
+  }
+
+  "local-development-setup" = {
+    description            = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
+    enable_datadog_webhook = false
+
+    topics = [
+      "docker",
+      "infrastructure-as-code",
+      "local-development",
+      "osinfra",
+      "terraform"
     ]
   }
 
