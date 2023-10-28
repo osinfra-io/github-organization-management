@@ -507,7 +507,8 @@ team_children = {
       "google-cloud-kitchen-terraform",
       "google-cloud-networking",
       "google-cloud-terraform-backend",
-      "google-cloud-workload-identity"
+      "google-cloud-workload-identity",
+      "platform-google-cloud-landing-zone"
     ]
   }
 
@@ -556,7 +557,8 @@ team_children = {
       "github-terraform-child-module-template",
       "github-terraform-codespace",
       "github-terraform-gcp-called-workflows",
-      "github-terraform-gcp-root-module-template"
+      "github-terraform-gcp-root-module-template",
+      "platform-github"
     ]
   }
 
@@ -568,7 +570,8 @@ team_children = {
     members         = []
 
     repositories = [
-      "ca-k8s-infra"
+      "ca-k8s-infra",
+      "stream-customer-acquisition"
     ]
   }
 
@@ -617,7 +620,8 @@ team_parents = {
       "github-organization-management",
       "github-terraform-codespace",
       "github-terraform-gcp-called-workflows",
-      "github-terraform-gcp-root-module-template"
+      "github-terraform-gcp-root-module-template",
+      "platform-github"
     ]
 
     review_request_delegation = true
@@ -635,7 +639,8 @@ team_parents = {
       "google-cloud-kitchen-terraform",
       "google-cloud-networking",
       "google-cloud-terraform-backend",
-      "google-cloud-workload-identity"
+      "google-cloud-workload-identity",
+      "platform-google-cloud-landing-zone"
     ]
 
     review_request_delegation = true
@@ -648,7 +653,8 @@ team_parents = {
     permission  = "push"
 
     repositories = [
-      "ca-k8s-infra"
+      "ca-k8s-infra",
+      "stream-customer-acquisition"
     ]
   }
 
