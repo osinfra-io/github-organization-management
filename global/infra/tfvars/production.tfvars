@@ -683,7 +683,7 @@ team_parents = {
   }
 
   "enabling-security" = {
-    description = "Enabling Team: responsible for the overall security of the GitHub organization and helping stream-aligned teams to overcome obstacles."
+    description = "Enabling Team: Enabling Team: responsible for the overall security of the organization and helping other teams types to overcome obstacles."
     maintainers = ["brettcurtis"]
     members     = []
     permission  = "push"
