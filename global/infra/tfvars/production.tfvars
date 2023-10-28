@@ -340,6 +340,39 @@ repositories = {
     ]
   }
 
+  "platform-github" = {
+    description              = "Platform Team responsible for the GitHub organization."
+    enable_branch_protection = false
+
+    topics = [
+      "github",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-google-cloud-landing-zone" = {
+    description              = "Platform Team responsible for the Google Cloud Landing Zone."
+    enable_branch_protection = false
+
+    topics = [
+      "google-cloud-platform",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "stream-customer-acquisition" = {
+    description              = "Stream Aligned Team responsible for the Customer Acquisition."
+    enable_branch_protection = false
+
+    topics = [
+      "customer-acquisition",
+      "osinfra",
+      "stream-aligned-team"
+    ]
+  }
+
   "terraform-datadog-google-integration" = {
     description = "Terraform example module for Datadog Google Cloud Platform integration."
 
