@@ -363,7 +363,7 @@ repositories = {
   }
 
   "stream-customer-acquisition" = {
-    description              = "Stream Aligned Team responsible for the Customer Acquisition."
+    description              = "Stream Aligned Team responsible for Customer Acquisition."
     enable_branch_protection = false
 
     topics = [
