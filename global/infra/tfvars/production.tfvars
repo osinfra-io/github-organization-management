@@ -74,8 +74,8 @@ repositories = {
 
   "enabling-security" = {
     description = "Enabling Team: responsible for the overall security of the organization and helping other teams types to overcome obstacles."
-
     enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "osinfra",
@@ -355,6 +355,7 @@ repositories = {
   "platform-github" = {
     description              = "Platform Team: responsible for the GitHub organization."
     enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "github",
@@ -366,6 +367,7 @@ repositories = {
   "platform-google-cloud-landing-zone" = {
     description              = "Platform Team: responsible for the Google Cloud Landing Zone."
     enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "google-cloud-platform",
@@ -377,6 +379,7 @@ repositories = {
   "stream-customer-acquisition" = {
     description              = "Stream Aligned Team: responsible for the Customer Acquisition stream."
     enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "customer-acquisition",
