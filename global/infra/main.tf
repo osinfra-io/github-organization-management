@@ -212,7 +212,7 @@ resource "github_repository_webhook" "datadog" {
     "push",                        # This event occurs when there is a push to a repository branch.
     "repository",                  # This event occurs when there is activity relating to repositories.
     "security_and_analysis",       # This event occurs when code security and analysis features are enabled or disabled for a repository.
-    "team_add",                    # This event occurs when a team is added to a repository.
+    "team_add"                     # This event occurs when a team is added to a repository.
   ]
 
   repository = each.key
