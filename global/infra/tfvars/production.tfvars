@@ -72,6 +72,18 @@ repositories = {
     ]
   }
 
+  "enabling-security" = {
+    description = "Enabling Team: responsible for the overall security of the organization and helping other teams types to overcome obstacles."
+
+    enable_branch_protection = false
+
+    topics = [
+      "osinfra",
+      "enabling-team",
+      "security"
+    ]
+  }
+
   "gitbook-docs" = {
     description              = "GitBook documentation for the osinfra.io organization."
     enable_branch_protection = false
@@ -341,7 +353,7 @@ repositories = {
   }
 
   "platform-github" = {
-    description              = "Platform Team responsible for the GitHub organization."
+    description              = "Platform Team: responsible for the GitHub organization."
     enable_branch_protection = false
 
     topics = [
@@ -352,7 +364,7 @@ repositories = {
   }
 
   "platform-google-cloud-landing-zone" = {
-    description              = "Platform Team responsible for the Google Cloud Landing Zone."
+    description              = "Platform Team: responsible for the Google Cloud Landing Zone."
     enable_branch_protection = false
 
     topics = [
@@ -363,7 +375,7 @@ repositories = {
   }
 
   "stream-customer-acquisition" = {
-    description              = "Stream Aligned Team responsible for Customer Acquisition."
+    description              = "Stream Aligned Team: responsible for the Customer Acquisition stream."
     enable_branch_protection = false
 
     topics = [
@@ -494,6 +506,18 @@ repositories = {
 }
 
 team_children = {
+  "enabling-security-admins" = {
+    description     = "Enabling Team: responsible for Securty repository administration."
+    parent_team_key = "enabling-security"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "enabling-security"
+    ]
+  }
+
   "platform-google-cloud-landing-zone-repository-admins" = {
     description     = "Platform Team: responsible for Google Cloud Landing Zone repository administration."
     parent_team_key = "platform-google-cloud-landing-zone"
@@ -662,5 +686,10 @@ team_parents = {
     description = "Enabling Team: responsible for the overall security of the GitHub organization and helping stream-aligned teams to overcome obstacles."
     maintainers = ["brettcurtis"]
     members     = []
+    permission  = "push"
+
+    repositories = [
+      "enabling-security"
+    ]
   }
 }
