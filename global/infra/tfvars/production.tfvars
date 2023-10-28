@@ -72,6 +72,18 @@ repositories = {
     ]
   }
 
+  "enabling-security" = {
+    description = "Enabling Team: responsible for the overall security of the organization and helping other teams types to overcome obstacles."
+
+    enable_branch_protection = false
+
+    topics = [
+      "osinfra",
+      "enabling-team",
+      "security"
+    ]
+  }
+
   "gitbook-docs" = {
     description              = "GitBook documentation for the osinfra.io organization."
     enable_branch_protection = false
@@ -340,6 +352,39 @@ repositories = {
     ]
   }
 
+  "platform-github" = {
+    description              = "Platform Team: responsible for the GitHub organization."
+    enable_branch_protection = false
+
+    topics = [
+      "github",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-google-cloud-landing-zone" = {
+    description              = "Platform Team: responsible for the Google Cloud Landing Zone."
+    enable_branch_protection = false
+
+    topics = [
+      "google-cloud-platform",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "stream-customer-acquisition" = {
+    description              = "Stream Aligned Team: responsible for the Customer Acquisition stream."
+    enable_branch_protection = false
+
+    topics = [
+      "customer-acquisition",
+      "osinfra",
+      "stream-aligned-team"
+    ]
+  }
+
   "terraform-datadog-google-integration" = {
     description = "Terraform example module for Datadog Google Cloud Platform integration."
 
@@ -461,6 +506,18 @@ repositories = {
 }
 
 team_children = {
+  "enabling-security-admins" = {
+    description     = "Enabling Team: responsible for Securty repository administration."
+    parent_team_key = "enabling-security"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "enabling-security"
+    ]
+  }
+
   "platform-google-cloud-landing-zone-repository-admins" = {
     description     = "Platform Team: responsible for Google Cloud Landing Zone repository administration."
     parent_team_key = "platform-google-cloud-landing-zone"
@@ -474,7 +531,8 @@ team_children = {
       "google-cloud-kitchen-terraform",
       "google-cloud-networking",
       "google-cloud-terraform-backend",
-      "google-cloud-workload-identity"
+      "google-cloud-workload-identity",
+      "platform-google-cloud-landing-zone"
     ]
   }
 
@@ -523,7 +581,8 @@ team_children = {
       "github-terraform-child-module-template",
       "github-terraform-codespace",
       "github-terraform-gcp-called-workflows",
-      "github-terraform-gcp-root-module-template"
+      "github-terraform-gcp-root-module-template",
+      "platform-github"
     ]
   }
 
@@ -535,7 +594,8 @@ team_children = {
     members         = []
 
     repositories = [
-      "ca-k8s-infra"
+      "ca-k8s-infra",
+      "stream-customer-acquisition"
     ]
   }
 
@@ -584,7 +644,8 @@ team_parents = {
       "github-organization-management",
       "github-terraform-codespace",
       "github-terraform-gcp-called-workflows",
-      "github-terraform-gcp-root-module-template"
+      "github-terraform-gcp-root-module-template",
+      "platform-github"
     ]
 
     review_request_delegation = true
@@ -602,7 +663,8 @@ team_parents = {
       "google-cloud-kitchen-terraform",
       "google-cloud-networking",
       "google-cloud-terraform-backend",
-      "google-cloud-workload-identity"
+      "google-cloud-workload-identity",
+      "platform-google-cloud-landing-zone"
     ]
 
     review_request_delegation = true
@@ -615,13 +677,19 @@ team_parents = {
     permission  = "push"
 
     repositories = [
-      "ca-k8s-infra"
+      "ca-k8s-infra",
+      "stream-customer-acquisition"
     ]
   }
 
   "enabling-security" = {
-    description = "Enabling Team: responsible for the overall security of the GitHub organization and helping stream-aligned teams to overcome obstacles."
+    description = "Enabling Team: Enabling Team: responsible for the overall security of the organization and helping other teams types to overcome obstacles."
     maintainers = ["brettcurtis"]
     members     = []
+    permission  = "push"
+
+    repositories = [
+      "enabling-security"
+    ]
   }
 }
