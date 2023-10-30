@@ -31,6 +31,19 @@ provider "github" {
   token = var.github_token
 }
 
+# Template File Data Source
+# https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file
+
+data "template_file" "security_policy" {
+  for_each = var.repositories
+
+  template = file("${path.module}/../markdown/SECURITY.md.tpl")
+
+  vars = {
+    repository = each.key
+  }
+}
+
 # GitHub Actions Organization Permissions Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_permissions
 
@@ -186,6 +199,22 @@ resource "github_repository" "this" {
       repository = template.value
     }
   }
+}
+
+# GitHub Repository File Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file
+
+resource "github_repository_file" "security_policy" {
+  for_each = var.repositories
+
+  branch              = "main"
+  content             = data.template_file.security_policy[each.key].rendered
+  file                = "SECURITY.md"
+  repository          = each.key
+  commit_message      = "Update SECURITY.md"
+  commit_author       = "Open Source Infrastructure as Code Service Account"
+  commit_email        = "github-sa@osinfra.io"
+  overwrite_on_create = true
 }
 
 # Github Repository Webhook Resource
