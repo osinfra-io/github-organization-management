@@ -73,7 +73,7 @@ repositories = {
   }
 
   "enabling-security" = {
-    description = "Enabling Team: responsible for the overall security of the organization and helping other teams types to overcome obstacles."
+    description              = "Enabling Team: responsible for the overall security of the organization and helping other teams types to overcome obstacles."
     enable_branch_protection = false
     enable_datadog_webhook   = false
 

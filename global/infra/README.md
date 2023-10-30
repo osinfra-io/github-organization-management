@@ -9,8 +9,9 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 5.39.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | 5.41.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
+| <a name="provider_template"></a> [template](#provider\_template) | 2.2.0 |
 | <a name="provider_time"></a> [time](#provider\_time) | 0.9.1 |
 
 ## Modules
@@ -28,6 +29,7 @@ No modules.
 | [github_organization_security_manager.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_security_manager) | resource |
 | [github_organization_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings) | resource |
 | [github_repository.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository_file.security_policy](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
 | [github_repository_webhook.datadog](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_webhook) | resource |
 | [github_team.children](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) | resource |
 | [github_team.parents](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) | resource |
@@ -38,6 +40,7 @@ No modules.
 | [github_team_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_settings) | resource |
 | [random_password.this](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 | [time_rotating.this](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/rotating) | resource |
+| [template_file.security_policy](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
 
 ## Inputs
 
