@@ -228,7 +228,7 @@ resource "github_repository_webhook" "discord" {
   configuration {
     content_type = "json"
     insecure_ssl = false
-    url          = "https://discord.com/api/webhooks/1175823442415722517/${var.discord_webhook_api_key}"
+    url          = "https://discord.com/api/webhooks/1175823442415722517/${var.discord_webhook_api_key}/github"
   }
 
   events     = ["*"]
