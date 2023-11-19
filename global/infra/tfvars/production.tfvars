@@ -560,7 +560,7 @@ team_children = {
 
     repositories = [
       "google-cloud-kubernetes-engine",
-      "platform-google-kubernetes-engine"
+      "platform-google-cloud-kubernetes"
     ]
   }
 
@@ -727,7 +727,7 @@ team_parents = {
 
     repositories = [
       "google-cloud-kubernetes-engine",
-      "platform-google-kubernetes-engine"
+      "platform-google-cloud-kubernetes"
     ]
 
     review_request_delegation = true
