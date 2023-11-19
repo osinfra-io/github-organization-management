@@ -233,6 +233,10 @@ resource "github_repository_webhook" "discord" {
 
   events     = ["*"]
   repository = each.key
+
+  depends_on = [
+    github_repository.this
+  ]
 }
 
 resource "github_repository_webhook" "datadog" {
@@ -260,6 +264,10 @@ resource "github_repository_webhook" "datadog" {
   ]
 
   repository = each.key
+
+  depends_on = [
+    github_repository.this
+  ]
 }
 
 # Github Team Resource
