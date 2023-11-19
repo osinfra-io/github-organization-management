@@ -11,6 +11,11 @@ variable "billing_email" {
   type        = string
   sensitive   = true
 }
+variable "discord_webhook_api_key" {
+  description = "The Discord API key used for creating webhooks"
+  type        = string
+  sensitive   = true
+}
 
 variable "datadog_webhook_api_key" {
   description = "The Datadog API key used for creating webhooks"
@@ -43,6 +48,7 @@ variable "repositories" {
   type = map(object({
     description                     = string
     enable_branch_protection        = optional(bool, true)
+    enable_discord_webhook          = optional(bool, true)
     enable_datadog_webhook          = optional(bool, true)
     has_discussions                 = optional(bool, false)
     is_template                     = optional(bool, false)

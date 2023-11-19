@@ -220,6 +220,21 @@ resource "github_repository_file" "security_policy" {
 # Github Repository Webhook Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_webhook
 
+resource "github_repository_webhook" "discord" {
+  for_each = local.discord_webhooks
+
+  active = true
+
+  configuration {
+    content_type = "json"
+    insecure_ssl = false
+    url          = "https://discord.com/api/webhooks/1175823442415722517/${var.discord_webhook_api_key}"
+  }
+
+  events     = ["*"]
+  repository = each.key
+}
+
 resource "github_repository_webhook" "datadog" {
   for_each = local.datadog_webhooks
 

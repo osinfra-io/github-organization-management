@@ -18,6 +18,7 @@ jobs:
   global_infra:
     name: "Global"
     uses: osinfra-io/github-terraform-called-workflows/.github/workflows/plan-and-apply.yml@v0.1.8
+    if: github.actor != 'dependabot[bot]'
     with:
       checkout_ref: ${{ github.ref }}
       environment: production
@@ -34,5 +35,6 @@ jobs:
       infracost_api_key: ${{ secrets.INFRACOST_API_KEY }}
       terraform_plan_secret_args: >-
         -var=billing_email=${{ secrets.BILLING_EMAIL }}
+        -var=discord_webhook_api_key=${{ secrets.DISCORD_WEBHOOK_API_KEY }}
         -var=datadog_webhook_api_key=${{ secrets.DATADOG_WEBHOOK_API_KEY }}
         -var=github_token=${{ secrets.ORGANIZATION_MANAGEMENT_WORKFLOW }}
