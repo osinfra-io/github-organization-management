@@ -294,13 +294,29 @@ repositories = {
     ]
   }
 
+  "google-cloud-kubernetes-engine" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Kubernetes engine resources."
+
+    topics = [
+      "google-cloud-landing-zone-platform",
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+  }
+
   "google-cloud-networking" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform networking resources."
 
     topics = [
+      "google-cloud-landing-zone-platform",
       "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
+      "platform-team",
       "terraform"
     ]
   }
@@ -532,6 +548,7 @@ team_children = {
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
       "google-cloud-kitchen-terraform",
+      "google-cloud-kubernetes-engine",
       "google-cloud-networking",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
@@ -664,6 +681,7 @@ team_parents = {
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
       "google-cloud-kitchen-terraform",
+      "google-cloud-kubernetes-engine",
       "google-cloud-networking",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
