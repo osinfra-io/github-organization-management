@@ -294,13 +294,29 @@ repositories = {
     ]
   }
 
+  "google-cloud-kubernetes-engine" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Kubernetes engine resources."
+
+    topics = [
+      "google-cloud-kubernetes-platform",
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+  }
+
   "google-cloud-networking" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform networking resources."
 
     topics = [
+      "google-cloud-landing-zone-platform",
       "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
+      "platform-team",
       "terraform"
     ]
   }
@@ -364,12 +380,26 @@ repositories = {
     ]
   }
 
+  "platform-google-cloud-kubernetes" = {
+    description              = "Platform Team: responsible for the Google Kubernetes engine."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "google-cloud-kubernetes-platform",
+      "google-cloud-platform",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
   "platform-google-cloud-landing-zone" = {
     description              = "Platform Team: responsible for the Google Cloud Landing Zone."
     enable_branch_protection = false
     enable_datadog_webhook   = false
 
     topics = [
+      "google-cloud-landing-zone-platform",
       "google-cloud-platform",
       "osinfra",
       "platform-team"
@@ -521,6 +551,40 @@ team_children = {
     ]
   }
 
+  "platform-google-kubernetes-repository-admins" = {
+    description     = "Platform Team: responsible for Google Cloud Kubernetes engine repository administration."
+    parent_team_key = "platform-google-kubernetes"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "google-cloud-kubernetes-engine",
+      "platform-google-kubernetes-engine"
+    ]
+  }
+
+  "platform-google-kubernetes-approvers-nonprod" = {
+    description     = "Platform Team: responsible for Google Cloud Kubernetes engine workflow approvals in the Non-Production environments."
+    parent_team_key = "platform-google-kubernetes"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-google-kubernetes-approvers-prod" = {
+    description     = "Platform Team: responsible for Google Cloud Kubernetes engine workflow approvals in the Production environment."
+    parent_team_key = "platform-google-kubernetes"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-google-cloud-landing-zone-approvers-sb" = {
+    description     = "Platform Team: responsible for Google Cloud Kubernetes engine workflow approvals in the Sandbox environment."
+    parent_team_key = "platform-google-kubernetes"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
   "platform-google-cloud-landing-zone-repository-admins" = {
     description     = "Platform Team: responsible for Google Cloud Landing Zone repository administration."
     parent_team_key = "platform-google-cloud-landing-zone"
@@ -532,6 +596,7 @@ team_children = {
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
       "google-cloud-kitchen-terraform",
+      "google-cloud-kubernetes-engine",
       "google-cloud-networking",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
@@ -654,6 +719,20 @@ team_parents = {
     review_request_delegation = true
   }
 
+  "platform-google-kubernetes" = {
+    description = "Platform Team: responsible the Google Cloud Kubernetes engine and code reviews."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "google-cloud-kubernetes-engine",
+      "platform-google-kubernetes-engine"
+    ]
+
+    review_request_delegation = true
+  }
+
   "platform-google-cloud-landing-zone" = {
     description = "Platform Team: responsible the Google Cloud Landing Zone and code reviews."
     maintainers = ["brettcurtis"]
@@ -664,6 +743,7 @@ team_parents = {
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
       "google-cloud-kitchen-terraform",
+      "google-cloud-kubernetes-engine",
       "google-cloud-networking",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
