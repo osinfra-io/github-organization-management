@@ -27,6 +27,10 @@ locals {
     for repository_key, repository in var.repositories : repository_key => repository if repository.enable_datadog_webhook
   }
 
+  discord_webhooks = {
+    for repository_key, repository in var.repositories : repository_key => repository if repository.enable_discord_webhook
+  }
+
   members = {
     for user in var.members : user => "member"
   }
