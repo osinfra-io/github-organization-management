@@ -598,7 +598,6 @@ repositories = {
     visibility  = "public"
 
     topics = [
-      "blaa",
       "google-cloud-platform",
       "hashicorp",
       "infrastructure-as-code",
