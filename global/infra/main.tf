@@ -215,6 +215,10 @@ resource "github_repository_file" "security_policy" {
   commit_author       = "Open Source Infrastructure as Code Service Account"
   commit_email        = "github-sa@osinfra.io"
   overwrite_on_create = true
+
+  depends_on = [
+    github_branch_protection.this
+  ]
 }
 
 # Github Repository Webhook Resource
