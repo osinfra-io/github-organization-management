@@ -381,25 +381,6 @@ repositories = {
     ]
   }
 
-  "istio" = {
-    description = "Infrastructure as Code (IaC) example for Istio."
-
-    topics = [
-      "google-cloud-kubernetes-platform",
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "istio",
-      "kubernetes",
-      "osinfra",
-      "platform-team",
-      "terraform"
-    ]
-
-    push_restrictions = [
-      "osinfra-io/platform-isito"
-    ]
-  }
-
   "local-development-setup" = {
     description            = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
     enable_datadog_webhook = false
@@ -410,6 +391,35 @@ repositories = {
       "local-development",
       "osinfra",
       "terraform"
+    ]
+  }
+
+  "platform-backstage" = {
+    description = "Platform Team: responsible for the Backstage application and code reviews."
+    visibility  = "public"
+
+    topics = [
+      "backstage",
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+  }
+
+  "platform-vault" = {
+    description = "Platform Team: responsible for the HashiCorp Vault application and code reviews."
+    visibility  = "public"
+
+    topics = [
+      "google-cloud-platform",
+      "hashicorp",
+      "infrastructure-as-code",
+      "osinfra",
+      "platform-team",
+      "terraform",
+      "vault"
     ]
   }
 
@@ -582,6 +592,26 @@ repositories = {
       "terraform-child-module"
     ]
   }
+
+  "vault" = {
+    description = "Infrastructure as Code (IaC) example for HashiCorp Vault."
+    visibility  = "public"
+
+    topics = [
+      "blaa",
+      "google-cloud-platform",
+      "hashicorp",
+      "infrastructure-as-code",
+      "osinfra",
+      "platform-team",
+      "terraform",
+      "vault"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-vault"
+    ]
+  }
 }
 
 team_children = {
@@ -626,7 +656,7 @@ team_children = {
     members         = []
 
     repositories = [
-      "backstage"
+      "backstage",
       "platform-backstage"
     ]
   }
@@ -733,7 +763,41 @@ team_children = {
       "platform-github"
     ]
   }
-  
+
+  "platform-vault-approvers-nonprod" = {
+    description     = "Platform Team: responsible for Vault workflow approvals in the Non-Production environments."
+    parent_team_key = "platform-vault"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-vault-approvers-prod" = {
+    description     = "Platform Team: responsible for Vault workflow approvals in the Production environment."
+    parent_team_key = "platform-vault"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-vault-approvers-sb" = {
+    description     = "Platform Team: responsible for Vault workflow approvals in the Sandbox environment."
+    parent_team_key = "platform-vault"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-vault-repository-admins" = {
+    description     = "Platform Team: responsible for Vault repository administration."
+    parent_team_key = "platform-vault"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "platform-vault",
+      "vault"
+    ]
+  }
+
   "stream-customer-acquisition-approvers-nonprod" = {
     description     = "Stream Aligned Team: responsible for Customer Acquisition workflow approvals in the Non-Production environments."
     parent_team_key = "stream-customer-acquisition"
@@ -774,6 +838,20 @@ team_parents = {
     description = "Owners of the osinfra.io organization."
     maintainers = ["brettcurtis"]
     members     = []
+  }
+
+  "platform-backstage" = {
+    description = "Platform Team: responsible for the Backstage application and code reviews."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "backstage",
+      "platform-backstage"
+    ]
+
+    review_request_delegation = true
   }
 
   "platform-github" = {
@@ -827,6 +905,20 @@ team_parents = {
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
       "platform-google-cloud-landing-zone"
+    ]
+
+    review_request_delegation = true
+  }
+
+  "platform-vault" = {
+    description = "Platform Team: responsible for the HashiCorp Vault application and code reviews."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "platform-vault",
+      "vault"
     ]
 
     review_request_delegation = true
