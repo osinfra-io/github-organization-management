@@ -541,6 +541,20 @@ repositories = {
     ]
   }
 
+  "terraform-google-kubernetes-engine-onboarding" = {
+    description = "Terraform example module for Google Cloud Platform Kubernetes Engine onboarding."
+
+    topics = [
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "kitchen-terraform",
+      "kubernetes",
+      "osinfra",
+      "terraform",
+      "terraform-child-module"
+    ]
+  }
+
   "terraform-google-subnet" = {
     description = "Terraform example module for Google Cloud Platform subnet."
 
