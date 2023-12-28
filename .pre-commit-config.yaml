@@ -12,7 +12,7 @@ repos:
       - id: no-commit-to-branch
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.83.6
+    rev: v1.86.0
     hooks:
       - id: terraform_fmt
 
@@ -23,6 +23,7 @@ repos:
         args:
           - --hook-config=--retry-once-with-cleanup=true
           - --tf-init-args=-upgrade
+
       - id: terraform_docs
         args:
           - --hook-config=--path-to-file=README.md
