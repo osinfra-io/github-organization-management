@@ -11,7 +11,7 @@ on:
 jobs:
   add-to-osinfra-project:
     name: Open Source Infrastructure (as Code)
-    uses: osinfra-io/github-misc-called-workflows/.github/workflows/add-to-project.yml@v0.1.0
+    uses: osinfra-io/github-misc-called-workflows/.github/workflows/add-to-project.yml@v0.1.1
     with:
      project_id: 1
     secrets:
