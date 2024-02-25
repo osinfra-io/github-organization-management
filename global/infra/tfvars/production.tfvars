@@ -347,6 +347,23 @@ repositories = {
     ]
   }
 
+  "google-cloud-services" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform services."
+
+    topics = [
+      "google-cloud-landing-zone-platform",
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+
+    push_restrictions = [
+      "osinfra-io/platform-google-cloud-landing-zone"
+    ]
+  }
+
   "google-cloud-terraform-backend" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform backend."
 
@@ -728,6 +745,7 @@ team_children = {
       "google-cloud-kitchen-terraform",
       "google-cloud-kubernetes",
       "google-cloud-networking",
+      "google-cloud-services",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
       "platform-google-cloud-landing-zone"
@@ -901,6 +919,7 @@ team_parents = {
       "google-cloud-hierarchy",
       "google-cloud-kitchen-terraform",
       "google-cloud-networking",
+      "google-cloud-services",
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
       "platform-google-cloud-landing-zone"

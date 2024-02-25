@@ -18,7 +18,7 @@ jobs:
   global_infra:
     name: "Global"
     uses: osinfra-io/github-terraform-called-workflows/.github/workflows/plan-and-apply.yml@v0.1.9
-    if: github.actor != 'dependabot[bot]'
+    if: github.actor != 'osinfra-sa'
     with:
       checkout_ref: ${{ github.ref }}
       environment: production
