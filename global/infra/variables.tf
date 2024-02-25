@@ -52,7 +52,7 @@ variable "repositories" {
     enable_datadog_webhook          = optional(bool, true)
     has_discussions                 = optional(bool, false)
     is_template                     = optional(bool, false)
-    push_restrictions               = optional(list(string), [])
+    push_allowances                 = optional(list(string), [])
     required_status_checks_contexts = optional(list(string), [])
     template                        = optional(string)
     topics                          = optional(list(string))
