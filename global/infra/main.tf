@@ -89,7 +89,6 @@ resource "github_branch_protection" "this" {
 
   enforce_admins                  = false
   pattern                         = "main"
-  push_restrictions               = each.value.push_restrictions
   repository_id                   = github_repository.this[each.key].name
   require_conversation_resolution = true
   required_linear_history         = true
@@ -104,6 +103,10 @@ resource "github_branch_protection" "this" {
   required_status_checks {
     contexts = each.value.required_status_checks_contexts
     strict   = true
+  }
+
+  restrict_pushes {
+    push_allowances = each.value.push_allowances
   }
 }
 

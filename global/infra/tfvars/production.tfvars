@@ -25,7 +25,7 @@ repositories = {
       "platform-team"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -41,7 +41,7 @@ repositories = {
       "platform-team"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
 
@@ -61,7 +61,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-backstage"
     ]
   }
@@ -128,7 +128,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -144,7 +144,7 @@ repositories = {
       "platform-team"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -161,7 +161,7 @@ repositories = {
       "platform-team"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -178,7 +178,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -197,7 +197,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -216,7 +216,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -234,7 +234,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -254,7 +254,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-github"
     ]
   }
@@ -271,7 +271,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
@@ -288,7 +288,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
@@ -307,7 +307,7 @@ repositories = {
       "testing"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
@@ -325,7 +325,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-google-kubernetes"
     ]
   }
@@ -342,7 +342,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
@@ -359,7 +359,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
@@ -376,7 +376,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
@@ -393,7 +393,7 @@ repositories = {
       "terraform"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
@@ -624,7 +624,7 @@ repositories = {
       "vault"
     ]
 
-    push_restrictions = [
+    push_allowances = [
       "osinfra-io/platform-vault"
     ]
   }
