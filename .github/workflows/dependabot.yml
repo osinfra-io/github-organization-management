@@ -5,6 +5,6 @@ on: pull_request_target
 jobs:
   dependabot:
     name: Dependabot
-    uses: osinfra-io/github-misc-called-workflows/.github/workflows/dependabot.yml@v0.1.1
+    uses: osinfra-io/github-misc-called-workflows/.github/workflows/dependabot.yml@v0.1.2
     secrets:
       pr_approve_and_merge_pat: ${{ secrets.PR_APPROVE_AND_MERGE_PAT }}
