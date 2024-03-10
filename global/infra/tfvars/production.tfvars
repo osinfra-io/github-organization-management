@@ -66,7 +66,7 @@ repositories = {
     ]
   }
 
-  "ca-google-kubernetes" = {
+  "ca-google-cloud-kubernetes" = {
     description = "Kubernetes Infrastructure as Code (IaC) example for the Customer Acquisition stream-aligned team."
 
     topics = [
@@ -256,6 +256,39 @@ repositories = {
 
     push_allowances = [
       "osinfra-io/platform-github"
+    ]
+  }
+
+  "gke-go-example" = {
+    description = "An example Go application that runs on Google Kubernetes Engine (GKE)."
+
+    topics = [
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+
+    push_allowances = [
+      "osinfra-io/platform-google-cloud-kubernetes"
+    ]
+  }
+
+  "gke-java-example" = {
+    description = "An example Java application that runs on Google Kubernetes Engine (GKE)."
+
+    topics = [
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+    push_allowances = [
+      "osinfra-io/platform-google-cloud-kubernetes"
     ]
   }
 
@@ -706,6 +739,8 @@ team_children = {
     members         = []
 
     repositories = [
+      "gke-go-example",
+      "gke-java-example",
       "google-cloud-kubernetes",
       "platform-google-cloud-kubernetes"
     ]
@@ -844,7 +879,7 @@ team_children = {
     members         = []
 
     repositories = [
-      "ca-google-kubernetes",
+      "ca-google-cloud-kubernetes",
       "stream-customer-acquisition"
     ]
   }
@@ -949,7 +984,7 @@ team_parents = {
     permission  = "push"
 
     repositories = [
-      "ca-google-kubernetes",
+      "ca-google-cloud-kubernetes",
       "stream-customer-acquisition"
     ]
   }
