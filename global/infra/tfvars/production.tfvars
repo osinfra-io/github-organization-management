@@ -936,6 +936,8 @@ team_parents = {
     permission  = "push"
 
     repositories = [
+      "gke-go-example",
+      "gke-java-example",
       "google-cloud-kubernetes",
       "platform-google-cloud-kubernetes"
     ]
