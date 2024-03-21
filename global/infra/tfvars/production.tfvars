@@ -359,7 +359,7 @@ repositories = {
     ]
 
     push_allowances = [
-      "osinfra-io/platform-google-kubernetes"
+      "osinfra-io/platform-google-cloud-kubernetes"
     ]
   }
 
@@ -710,30 +710,30 @@ team_children = {
     ]
   }
 
-  "platform-google-kubernetes-approvers-nonprod" = {
+  "platform-google-cloud-kubernetes-approvers-nonprod" = {
     description     = "Platform Team: responsible for Google Cloud Kubernetes workflow approvals in the Non-Production environments."
-    parent_team_key = "platform-google-kubernetes"
+    parent_team_key = "platform-google-cloud-kubernetes"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "platform-google-kubernetes-approvers-prod" = {
+  "platform-google-cloud-kubernetes-approvers-prod" = {
     description     = "Platform Team: responsible for Google Cloud Kubernetes workflow approvals in the Production environment."
-    parent_team_key = "platform-google-kubernetes"
+    parent_team_key = "platform-google-cloud-kubernetes"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "platform-google-kubernetes-approvers-sb" = {
+  "platform-google-cloud-kubernetes-approvers-sb" = {
     description     = "Platform Team: responsible for Google Cloud Kubernetes workflow approvals in the Sandbox environment."
-    parent_team_key = "platform-google-kubernetes"
+    parent_team_key = "platform-google-cloud-kubernetes"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "platform-google-kubernetes-repository-admins" = {
+  "platform-google-cloud-kubernetes-repository-admins" = {
     description     = "Platform Team: responsible for Google Cloud Kubernetes repository administration."
-    parent_team_key = "platform-google-kubernetes"
+    parent_team_key = "platform-google-cloud-kubernetes"
     permission      = "admin"
     maintainers     = ["brettcurtis"]
     members         = []
@@ -929,7 +929,7 @@ team_parents = {
     review_request_delegation = true
   }
 
-  "platform-google-kubernetes" = {
+  "platform-google-cloud-kubernetes" = {
     description = "Platform Team: responsible the Google Cloud Kubernetes and code reviews."
     maintainers = ["brettcurtis"]
     members     = []
