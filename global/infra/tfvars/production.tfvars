@@ -66,8 +66,8 @@ repositories = {
     ]
   }
 
-  "ca-google-cloud-kubernetes" = {
-    description = "Kubernetes Infrastructure as Code (IaC) example for the Customer Acquisition stream-aligned team."
+  "ct-google-cloud-kubernetes" = {
+    description = "Kubernetes Infrastructure as Code (IaC) example for the Customer Trust stream-aligned team."
 
     topics = [
       "customer-acquisition",
@@ -512,8 +512,8 @@ repositories = {
     ]
   }
 
-  "stream-customer-acquisition" = {
-    description              = "Stream Aligned Team: responsible for the Customer Acquisition stream."
+  "stream-customer-trust" = {
+    description              = "Stream Aligned Team: responsible for the Customer Trust stream."
     enable_branch_protection = false
     enable_datadog_webhook   = false
 
@@ -850,37 +850,37 @@ team_children = {
     ]
   }
 
-  "stream-customer-acquisition-approvers-nonprod" = {
-    description     = "Stream Aligned Team: responsible for Customer Acquisition workflow approvals in the Non-Production environments."
-    parent_team_key = "stream-customer-acquisition"
+  "stream-customer-trust-approvers-nonprod" = {
+    description     = "Stream Aligned Team: responsible for Customer Trust workflow approvals in the Non-Production environments."
+    parent_team_key = "stream-customer-trust"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "stream-customer-acquisition-approvers-prod" = {
-    description     = "Stream Aligned Team: responsible for Customer Acquisition workflow approvals in the Production environment."
-    parent_team_key = "stream-customer-acquisition"
+  "stream-customer-trust-approvers-prod" = {
+    description     = "Stream Aligned Team: responsible for Customer Trust workflow approvals in the Production environment."
+    parent_team_key = "stream-customer-trust"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "stream-customer-acquisition-approvers-sb" = {
-    description     = "Stream Aligned Team: responsible for Customer Acquisition workflow approvals in the Sandbox environment."
-    parent_team_key = "stream-customer-acquisition"
+  "stream-customer-trust-approvers-sb" = {
+    description     = "Stream Aligned Team: responsible for Customer Trust workflow approvals in the Sandbox environment."
+    parent_team_key = "stream-customer-trust"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "stream-customer-acquisition-repository-admins" = {
-    description     = "Stream Aligned Team: responsible for Customer Acquisition repository administration."
-    parent_team_key = "stream-customer-acquisition"
+  "stream-customer-trust-repository-admins" = {
+    description     = "Stream Aligned Team: responsible for Customer Trust repository administration."
+    parent_team_key = "stream-customer-trust"
     permission      = "admin"
     maintainers     = ["brettcurtis"]
     members         = []
 
     repositories = [
-      "ca-google-cloud-kubernetes",
-      "stream-customer-acquisition"
+      "ct-google-cloud-kubernetes",
+      "stream-customer-trust"
     ]
   }
 }
@@ -979,15 +979,15 @@ team_parents = {
     review_request_delegation = true
   }
 
-  "stream-customer-acquisition" = {
-    description = "Stream Aligned Team: responsible for the Customer Acquisition stream and code reviews."
+  "stream-customer-trust" = {
+    description = "Stream Aligned Team: responsible for the Customer Trust stream and code reviews."
     maintainers = ["brettcurtis"]
     members     = []
     permission  = "push"
 
     repositories = [
-      "ca-google-cloud-kubernetes",
-      "stream-customer-acquisition"
+      "ct-google-cloud-kubernetes",
+      "stream-customer-trust"
     ]
   }
 
