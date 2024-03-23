@@ -70,7 +70,7 @@ repositories = {
     description = "Kubernetes Infrastructure as Code (IaC) example for the Customer Trust stream-aligned team."
 
     topics = [
-      "customer-acquisition",
+      "customer-trust",
       "google-cloud-platform",
       "infrastructure-as-code",
       "kubernetes",
@@ -518,7 +518,7 @@ repositories = {
     enable_datadog_webhook   = false
 
     topics = [
-      "customer-acquisition",
+      "customer-trust",
       "osinfra",
       "stream-aligned-team"
     ]
