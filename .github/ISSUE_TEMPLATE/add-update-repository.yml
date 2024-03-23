@@ -26,7 +26,7 @@ body:
       label: "Team name:"
       description: Select the team that will own this repository. If you don't see your team, please use the add or update team service interface.
       options:
-        - stream-customer-acquisition
+        - stream-customer-trust
         - platform-github
         - platform-google-cloud-landing-zone
     validations:
