@@ -161,7 +161,6 @@ resource "github_organization_settings" "this" {
   name                                                         = "osinfra.io (Alpha)"
   secret_scanning_enabled_for_new_repositories                 = true
   secret_scanning_push_protection_enabled_for_new_repositories = true
-  twitter_username                                             = "osinfra"
   web_commit_signoff_required                                  = false
 }
 
