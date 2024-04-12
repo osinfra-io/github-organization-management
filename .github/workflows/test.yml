@@ -18,8 +18,8 @@ jobs:
     uses: osinfra-io/github-terraform-called-workflows/.github/workflows/test.yml@v0.2.3
     if: github.actor != 'dependabot[bot]'
     with:
-      service_account: plt-gh-organization-github@ptl-lz-terraform-tf62-prod.iam.gserviceaccount.com
+      service_account: plt-gh-organization-github@ptl-lz-terraform-tf91-sb.iam.gserviceaccount.com
       terraform_test_args: -var-file=tfvars/production.tfvars
       terraform_version: ${{ vars.TERRAFORM_VERSION }}
       working_directory: global
-      workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
+      workload_identity_provider: projects/746490462722/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
