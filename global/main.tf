@@ -37,7 +37,7 @@ provider "github" {
 data "template_file" "security_policy" {
   for_each = var.repositories
 
-  template = file("${path.module}/../markdown/SECURITY.md.tpl")
+  template = file("${path.module}/markdown/SECURITY.md.tpl")
 
   vars = {
     repository = each.key

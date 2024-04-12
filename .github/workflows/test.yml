@@ -1,0 +1,25 @@
+name: Terraform Tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    paths-ignore:
+      - "**.md"
+
+permissions:
+  id-token: write
+
+jobs:
+  default:
+    name: "Default"
+    uses: osinfra-io/github-terraform-called-workflows/.github/workflows/test.yml@v0.2.3
+    if: github.actor != 'dependabot[bot]'
+    with:
+      service_account: plt-gh-organization-github@ptl-lz-terraform-tf62-prod.iam.gserviceaccount.com
+      terraform_test_args: -var-file=tfvars/production.tfvars
+      terraform_version: ${{ vars.TERRAFORM_VERSION }}
+      working_directory: global
+      workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
