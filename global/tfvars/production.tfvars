@@ -113,26 +113,6 @@ repositories = {
     ]
   }
 
-  "github-kitchen-terraform-action" = {
-    description = "Kitchen-Terraform GitHub Action."
-
-    topics = [
-      "chef-inspec",
-      "github",
-      "github-actions",
-      "github-organization-management-platform",
-      "infrastructure-as-code",
-      "kitchen-terraform",
-      "osinfra",
-      "platform-team",
-      "terraform"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-github"
-    ]
-  }
-
   "github-misc-called-workflows" = {
     description = "Miscellaneous Reusable GitHub Called Workflow examples."
 
@@ -326,14 +306,14 @@ repositories = {
     ]
   }
 
-  "google-cloud-kitchen-terraform" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Kitchen-Terraform testing."
+  "google-cloud-terraform-testing" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform testing."
 
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "platform-team",
       "terraform",
@@ -531,7 +511,7 @@ repositories = {
       "datadog",
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -544,7 +524,7 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -557,7 +537,7 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -570,7 +550,7 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -583,7 +563,7 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "kubernetes",
       "osinfra",
       "terraform",
@@ -597,7 +577,7 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -610,7 +590,7 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -623,7 +603,7 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -636,7 +616,7 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-      "kitchen-terraform",
+
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -777,7 +757,7 @@ team_children = {
     repositories = [
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
-      "google-cloud-kitchen-terraform",
+      "google-cloud-terraform-testing",
       "google-cloud-kubernetes",
       "google-cloud-networking",
       "google-cloud-services",
@@ -804,7 +784,6 @@ team_children = {
     repositories = [
       ".github",
       ".github-private",
-      "github-kitchen-terraform-action",
       "github-misc-called-workflows",
       "github-organization-management",
       "github-organization-discussions",
@@ -915,7 +894,6 @@ team_parents = {
     repositories = [
       ".github",
       ".github-private",
-      "github-kitchen-terraform-action",
       "github-misc-called-workflows",
       "github-organization-discussions",
       "github-terraform-child-module-template",
@@ -954,7 +932,7 @@ team_parents = {
     repositories = [
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
-      "google-cloud-kitchen-terraform",
+      "google-cloud-terraform-testing",
       "google-cloud-networking",
       "google-cloud-services",
       "google-cloud-terraform-backend",

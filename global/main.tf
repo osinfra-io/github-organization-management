@@ -37,7 +37,7 @@ provider "github" {
 data "template_file" "security_policy" {
   for_each = var.repositories
 
-  template = file("${path.module}/../markdown/SECURITY.md.tpl")
+  template = file("${path.module}/markdown/SECURITY.md.tpl")
 
   vars = {
     repository = each.key
@@ -161,7 +161,6 @@ resource "github_organization_settings" "this" {
   name                                                         = "osinfra.io (Alpha)"
   secret_scanning_enabled_for_new_repositories                 = true
   secret_scanning_push_protection_enabled_for_new_repositories = true
-  twitter_username                                             = "osinfra"
   web_commit_signoff_required                                  = false
 }
 
