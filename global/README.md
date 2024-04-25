@@ -10,7 +10,7 @@ No requirements.
 | Name | Version |
 |------|---------|
 | <a name="provider_github"></a> [github](#provider\_github) | 6.2.1 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.6.0 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.6.1 |
 | <a name="provider_template"></a> [template](#provider\_template) | 2.2.0 |
 | <a name="provider_time"></a> [time](#provider\_time) | 0.11.1 |
 
@@ -48,7 +48,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_admins"></a> [admins](#input\_admins) | A set of admins to add to the organization | `set(string)` | n/a | yes |
-| <a name="input_billing_email"></a> [billing\_email](#input\_billing\_email) | The billing email address for the organization | `string` | n/a | yes |
 | <a name="input_datadog_webhook_api_key"></a> [datadog\_webhook\_api\_key](#input\_datadog\_webhook\_api\_key) | The Datadog API key used for creating webhooks | `string` | n/a | yes |
 | <a name="input_discord_webhook_api_key"></a> [discord\_webhook\_api\_key](#input\_discord\_webhook\_api\_key) | The Discord API key used for creating webhooks | `string` | n/a | yes |
 | <a name="input_github_token"></a> [github\_token](#input\_github\_token) | The GitHub token used for managing the organization | `string` | n/a | yes |

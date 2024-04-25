@@ -138,7 +138,7 @@ resource "github_organization_settings" "this" {
   # To get the organization id, you can run the following curl command with a token that has the read:org scope against your existing organization.
   # curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io
 
-  billing_email                                                = var.billing_email
+  billing_email                                                = "brett@osinfra.io"
   blog                                                         = "https://www.osinfra.io"
   company                                                      = "Open Source Infrastructure (as Code)"
   default_repository_permission                                = "read"
