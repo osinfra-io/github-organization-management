@@ -6,11 +6,6 @@ variable "admins" {
   type        = set(string)
 }
 
-variable "billing_email" {
-  description = "The billing email address for the organization"
-  type        = string
-  sensitive   = true
-}
 variable "discord_webhook_api_key" {
   description = "The Discord API key used for creating webhooks"
   type        = string
