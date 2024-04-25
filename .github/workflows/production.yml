@@ -17,7 +17,7 @@ permissions:
 jobs:
   global_infra:
     name: "Global"
-    uses: osinfra-io/github-terraform-called-workflows/.github/workflows/plan-and-apply.yml@v0.2.4
+    uses: osinfra-io/github-terraform-gcp-called-workflows/.github/workflows/plan-and-apply.yml@v0.2.4
     if: github.actor != 'osinfra-sa'
     with:
       checkout_ref: ${{ github.ref }}
