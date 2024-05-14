@@ -80,6 +80,18 @@ repositories = {
     ]
   }
 
+  "datadog-organization-management" = {
+    description = "Infrastructure as Code (IaC) example for a Datadog organization."
+
+    topics = [
+      "infrastructure-as-code",
+      "datadog",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+  }
+
   "diagrams" = {
     description            = "Diagrams using diagrams.net a free and open source cross-platform graph drawing software."
     enable_datadog_webhook = false
@@ -690,6 +702,25 @@ team_children = {
     ]
   }
 
+  "platform-datadog-approvers-prod" = {
+    description     = "Platform Team: responsible for Datadog workflow approvals in the Production environment."
+    parent_team_key = "platform-datadog"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-datadog-repository-admins" = {
+    description     = "Platform Team: responsible for Datadog repository administration."
+    parent_team_key = "platform-datadog"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "datadog-organization-management"
+    ]
+  }
+
   "platform-google-cloud-kubernetes-approvers-nonprod" = {
     description     = "Platform Team: responsible for Google Cloud Kubernetes workflow approvals in the Non-Production environments."
     parent_team_key = "platform-google-cloud-kubernetes"
@@ -880,6 +911,19 @@ team_parents = {
     repositories = [
       "backstage",
       "platform-backstage"
+    ]
+
+    review_request_delegation = true
+  }
+
+  "platform-datadog" = {
+    description = "Platform Team: responsible for the Datadog application and code reviews."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "datadog-organization-management"
     ]
 
     review_request_delegation = true
