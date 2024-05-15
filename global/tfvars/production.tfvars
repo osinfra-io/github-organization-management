@@ -251,8 +251,8 @@ repositories = {
     ]
   }
 
-  "gke-go-example" = {
-    description = "An example Go application that runs on Google Kubernetes Engine (GKE)."
+  "gke-info-go" = {
+    description = "An example Go application that shows information about the Google Kubernetes Engine (GKE) cluster."
 
     topics = [
       "google-cloud-platform",
@@ -268,8 +268,8 @@ repositories = {
     ]
   }
 
-  "gke-java-example" = {
-    description = "An example Java application that runs on Google Kubernetes Engine (GKE)."
+  "gke-info-java" = {
+    description = "An example Java application that shows information about the Google Kubernetes Engine (GKE) cluster."
 
     topics = [
       "google-cloud-platform",
@@ -750,8 +750,8 @@ team_children = {
     members         = []
 
     repositories = [
-      "gke-go-example",
-      "gke-java-example",
+      "gke-info-go",
+      "gke-info-java",
       "google-cloud-kubernetes",
       "platform-google-cloud-kubernetes"
     ]
@@ -958,8 +958,8 @@ team_parents = {
     permission  = "push"
 
     repositories = [
-      "gke-go-example",
-      "gke-java-example",
+      "gke-info-go",
+      "gke-info-java",
       "google-cloud-kubernetes",
       "platform-google-cloud-kubernetes"
     ]
