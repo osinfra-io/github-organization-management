@@ -523,7 +523,6 @@ repositories = {
       "datadog",
       "google-cloud-platform",
       "infrastructure-as-code",
-
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -536,7 +535,6 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -549,7 +547,6 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -562,7 +559,6 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -575,7 +571,6 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-
       "kubernetes",
       "osinfra",
       "terraform",
@@ -589,7 +584,6 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -602,7 +596,6 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -615,7 +608,6 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
-
       "osinfra",
       "terraform",
       "terraform-child-module"
@@ -628,7 +620,34 @@ repositories = {
     topics = [
       "google-cloud-platform",
       "infrastructure-as-code",
+      "osinfra",
+      "terraform",
+      "terraform-child-module"
+    ]
+  }
 
+  "terraform-kubernetes-datadog-operator" = {
+    description = "Terraform example module for Kubernetes Datadog operator."
+
+    topics = [
+      "datadog",
+      "infrastructure-as-code",
+      "helm",
+      "kubernetes",
+      "osinfra",
+      "terraform",
+      "terraform-child-module"
+    ]
+  }
+
+  "terraform-kubernetes-istio" = {
+    description = "Terraform example module for Kubernetes Istio service mesh."
+
+    topics = [
+      "helm",
+      "infrastructure-as-code",
+      "istio",
+      "kubernetes",
       "osinfra",
       "terraform",
       "terraform-child-module"
