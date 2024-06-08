@@ -8,6 +8,9 @@ on:
     types:
       - opened
 
+permissions:
+  issues: write
+
 jobs:
   add-to-osinfra-project:
     name: Open Source Infrastructure (as Code)

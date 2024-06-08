@@ -74,6 +74,11 @@ resource "github_actions_organization_permissions" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret
 
 resource "github_actions_organization_secret" "this" {
+
+  # Ensure GitHub Actions secrets are encrypted
+  # checkov:skip=CKV_GIT_4: We are passing the secret from the random_password resource which is sensitive by default
+  # and not checking in any plain text values. State is always secured.
+
   for_each = var.organization_secrets
 
   plaintext_value = random_password.this[each.key].result
@@ -85,6 +90,9 @@ resource "github_actions_organization_secret" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection
 
 resource "github_branch_protection" "this" {
+
+  # GitHub pull requests should require at least 2 approvals
+  # checkov:skip=CKV_GIT_5: 1 approval is reasonable for a small team
   for_each = local.branch_protections
 
   enforce_admins                  = false
@@ -168,6 +176,10 @@ resource "github_organization_settings" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 
 resource "github_repository" "this" {
+
+  # Ensure GitHub repository is Private
+  # checkov:skip=CKV_GIT_1: Public is ok for us since we are an open source project
+
   for_each = var.repositories
 
   allow_auto_merge            = true
