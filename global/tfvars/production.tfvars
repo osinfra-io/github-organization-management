@@ -16,6 +16,7 @@ repositories = {
 
   ".github" = {
     description            = "A Special Repository."
+    enable_branch_protection = false
     enable_datadog_webhook = false
 
     topics = [
@@ -32,6 +33,7 @@ repositories = {
 
   ".github-private" = {
     description            = "A Special Repository."
+    enable_branch_protection = false
     enable_datadog_webhook = false
 
     topics = [
@@ -143,6 +145,7 @@ repositories = {
 
   "github-organization-discussions" = {
     description            = "This repository is for osinfra.io GitHub organization discussions."
+    enable_branch_protection = false
     enable_datadog_webhook = false
     has_discussions        = true
 
@@ -438,7 +441,8 @@ repositories = {
 
   "platform-backstage" = {
     description = "Platform Team: responsible for the Backstage application and code reviews."
-    visibility  = "public"
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "backstage",
@@ -452,7 +456,8 @@ repositories = {
 
   "platform-vault" = {
     description = "Platform Team: responsible for the HashiCorp Vault application and code reviews."
-    visibility  = "public"
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "google-cloud-platform",
@@ -501,6 +506,18 @@ repositories = {
       "google-cloud-platform",
       "osinfra",
       "platform-team"
+    ]
+  }
+
+  "pre-commit-hooks" = {
+    description            = "Pre-commit hooks for Infrastructure as Code (IaC) tools."
+    enable_datadog_webhook = false
+
+    topics = [
+      "infrastructure-as-code",
+      "osinfra",
+      "pre-commit",
+      "terraform"
     ]
   }
 
