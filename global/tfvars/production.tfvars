@@ -15,8 +15,9 @@ repositories = {
   # Keep the following repositories in alphabetical order
 
   ".github" = {
-    description            = "A Special Repository."
-    enable_datadog_webhook = false
+    description              = "A Special Repository."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "github",
@@ -31,8 +32,9 @@ repositories = {
   }
 
   ".github-private" = {
-    description            = "A Special Repository."
-    enable_datadog_webhook = false
+    description              = "A Special Repository."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "github",
@@ -142,9 +144,10 @@ repositories = {
   }
 
   "github-organization-discussions" = {
-    description            = "This repository is for osinfra.io GitHub organization discussions."
-    enable_datadog_webhook = false
-    has_discussions        = true
+    description              = "This repository is for osinfra.io GitHub organization discussions."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+    has_discussions          = true
 
     topics = [
       "github",
@@ -437,8 +440,9 @@ repositories = {
   }
 
   "platform-backstage" = {
-    description = "Platform Team: responsible for the Backstage application and code reviews."
-    visibility  = "public"
+    description              = "Platform Team: responsible for the Backstage application and code reviews."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "backstage",
@@ -451,8 +455,9 @@ repositories = {
   }
 
   "platform-vault" = {
-    description = "Platform Team: responsible for the HashiCorp Vault application and code reviews."
-    visibility  = "public"
+    description              = "Platform Team: responsible for the HashiCorp Vault application and code reviews."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
 
     topics = [
       "google-cloud-platform",
@@ -501,6 +506,18 @@ repositories = {
       "google-cloud-platform",
       "osinfra",
       "platform-team"
+    ]
+  }
+
+  "pre-commit-hooks" = {
+    description            = "Pre-commit hooks for Infrastructure as Code (IaC) tools."
+    enable_datadog_webhook = false
+
+    topics = [
+      "infrastructure-as-code",
+      "osinfra",
+      "pre-commit",
+      "terraform"
     ]
   }
 
