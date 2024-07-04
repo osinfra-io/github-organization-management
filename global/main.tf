@@ -54,6 +54,7 @@ resource "github_actions_organization_permissions" "this" {
     github_owned_allowed = true
 
     patterns_allowed = [
+      "datadog/*",
       "dependabot/*",
       "docker/*",
       "github/*",
