@@ -41,4 +41,52 @@ Links to documentation and other resources required to develop and iterate in th
 
 ### 📓 Terraform Documentation
 
-- [global](global/infra/README.md)
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+#### Providers
+
+| Name | Version |
+|------|---------|
+| github | 6.2.3 |
+| random | 3.6.2 |
+| template | 2.2.0 |
+| time | 0.11.2 |
+
+#### Resources
+
+| Name | Type |
+|------|------|
+| [github_actions_organization_permissions.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_permissions) | resource |
+| [github_actions_organization_secret.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret) | resource |
+| [github_branch_protection.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
+| [github_membership.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership) | resource |
+| [github_organization_security_manager.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_security_manager) | resource |
+| [github_organization_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings) | resource |
+| [github_repository.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository_file.security_policy](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_webhook.datadog](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_webhook) | resource |
+| [github_repository_webhook.discord](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_webhook) | resource |
+| [github_team.children](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) | resource |
+| [github_team.parents](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team) | resource |
+| [github_team_members.children](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_members) | resource |
+| [github_team_members.parents](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_members) | resource |
+| [github_team_repository.children](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
+| [github_team_repository.parents](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
+| [github_team_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_settings) | resource |
+| [random_password.this](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
+| [time_rotating.this](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/rotating) | resource |
+| [template_file.security_policy](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
+
+#### Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| admins | A set of admins to add to the organization | `set(string)` | n/a | yes |
+| datadog\_webhook\_api\_key | The Datadog API key used for creating webhooks | `string` | n/a | yes |
+| discord\_webhook\_api\_key | The Discord API key used for creating webhooks | `string` | n/a | yes |
+| github\_token | The GitHub token used for managing the organization | `string` | n/a | yes |
+| members | A set of members to add to the organization | `set(string)` | `[]` | no |
+| organization\_secrets | Map of secrets to add to the organization | ```map(object({ description = string visibility = string }))``` | n/a | yes |
+| repositories | Map of repositories to create | ```map(object({ description = string enable_branch_protection = optional(bool, true) enable_discord_webhook = optional(bool, true) enable_datadog_webhook = optional(bool, true) has_discussions = optional(bool, false) is_template = optional(bool, false) push_allowances = optional(list(string), []) required_status_checks_contexts = optional(list(string), []) template = optional(string) topics = optional(list(string)) # In most cases, the visibility of your organizations repository should be private. # However, we are keeping our code public to encourage others to learn from our work. visibility = optional(string, "public") }))``` | n/a | yes |
+| team\_children | Map of child teams to create | ```map(object({ description = string maintainers = optional(set(string), []) members = optional(set(string), []) permission = optional(string, null) parent_team_key = string repositories = optional(set(string), []) }))``` | n/a | yes |
+| team\_parents | Map of parent teams to create | ```map(object({ description = string maintainers = optional(set(string), []) members = optional(set(string), []) permission = optional(string, null) privacy = optional(string, "closed") repositories = optional(set(string), []) review_request_delegation = optional(bool, false) }))``` | n/a | yes |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
