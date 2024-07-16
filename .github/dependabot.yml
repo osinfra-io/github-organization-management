@@ -1,7 +1,7 @@
 # Dependabot
 # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates
 
-version: 2
+version: 2.0
 updates:
   - package-ecosystem: github-actions
 
@@ -12,6 +12,7 @@ updates:
       interval: daily
 
   - package-ecosystem: terraform
-    directory: global
+    directories:
+      - "**/*"
     schedule:
       interval: daily
