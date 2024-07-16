@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 jobs:
-  global_infra:
+  global:
     name: "Global"
     uses: osinfra-io/github-terraform-gcp-called-workflows/.github/workflows/plan-and-apply.yml@v0.2.4
     if: github.actor != 'osinfra-sa'
@@ -28,7 +28,6 @@ jobs:
       terraform_state_bucket: plt-gh-organization-e194-prod
       terraform_version: ${{ vars.TERRAFORM_VERSION }}
       terraform_workspace: global-production
-      working_directory: global
       workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
     secrets:
       gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}

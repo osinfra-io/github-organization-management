@@ -1,4 +1,4 @@
-name: Dependabot Approve and Merge
+name: Dependabot Approval and Merge
 
 on: pull_request_target
 

@@ -1,0 +1,14 @@
+# Terraform Docs
+# https://github.com/terraform-docs/terraform-docs
+
+formatter: markdown
+
+sections:
+  hide:
+    - requirements
+
+settings:
+  anchor: false
+  hide-empty: true
+  html: false
+  indent: 4
