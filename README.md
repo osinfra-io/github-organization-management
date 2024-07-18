@@ -25,6 +25,7 @@ See the documentation for setting up a local development environment [here](http
 
 ### 🛠️ Tools
 
+- [checkov](https://github.com/bridgecrewio/checkov)
 - [pre-commit](https://github.com/pre-commit/pre-commit)
 - [pre-commit-terraform](https://github.com/antonbabenko/pre-commit-terraform)
 - [terraform-docs](https://github.com/terraform-docs/terraform-docs)
