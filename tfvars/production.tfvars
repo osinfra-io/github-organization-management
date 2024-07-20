@@ -562,6 +562,18 @@ repositories = {
     ]
   }
 
+  "terraform-google-network" = {
+    description = "Terraform example module for Google Cloud Platform network."
+
+    topics = [
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
+      "terraform",
+      "terraform-child-module"
+    ]
+  }
+
   "terraform-google-subnet" = {
     description = "Terraform example module for Google Cloud Platform subnet."
 
