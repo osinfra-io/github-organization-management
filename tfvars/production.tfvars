@@ -303,25 +303,6 @@ repositories = {
     ]
   }
 
-  "google-cloud-terraform-testing" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform testing."
-
-    topics = [
-      "google-cloud-landing-zone-platform",
-      "google-cloud-platform",
-      "infrastructure-as-code",
-
-      "osinfra",
-      "platform-team",
-      "terraform",
-      "testing"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-google-cloud-landing-zone"
-    ]
-  }
-
   "google-cloud-kubernetes" = {
     description = "Infrastructure as Code (IaC) example for Google Cloud Platform Kubernetes resources."
 
@@ -513,30 +494,6 @@ repositories = {
     ]
   }
 
-  "terraform-google-cloud-dns" = {
-    description = "Terraform example module for Google Cloud Platform Cloud DNS."
-
-    topics = [
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "osinfra",
-      "terraform",
-      "terraform-child-module"
-    ]
-  }
-
-  "terraform-google-cloud-nat" = {
-    description = "Terraform example module for Google Cloud Platform Cloud NAT."
-
-    topics = [
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "osinfra",
-      "terraform",
-      "terraform-child-module"
-    ]
-  }
-
   "terraform-google-cloud-sql" = {
     description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
 
@@ -574,18 +531,6 @@ repositories = {
     ]
   }
 
-  "terraform-google-subnet" = {
-    description = "Terraform example module for Google Cloud Platform subnet."
-
-    topics = [
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "osinfra",
-      "terraform",
-      "terraform-child-module"
-    ]
-  }
-
   "terraform-google-project" = {
     description = "Terraform example module for Google Cloud Platform project."
 
@@ -600,18 +545,6 @@ repositories = {
 
   "terraform-google-storage-bucket" = {
     description = "Terraform example module for Google Cloud Platform Storage bucket."
-
-    topics = [
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "osinfra",
-      "terraform",
-      "terraform-child-module"
-    ]
-  }
-
-  "terraform-google-vpc" = {
-    description = "Terraform example module for Google Cloud Platform VPC."
 
     topics = [
       "google-cloud-platform",
@@ -769,7 +702,6 @@ team_children = {
     repositories = [
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
-      "google-cloud-terraform-testing",
       "google-cloud-kubernetes",
       "google-cloud-networking",
       "google-cloud-services",
@@ -943,7 +875,6 @@ team_parents = {
     repositories = [
       "google-cloud-audit-logging",
       "google-cloud-hierarchy",
-      "google-cloud-terraform-testing",
       "google-cloud-networking",
       "google-cloud-services",
       "google-cloud-terraform-backend",

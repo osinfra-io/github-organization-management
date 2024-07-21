@@ -32,7 +32,7 @@ repos:
           - --hook-config=--create-file-if-not-exist=false
 
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: 3.2.174
+    rev: 3.2.195
     hooks:
       - id: checkov
         verbose: true
