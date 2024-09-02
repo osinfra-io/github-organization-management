@@ -15,19 +15,19 @@ permissions:
   id-token: write
 
 jobs:
-  global:
-    name: "Global"
+  main:
+    name: "Main"
     uses: osinfra-io/github-terraform-gcp-called-workflows/.github/workflows/plan-and-apply.yml@v0.2.5
     if: github.actor != 'osinfra-sa'
     with:
       checkout_ref: ${{ github.ref }}
       environment: production
-      github_environment: "Production: Global"
+      github_environment: "Production: Main"
       service_account: plt-gh-organization-github@ptl-lz-terraform-tf62-prod.iam.gserviceaccount.com
       terraform_plan_args: -var-file=tfvars/production.tfvars
       terraform_state_bucket: plt-gh-organization-e194-prod
       terraform_version: ${{ vars.TERRAFORM_VERSION }}
-      terraform_workspace: global-production
+      terraform_workspace: main-production
       workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
     secrets:
       gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
