@@ -61,7 +61,8 @@ resource "github_actions_organization_permissions" "this" {
       "githubsecuritylab/*",
       "google-github-actions/*",
       "hashicorp/*",
-      "infracost/*"
+      "infracost/*",
+      "open-policy-agent/*"
     ]
 
     verified_allowed = false
