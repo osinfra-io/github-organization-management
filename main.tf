@@ -123,10 +123,8 @@ resource "github_branch_protection" "this" {
 # GitHub Issue Labels Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_labels
 
-resource "github_issue_labels" "release_labels" {
-  for_each = local.release_label_repositories
-
-  repository = each.key
+resource "github_issue_labels" "this" {
+  for_each = var.repositories
 
   label {
     name        = "major"
@@ -145,6 +143,18 @@ resource "github_issue_labels" "release_labels" {
     color       = "0E8A16"
     description = "Patch version: Backwards-compatible bug fixes"
   }
+
+  dynamic "label" {
+    for_each = each.value.labels != null ? each.value.labels : []
+
+    content {
+      color       = label.value.color
+      description = label.value.description
+      name        = label.value.name
+    }
+  }
+
+  repository = each.key
 }
 
 

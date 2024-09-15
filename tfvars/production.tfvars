@@ -199,8 +199,7 @@ repositories = {
   }
 
   "github-terraform-gcp-called-workflows" = {
-    description        = "Reusable GitHub Called Workflow examples for Terraform and Google Cloud Platform."
-    has_release_labels = true
+    description = "Reusable GitHub Called Workflow examples for Terraform and Google Cloud Platform."
 
     topics = [
       "github",
@@ -238,8 +237,7 @@ repositories = {
   }
 
   "gke-info-go" = {
-    description        = "An example Go application that shows information about the Google Kubernetes Engine (GKE) cluster."
-    has_release_labels = true
+    description = "An example Go application that shows information about the Google Kubernetes Engine (GKE) cluster."
 
     topics = [
       "google-cloud-platform",
@@ -256,8 +254,7 @@ repositories = {
   }
 
   "gke-info-java" = {
-    description        = "An example Java application that shows information about the Google Kubernetes Engine (GKE) cluster."
-    has_release_labels = true
+    description = "An example Java application that shows information about the Google Kubernetes Engine (GKE) cluster."
 
     topics = [
       "google-cloud-platform",
@@ -395,7 +392,6 @@ repositories = {
   "local-development-setup" = {
     description            = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
     enable_datadog_webhook = false
-    has_release_labels     = true
 
     topics = [
       "docker",
@@ -464,7 +460,6 @@ repositories = {
   "pre-commit-hooks" = {
     description            = "Pre-commit hooks for Infrastructure as Code (IaC) tools."
     enable_datadog_webhook = false
-    has_release_labels     = true
 
     topics = [
       "infrastructure-as-code",
@@ -487,8 +482,7 @@ repositories = {
   }
 
   "terraform-datadog-google-integration" = {
-    description        = "Terraform example module for Datadog Google Cloud Platform integration."
-    has_release_labels = true
+    description = "Terraform example module for Datadog Google Cloud Platform integration."
 
     topics = [
       "datadog",
@@ -501,8 +495,7 @@ repositories = {
   }
 
   "terraform-google-cloud-sql" = {
-    description        = "Terraform example module for Google Cloud Platform Cloud SQL instance."
-    has_release_labels = true
+    description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
 
     topics = [
       "google-cloud-platform",
@@ -514,8 +507,7 @@ repositories = {
   }
 
   "terraform-google-kubernetes-engine" = {
-    description        = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
-    has_release_labels = true
+    description = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
 
     topics = [
       "google-cloud-platform",
@@ -528,8 +520,7 @@ repositories = {
   }
 
   "terraform-google-network" = {
-    description        = "Terraform example module for Google Cloud Platform network."
-    has_release_labels = true
+    description = "Terraform example module for Google Cloud Platform network."
 
     topics = [
       "google-cloud-platform",
@@ -541,8 +532,7 @@ repositories = {
   }
 
   "terraform-google-project" = {
-    description        = "Terraform example module for Google Cloud Platform project."
-    has_release_labels = true
+    description = "Terraform example module for Google Cloud Platform project."
 
     topics = [
       "google-cloud-platform",
@@ -554,8 +544,7 @@ repositories = {
   }
 
   "terraform-google-storage-bucket" = {
-    description        = "Terraform example module for Google Cloud Platform Storage bucket."
-    has_release_labels = true
+    description = "Terraform example module for Google Cloud Platform Storage bucket."
 
     topics = [
       "google-cloud-platform",
@@ -567,8 +556,7 @@ repositories = {
   }
 
   "terraform-kubernetes-datadog-operator" = {
-    description        = "Terraform example module for Kubernetes Datadog operator."
-    has_release_labels = true
+    description = "Terraform example module for Kubernetes Datadog operator."
 
     topics = [
       "datadog",
@@ -582,8 +570,7 @@ repositories = {
   }
 
   "terraform-kubernetes-istio" = {
-    description        = "Terraform example module for Kubernetes Istio service mesh."
-    has_release_labels = true
+    description = "Terraform example module for Kubernetes Istio service mesh."
 
     topics = [
       "helm",
