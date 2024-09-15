@@ -120,6 +120,33 @@ resource "github_branch_protection" "this" {
   }
 }
 
+# GitHub Issue Labels Resource
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_labels
+
+resource "github_issue_labels" "release_labels" {
+  for_each = local.release_label_repositories
+
+  repository = each.value.repository
+  label {
+    name        = "major"
+    color       = "B60205"
+    description = "Major version: Incompatible changes"
+  }
+
+  label {
+    name        = "minor"
+    color       = "FBCA04"
+    description = "Minor version: Additional functionality in a backwards-compatible manner"
+  }
+
+  label {
+    name        = "patch"
+    color       = "0E8A16"
+    description = "Patch version: Backwards-compatible bug fixes"
+  }
+}
+
+
 # GitHub Membership Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership
 

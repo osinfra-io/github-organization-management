@@ -47,6 +47,11 @@ locals {
       ]
   ]) : "${repository.team_parent}-${repository.repository}" => repository }
 
+
+  release_label_repositories = {
+    for repository_key, repository in var.repositories : repository_key => repository if repository.has_release_labels
+  }
+
   review_request_delegations = {
     for team_parent_key, team_parent in var.team_parents : team_parent_key => team_parent if team_parent.review_request_delegation
   }

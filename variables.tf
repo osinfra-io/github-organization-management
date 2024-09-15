@@ -46,6 +46,7 @@ variable "repositories" {
     enable_discord_webhook          = optional(bool, true)
     enable_datadog_webhook          = optional(bool, true)
     has_discussions                 = optional(bool, false)
+    has_release_labels              = optional(bool, false)
     is_template                     = optional(bool, false)
     push_allowances                 = optional(list(string), [])
     required_status_checks_contexts = optional(list(string), [])

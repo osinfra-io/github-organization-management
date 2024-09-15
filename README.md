@@ -47,10 +47,10 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| github | 6.2.3 |
-| random | 3.6.2 |
+| github | 6.3.0 |
+| random | 3.6.3 |
 | template | 2.2.0 |
-| time | 0.11.2 |
+| time | 0.12.1 |
 
 #### Resources
 
@@ -59,6 +59,7 @@ Links to documentation and other resources required to develop and iterate in th
 | [github_actions_organization_permissions.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_permissions) | resource |
 | [github_actions_organization_secret.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret) | resource |
 | [github_branch_protection.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
+| [github_issue_labels.release_labels](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_labels) | resource |
 | [github_membership.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership) | resource |
 | [github_organization_security_manager.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_security_manager) | resource |
 | [github_organization_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings) | resource |
@@ -87,7 +88,7 @@ Links to documentation and other resources required to develop and iterate in th
 | github\_token | The GitHub token used for managing the organization | `string` | n/a | yes |
 | members | A set of members to add to the organization | `set(string)` | `[]` | no |
 | organization\_secrets | Map of secrets to add to the organization | ```map(object({ description = string visibility = string }))``` | n/a | yes |
-| repositories | Map of repositories to create | ```map(object({ description = string enable_branch_protection = optional(bool, true) enable_discord_webhook = optional(bool, true) enable_datadog_webhook = optional(bool, true) has_discussions = optional(bool, false) is_template = optional(bool, false) push_allowances = optional(list(string), []) required_status_checks_contexts = optional(list(string), []) template = optional(string) topics = optional(list(string)) # In most cases, the visibility of your organizations repository should be private. # However, we are keeping our code public to encourage others to learn from our work. visibility = optional(string, "public") }))``` | n/a | yes |
+| repositories | Map of repositories to create | ```map(object({ description = string enable_branch_protection = optional(bool, true) enable_discord_webhook = optional(bool, true) enable_datadog_webhook = optional(bool, true) has_discussions = optional(bool, false) has_release_labels = optional(bool, false) is_template = optional(bool, false) push_allowances = optional(list(string), []) required_status_checks_contexts = optional(list(string), []) template = optional(string) topics = optional(list(string)) # In most cases, the visibility of your organizations repository should be private. # However, we are keeping our code public to encourage others to learn from our work. visibility = optional(string, "public") }))``` | n/a | yes |
 | team\_children | Map of child teams to create | ```map(object({ description = string maintainers = optional(set(string), []) members = optional(set(string), []) permission = optional(string, null) parent_team_key = string repositories = optional(set(string), []) }))``` | n/a | yes |
 | team\_parents | Map of parent teams to create | ```map(object({ description = string maintainers = optional(set(string), []) members = optional(set(string), []) permission = optional(string, null) privacy = optional(string, "closed") repositories = optional(set(string), []) review_request_delegation = optional(bool, false) }))``` | n/a | yes |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
