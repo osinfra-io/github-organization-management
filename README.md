@@ -42,7 +42,7 @@ Links to documentation and other resources required to develop and iterate in th
 
 ### 📓 Terraform Documentation
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 #### Providers
 
 | Name | Version |
@@ -91,4 +91,4 @@ Links to documentation and other resources required to develop and iterate in th
 | repositories | Map of repositories to create | ```map(object({ description = string enable_branch_protection = optional(bool, true) enable_discord_webhook = optional(bool, true) enable_datadog_webhook = optional(bool, true) has_discussions = optional(bool, false) has_release_labels = optional(bool, false) is_template = optional(bool, false) push_allowances = optional(list(string), []) required_status_checks_contexts = optional(list(string), []) template = optional(string) topics = optional(list(string)) # In most cases, the visibility of your organizations repository should be private. # However, we are keeping our code public to encourage others to learn from our work. visibility = optional(string, "public") }))``` | n/a | yes |
 | team\_children | Map of child teams to create | ```map(object({ description = string maintainers = optional(set(string), []) members = optional(set(string), []) permission = optional(string, null) parent_team_key = string repositories = optional(set(string), []) }))``` | n/a | yes |
 | team\_parents | Map of parent teams to create | ```map(object({ description = string maintainers = optional(set(string), []) members = optional(set(string), []) permission = optional(string, null) privacy = optional(string, "closed") repositories = optional(set(string), []) review_request_delegation = optional(bool, false) }))``` | n/a | yes |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

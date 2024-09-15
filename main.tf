@@ -126,7 +126,8 @@ resource "github_branch_protection" "this" {
 resource "github_issue_labels" "release_labels" {
   for_each = local.release_label_repositories
 
-  repository = each.value.repository
+  repository = each.key
+
   label {
     name        = "major"
     color       = "B60205"
