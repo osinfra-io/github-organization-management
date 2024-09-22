@@ -402,22 +402,6 @@ repositories = {
     ]
   }
 
-  "platform-vault" = {
-    description              = "Platform Team: responsible for the HashiCorp Vault application and code reviews."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-
-    topics = [
-      "google-cloud-platform",
-      "hashicorp",
-      "infrastructure-as-code",
-      "osinfra",
-      "platform-team",
-      "terraform",
-      "vault"
-    ]
-  }
-
   "platform-github" = {
     description              = "Platform Team: responsible for the GitHub organization."
     enable_branch_protection = false
@@ -555,6 +539,20 @@ repositories = {
     ]
   }
 
+  "terraform-kubernetes-cert-manager" = {
+    description = "Terraform example module for Kubernetes cert-manager."
+
+    topics = [
+      "cert-manager",
+      "helm",
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "terraform",
+      "terraform-child-module"
+    ]
+  }
+
   "terraform-kubernetes-datadog-operator" = {
     description = "Terraform example module for Kubernetes Datadog operator."
 
@@ -580,25 +578,6 @@ repositories = {
       "osinfra",
       "terraform",
       "terraform-child-module"
-    ]
-  }
-
-  "vault" = {
-    description = "Infrastructure as Code (IaC) example for HashiCorp Vault."
-    visibility  = "public"
-
-    topics = [
-      "google-cloud-platform",
-      "hashicorp",
-      "infrastructure-as-code",
-      "osinfra",
-      "platform-team",
-      "terraform",
-      "vault"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-vault"
     ]
   }
 }
@@ -739,40 +718,6 @@ team_children = {
     ]
   }
 
-  "platform-vault-approvers-nonprod" = {
-    description     = "Platform Team: responsible for Vault workflow approvals in the Non-Production environments."
-    parent_team_key = "platform-vault"
-    maintainers     = ["brettcurtis"]
-    members         = []
-  }
-
-  "platform-vault-approvers-prod" = {
-    description     = "Platform Team: responsible for Vault workflow approvals in the Production environment."
-    parent_team_key = "platform-vault"
-    maintainers     = ["brettcurtis"]
-    members         = []
-  }
-
-  "platform-vault-approvers-sb" = {
-    description     = "Platform Team: responsible for Vault workflow approvals in the Sandbox environment."
-    parent_team_key = "platform-vault"
-    maintainers     = ["brettcurtis"]
-    members         = []
-  }
-
-  "platform-vault-repository-admins" = {
-    description     = "Platform Team: responsible for Vault repository administration."
-    parent_team_key = "platform-vault"
-    permission      = "admin"
-    maintainers     = ["brettcurtis"]
-    members         = []
-
-    repositories = [
-      "platform-vault",
-      "vault"
-    ]
-  }
-
   "stream-customer-trust-approvers-nonprod" = {
     description     = "Stream Aligned Team: responsible for Customer Trust workflow approvals in the Non-Production environments."
     parent_team_key = "stream-customer-trust"
@@ -880,20 +825,6 @@ team_parents = {
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
       "platform-google-cloud-landing-zone"
-    ]
-
-    review_request_delegation = true
-  }
-
-  "platform-vault" = {
-    description = "Platform Team: responsible for the HashiCorp Vault application and code reviews."
-    maintainers = ["brettcurtis"]
-    members     = []
-    permission  = "push"
-
-    repositories = [
-      "platform-vault",
-      "vault"
     ]
 
     review_request_delegation = true

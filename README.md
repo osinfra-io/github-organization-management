@@ -47,10 +47,10 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| github | 6.3.0 |
-| random | 3.6.3 |
+| github | 6.2.3 |
+| random | 3.6.2 |
 | template | 2.2.0 |
-| time | 0.12.1 |
+| time | 0.11.2 |
 
 #### Resources
 

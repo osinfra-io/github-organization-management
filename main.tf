@@ -127,6 +127,36 @@ resource "github_issue_labels" "this" {
   for_each = var.repositories
 
   label {
+    name        = "bug"
+    color       = "84A255"
+    description = "Something isn't working"
+  }
+
+  label {
+    name        = "chore"
+    color       = "FBCA04"
+    description = "Grunt tasks etc; no production code change"
+  }
+
+  label {
+    name        = "documentation"
+    color       = "0075CA"
+    description = "Improvements or additions to documentation"
+  }
+
+  label {
+    name        = "enhancement"
+    color       = "A2EEEF"
+    description = "New feature or request"
+  }
+
+  label {
+    name        = "good first issue"
+    color       = "7057FF"
+    description = "Good for newcomers"
+  }
+
+  label {
     name        = "major"
     color       = "B60205"
     description = "Major version: Incompatible changes"
@@ -144,6 +174,18 @@ resource "github_issue_labels" "this" {
     description = "Patch version: Backwards-compatible bug fixes"
   }
 
+  label {
+    name        = "security"
+    color       = "B60205"
+    description = "Security vulnerability or configuration"
+  }
+
+  label {
+    name        = "tech-debt"
+    color       = "443221"
+    description = "Accrued work that is owed to a system or process"
+  }
+
   dynamic "label" {
     for_each = each.value.labels != null ? each.value.labels : []
 
@@ -155,6 +197,10 @@ resource "github_issue_labels" "this" {
   }
 
   repository = each.key
+
+  depends_on = [
+    github_repository.this
+  ]
 }
 
 
