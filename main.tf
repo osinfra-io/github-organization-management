@@ -129,7 +129,7 @@ resource "github_issue_labels" "this" {
   label {
     name        = "bug"
     color       = "84A255"
-    description = "Something isn't working"
+    description = "Something is not working"
   }
 
   label {
