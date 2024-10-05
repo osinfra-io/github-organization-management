@@ -580,6 +580,21 @@ repositories = {
       "terraform-child-module"
     ]
   }
+
+  "terraform-kubernetes-opa-gatekeeper" = {
+    description = "Terraform example module for Kubernetes Open Policy Agent (OPA) Gatekeeper."
+
+    topics = [
+      "gatekeeper",
+      "helm",
+      "infrastructure-as-code",
+      "kubernetes",
+      "opa",
+      "osinfra",
+      "terraform",
+      "terraform-child-module"
+    ]
+  }
 }
 
 team_children = {
