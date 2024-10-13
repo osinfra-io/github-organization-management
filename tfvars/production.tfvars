@@ -465,6 +465,17 @@ repositories = {
     ]
   }
 
+  "terraform-core-workspace" = {
+    description            = "Terraform example module for extracting workspace information."
+
+    topics = [
+      "infrastructure-as-code",
+      "osinfra",
+      "terraform",
+      "terraform-child-module"
+    ]
+  }
+
   "terraform-datadog-google-integration" = {
     description = "Terraform example module for Datadog Google Cloud Platform integration."
 
