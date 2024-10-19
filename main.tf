@@ -123,86 +123,94 @@ resource "github_branch_protection" "this" {
 # GitHub Issue Labels Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_labels
 
-resource "github_issue_labels" "this" {
+resource "github_issue_label" "bug" {
   for_each = var.repositories
 
-  label {
-    name        = "bug"
-    color       = "84A255"
-    description = "Something is not working"
-  }
-
-  label {
-    name        = "chore"
-    color       = "FBCA04"
-    description = "Grunt tasks etc; no production code change"
-  }
-
-  label {
-    name        = "documentation"
-    color       = "0075CA"
-    description = "Improvements or additions to documentation"
-  }
-
-  label {
-    name        = "enhancement"
-    color       = "A2EEEF"
-    description = "New feature or request"
-  }
-
-  label {
-    name        = "good first issue"
-    color       = "7057FF"
-    description = "Good for newcomers"
-  }
-
-  label {
-    name        = "major"
-    color       = "B60205"
-    description = "Major version: Incompatible changes"
-  }
-
-  label {
-    name        = "minor"
-    color       = "FBCA04"
-    description = "Minor version: Additional functionality in a backwards-compatible manner"
-  }
-
-  label {
-    name        = "patch"
-    color       = "0E8A16"
-    description = "Patch version: Backwards-compatible bug fixes"
-  }
-
-  label {
-    name        = "security"
-    color       = "B60205"
-    description = "Security vulnerability or configuration"
-  }
-
-  label {
-    name        = "tech-debt"
-    color       = "443221"
-    description = "Accrued work that is owed to a system or process"
-  }
-
-  dynamic "label" {
-    for_each = each.value.labels != null ? each.value.labels : []
-
-    content {
-      color       = label.value.color
-      description = label.value.description
-      name        = label.value.name
-    }
-  }
-
-  repository = each.key
-
-  depends_on = [
-    github_repository.this
-  ]
+  name        = "bug"
+  color       = "84A255"
+  description = "Something is not working"
+  repository  = each.key
 }
 
+resource "github_issue_label" "chore" {
+  for_each    = var.repositories
+  name        = "chore"
+  color       = "FBCA04"
+  description = "Grunt tasks etc; no production code change"
+  repository  = each.key
+}
+
+resource "github_issue_label" "documentation" {
+  for_each = var.repositories
+
+  name        = "documentation"
+  color       = "0075CA"
+  description = "Improvements or additions to documentation"
+  repository  = each.key
+}
+
+resource "github_issue_label" "enhancement" {
+  for_each = var.repositories
+
+  name        = "enhancement"
+  color       = "A2EEEF"
+  description = "New feature or request"
+  repository  = each.key
+}
+
+resource "github_issue_label" "good_first_issue" {
+  for_each = var.repositories
+
+  name        = "good first issue"
+  color       = "7057FF"
+  description = "Good for newcomers"
+  repository  = each.key
+}
+
+resource "github_issue_label" "major" {
+  for_each = var.repositories
+
+  name        = "major"
+  color       = "B60205"
+  description = "Major version: Incompatible changes"
+  repository  = each.key
+}
+
+resource "github_issue_label" "minor" {
+  for_each = var.repositories
+
+  name        = "minor"
+  color       = "FBCA04"
+  description = "Minor version: Additional functionality in a backwards-compatible manner"
+  repository  = each.key
+}
+
+resource "github_issue_label" "patch" {
+  for_each = var.repositories
+
+  name        = "patch"
+  color       = "0E8A16"
+  description = "Patch version: Backwards-compatible bug fixes"
+  repository  = each.key
+}
+
+resource "github_issue_label" "security" {
+  for_each = var.repositories
+
+  name        = "security"
+  color       = "B60205"
+  description = "Security vulnerability or configuration"
+  repository  = each.key
+}
+
+resource "github_issue_label" "tech_debt" {
+  for_each = var.repositories
+
+  name        = "tech-debt"
+  color       = "443221"
+  description = "Accrued work that is owed to a system or process"
+  repository  = each.key
+}
 
 # GitHub Membership Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership
@@ -303,6 +311,23 @@ resource "github_repository" "this" {
 
 # GitHub Repository File Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file
+
+resource "github_repository_file" "release" {
+  for_each = var.repositories
+
+  branch              = "main"
+  content             = file("${path.module}/markdown/release.yml")
+  file                = ".github/release.yml"
+  repository          = each.key
+  commit_message      = "Update .github/release.yml"
+  commit_author       = "Open Source Infrastructure as Code Service Account"
+  commit_email        = "github-sa@osinfra.io"
+  overwrite_on_create = true
+
+  depends_on = [
+    github_branch_protection.this
+  ]
+}
 
 resource "github_repository_file" "security_policy" {
   for_each = var.repositories

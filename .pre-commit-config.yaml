@@ -3,7 +3,7 @@
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -32,7 +32,7 @@ repos:
           - --hook-config=--create-file-if-not-exist=false
 
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: 3.2.255
+    rev: 3.2.267
     hooks:
       - id: checkov
         verbose: true
