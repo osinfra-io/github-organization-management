@@ -47,10 +47,10 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| github | 6.2.3 |
-| random | 3.6.2 |
+| github | 6.3.1 |
+| random | 3.6.3 |
 | template | 2.2.0 |
-| time | 0.11.2 |
+| time | 0.12.1 |
 
 #### Resources
 
@@ -59,7 +59,16 @@ Links to documentation and other resources required to develop and iterate in th
 | [github_actions_organization_permissions.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_permissions) | resource |
 | [github_actions_organization_secret.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret) | resource |
 | [github_branch_protection.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
-| [github_issue_labels.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_labels) | resource |
+| [github_issue_label.bug](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.chore](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.documentation](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.enhancement](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.good_first_issue](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.major](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.minor](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.patch](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.security](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
+| [github_issue_label.tech_debt](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
 | [github_membership.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership) | resource |
 | [github_organization_security_manager.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_security_manager) | resource |
 | [github_organization_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings) | resource |

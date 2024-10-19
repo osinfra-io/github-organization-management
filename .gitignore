@@ -18,9 +18,6 @@ crash.log
 # be included in version control.
 local.tfvars
 
-# Provider.tf is used for local development of modules and shouldn't be added to repos.
-provider.tf
-
 # Ignore override files as they are usually used to override ressources locally
 override.tf
 override.tf.json
