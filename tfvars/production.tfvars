@@ -465,11 +465,11 @@ repositories = {
     ]
   }
 
-  "terraform-core-workspace" = {
-    description = "Terraform example module for extracting workspace information."
+  "terraform-core-helpers" = {
+    description = "Terraform example module for helpers."
 
     topics = [
-      "infrastructure-as-code",
+      "infrastructure-as-code"
       "osinfra",
       "terraform",
       "terraform-child-module"
