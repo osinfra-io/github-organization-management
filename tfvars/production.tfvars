@@ -469,7 +469,7 @@ repositories = {
     description = "Terraform example module for helpers."
 
     topics = [
-      "infrastructure-as-code"
+      "infrastructure-as-code",
       "osinfra",
       "terraform",
       "terraform-child-module"
