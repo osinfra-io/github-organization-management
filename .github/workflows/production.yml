@@ -14,10 +14,6 @@ on:
 permissions:
   id-token: write
 
-env:
-  TF_VAR_app_pem_file: |
-     ${{ secrets.ORGANIZATION_MANAGEMENT_PEM }}
-
 jobs:
   main:
     name: "Main"
@@ -39,3 +35,4 @@ jobs:
       terraform_plan_secret_args: >-
         -var=discord_webhook_api_key=${{ secrets.DISCORD_WEBHOOK_API_KEY }}
         -var=datadog_webhook_api_key=${{ secrets.DATADOG_WEBHOOK_API_KEY }}
+        -var=app_pem_file_base64=${{ secrets.ORGANIZATION_MANAGEMENT_PEM_BASE64 }}

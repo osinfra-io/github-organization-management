@@ -47,7 +47,7 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| github | 6.3.0 |
+| github | 6.4.0 |
 | random | 3.6.3 |
 | template | 2.2.0 |
 | time | 0.12.1 |
@@ -84,7 +84,7 @@ Links to documentation and other resources required to develop and iterate in th
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | admins | A set of admins to add to the organization | `set(string)` | n/a | yes |
-| app\_pem\_file | The PEM file used for creating a token for the organization-management GitHub App | `string` | n/a | yes |
+| app\_pem\_file\_base64 | The base64 encoded PEM file used for creating a token for the organization-management GitHub App | `string` | n/a | yes |
 | datadog\_webhook\_api\_key | The Datadog API key used for creating webhooks | `string` | n/a | yes |
 | discord\_webhook\_api\_key | The Discord API key used for creating webhooks | `string` | n/a | yes |
 | members | A set of members to add to the organization | `set(string)` | `[]` | no |

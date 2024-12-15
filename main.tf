@@ -30,7 +30,7 @@ provider "github" {
   app_auth {
     id              = "1081373"
     installation_id = "58130651"
-    pem_file        = var.app_pem_file
+    pem_file        = base64decode(var.app_pem_file_base64)
   }
 
   owner = "osinfra-io"

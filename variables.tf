@@ -6,8 +6,8 @@ variable "admins" {
   type        = set(string)
 }
 
-variable "app_pem_file" {
-  description = "The PEM file used for creating a token for the organization-management GitHub App"
+variable "app_pem_file_base64" {
+  description = "The base64 encoded PEM file used for creating a token for the organization-management GitHub App"
   type        = string
   sensitive   = true
 }
