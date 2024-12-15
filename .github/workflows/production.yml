@@ -36,4 +36,4 @@ jobs:
         -var=discord_webhook_api_key=${{ secrets.DISCORD_WEBHOOK_API_KEY }}
         -var=datadog_webhook_api_key=${{ secrets.DATADOG_WEBHOOK_API_KEY }}
         -var=app_pem_file= |
-           ${{ secrets.ORGANIZATION_MANAGEMENT_PEM }}
+           "${{ secrets.ORGANIZATION_MANAGEMENT_PEM }}"
