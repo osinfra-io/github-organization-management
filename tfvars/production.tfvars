@@ -1,6 +1,5 @@
 admins = [
-  "brettcurtis",
-  "osinfra-sa"
+  "brettcurtis"
 ]
 
 organization_secrets = {
@@ -48,6 +47,19 @@ repositories = {
     ]
 
     visibility = "private"
+  }
+
+  "backstage" = {
+    description = "Backstage Infrastructure as Code (IaC) example for the osinfra.io organization."
+
+    topics = [
+      "backstage",
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
   }
 
   "ct-google-cloud-kubernetes" = {
@@ -402,6 +414,18 @@ repositories = {
     ]
   }
 
+  "platform-backstage" = {
+    description              = "Platform Team: responsible for Backstage."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "backstage",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
   "platform-github" = {
     description              = "Platform Team: responsible for the GitHub organization."
     enable_branch_protection = false
@@ -621,6 +645,39 @@ team_children = {
     ]
   }
 
+  "platform-backstage-approvers-nonprod" = {
+    description     = "Platform Team: responsible for Backstage workflow approvals in the Non-Production environments."
+    parent_team_key = "platform-backstage"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-backstage-approvers-prod" = {
+    description     = "Platform Team: responsible for Backstage workflow approvals in the Production environment."
+    parent_team_key = "platform-backstage"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-backstage-approvers-sb" = {
+    description     = "Platform Team: responsible for Backstage workflow approvals in the Sandbox environment."
+    parent_team_key = "platform-backstage"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-backstage-repository-admins" = {
+    description     = "Platform Team: responsible for Backstage repository administration."
+    parent_team_key = "platform-backstage"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "backstage"
+    ]
+  }
+
   "platform-datadog-approvers-prod" = {
     description     = "Platform Team: responsible for Datadog workflow approvals in the Production environment."
     parent_team_key = "platform-datadog"
@@ -794,6 +851,19 @@ team_parents = {
 
     repositories = [
       "datadog-organization-management"
+    ]
+
+    review_request_delegation = true
+  }
+
+  "platform-backstage" = {
+    description = "Platform Team: responsible for the Backstage application and code reviews."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "backstage"
     ]
 
     review_request_delegation = true

@@ -6,6 +6,12 @@ variable "admins" {
   type        = set(string)
 }
 
+variable "app_pem_file" {
+  description = "The PEM file used for creating a token for the organization-management GitHub App"
+  type        = string
+  sensitive   = true
+}
+
 variable "discord_webhook_api_key" {
   description = "The Discord API key used for creating webhooks"
   type        = string
@@ -14,12 +20,6 @@ variable "discord_webhook_api_key" {
 
 variable "datadog_webhook_api_key" {
   description = "The Datadog API key used for creating webhooks"
-  type        = string
-  sensitive   = true
-}
-
-variable "github_token" {
-  description = "The GitHub token used for managing the organization"
   type        = string
   sensitive   = true
 }
@@ -47,11 +47,11 @@ variable "repositories" {
     enable_datadog_webhook   = optional(bool, true)
     has_discussions          = optional(bool, false)
 
-    labels = optional(list(object({
+    labels = optional(map(object({
       color       = string
       description = string
-      name        = string
-    })))
+      })), {}
+    )
 
     is_template                     = optional(bool, false)
     push_allowances                 = optional(list(string), [])
@@ -64,6 +64,16 @@ variable "repositories" {
 
     visibility = optional(string, "public")
   }))
+
+  validation {
+    condition = alltrue([
+      for repo in var.repositories : alltrue([
+        for label in values(repo.labels) :
+        can(regex("^[0-9A-Fa-f]{6}$", label.color))
+      ])
+    ])
+    error_message = "The color of the labels must be a valid 6-character hexadecimal color code"
+  }
 }
 
 variable "team_children" {

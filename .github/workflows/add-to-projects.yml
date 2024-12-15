@@ -18,4 +18,4 @@ jobs:
     with:
      project_id: 1
     secrets:
-     add_to_project_pat: ${{ secrets.ADD_TO_PROJECT_PAT }}
+     add_to_project_pem: ${{ secrets.ADD_TO_PROJECT_PEM }}
