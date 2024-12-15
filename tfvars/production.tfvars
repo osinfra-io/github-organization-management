@@ -226,6 +226,14 @@ repositories = {
     push_allowances = [
       "osinfra-io/platform-github"
     ]
+
+    labels = {
+      "bug" = {
+        color       = "#d73a4a"
+        description = "Something isn't working"
+        repository  = "github-terraform-gcp-called-workflows"
+      }
+    }
   }
 
   "github-terraform-gcp-root-module-template" = {

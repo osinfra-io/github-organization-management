@@ -65,6 +65,16 @@ variable "repositories" {
 
     visibility = optional(string, "public")
   }))
+
+  validation {
+    condition = alltrue([
+      for repo in var.repositories : alltrue([
+        for label in values(repo.labels) :
+        can(regex("^[0-9A-Fa-f]{6}$", label.color))
+      ])
+    ])
+    error_message = "The color of the labels must be a valid 6-character hexadecimal color code"
+  }
 }
 
 variable "team_children" {
