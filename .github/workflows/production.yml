@@ -33,6 +33,6 @@ jobs:
       gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
       infracost_api_key: ${{ secrets.INFRACOST_API_KEY }}
       terraform_plan_secret_args: >-
-        -var=discord_webhook_api_key=${{ secrets.DISCORD_WEBHOOK_API_KEY }}
-        -var=datadog_webhook_api_key=${{ secrets.DATADOG_WEBHOOK_API_KEY }}
         -var=app_pem_file_base64=${{ secrets.ORGANIZATION_MANAGEMENT_PEM_BASE64 }}
+        -var=datadog_webhook_api_key=${{ secrets.DATADOG_WEBHOOK_API_KEY }}
+        -var=discord_webhook_api_key=${{ secrets.DISCORD_WEBHOOK_API_KEY }}
