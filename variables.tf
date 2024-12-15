@@ -50,7 +50,6 @@ variable "repositories" {
     labels = optional(map(object({
       color       = string
       description = string
-      repository  = string
       })), {}
     )
 
