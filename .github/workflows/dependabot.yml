@@ -10,4 +10,4 @@ jobs:
     name: Dependabot
     uses: osinfra-io/github-misc-called-workflows/.github/workflows/dependabot.yml@v0.1.7
     secrets:
-      pr_approve_and_merge_pat: ${{ secrets.PR_APPROVE_AND_MERGE_PAT }}
+      pr_approve_and_merge_pem: ${{ secrets.PR_APPROVE_AND_MERGE_PEM }}

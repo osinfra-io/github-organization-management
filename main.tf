@@ -27,8 +27,13 @@ terraform {
 # https://registry.terraform.io/providers/integrations/github/latest/docs
 
 provider "github" {
+  app_auth {
+    id              = "1081373"
+    installation_id = "58130651"
+    pem_file        = var.app_pem_file
+  }
+
   owner = "osinfra-io"
-  token = var.github_token
 }
 
 # Template File Data Source
@@ -121,95 +126,16 @@ resource "github_branch_protection" "this" {
 }
 
 # GitHub Issue Labels Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_labels
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label
 
-resource "github_issue_label" "bug" {
-  for_each = var.repositories
+resource "github_issue_label" "this" {
+  #for_each = merge(local.repository_default_labels, local.repository_labels)
+  for_each = local.repository_labels
 
-  name        = "bug"
-  color       = "84A255"
-  description = "Something is not working"
-  repository  = each.key
-}
-
-resource "github_issue_label" "chore" {
-  for_each    = var.repositories
-  name        = "chore"
-  color       = "FBCA04"
-  description = "Grunt tasks etc; no production code change"
-  repository  = each.key
-}
-
-resource "github_issue_label" "documentation" {
-  for_each = var.repositories
-
-  name        = "documentation"
-  color       = "0075CA"
-  description = "Improvements or additions to documentation"
-  repository  = each.key
-}
-
-resource "github_issue_label" "enhancement" {
-  for_each = var.repositories
-
-  name        = "enhancement"
-  color       = "A2EEEF"
-  description = "New feature or request"
-  repository  = each.key
-}
-
-resource "github_issue_label" "good_first_issue" {
-  for_each = var.repositories
-
-  name        = "good first issue"
-  color       = "7057FF"
-  description = "Good for newcomers"
-  repository  = each.key
-}
-
-resource "github_issue_label" "major" {
-  for_each = var.repositories
-
-  name        = "major"
-  color       = "B60205"
-  description = "Major version: Incompatible changes"
-  repository  = each.key
-}
-
-resource "github_issue_label" "minor" {
-  for_each = var.repositories
-
-  name        = "minor"
-  color       = "FBCA04"
-  description = "Minor version: Additional functionality in a backwards-compatible manner"
-  repository  = each.key
-}
-
-resource "github_issue_label" "patch" {
-  for_each = var.repositories
-
-  name        = "patch"
-  color       = "0E8A16"
-  description = "Patch version: Backwards-compatible bug fixes"
-  repository  = each.key
-}
-
-resource "github_issue_label" "security" {
-  for_each = var.repositories
-
-  name        = "security"
-  color       = "B60205"
-  description = "Security vulnerability or configuration"
-  repository  = each.key
-}
-
-resource "github_issue_label" "tech_debt" {
-  for_each = var.repositories
-
-  name        = "tech-debt"
-  color       = "443221"
-  description = "Accrued work that is owed to a system or process"
-  repository  = each.key
+  name        = each.value.name
+  color       = each.value.color
+  description = each.value.description
+  repository  = github_repository.this[each.value.repository].name
 }
 
 # GitHub Membership Resource
