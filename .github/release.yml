@@ -10,7 +10,7 @@ changelog:
         labels:
           - dependencies
 
-    - title: 🔩 Dependencies 
+    - title: 🔩 Dependencies
       labels:
         - dependencies
 
