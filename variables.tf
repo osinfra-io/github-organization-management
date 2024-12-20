@@ -100,3 +100,9 @@ variable "team_parents" {
     review_request_delegation = optional(bool, false)
   }))
 }
+
+variable "token" {
+  description = "The GitHub token used for organization management"
+  type        = string
+  sensitive   = true
+}
