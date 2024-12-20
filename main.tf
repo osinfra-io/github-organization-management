@@ -26,14 +26,32 @@ terraform {
 # Github Provider
 # https://registry.terraform.io/providers/integrations/github/latest/docs
 
-provider "github" {
-  app_auth {
-    id              = "1081373"
-    installation_id = "58130651"
-    pem_file        = base64decode(var.app_pem_file_base64)
-  }
+# Some API operations may not be available when using a GitHub App installation configuration. For more information, refer to the list of
+# supported operations: https://docs.github.com/en/rest/authentication/endpoints-available-for-github-app-installation-access-tokens
 
+# provider "github" {
+#   app_auth {
+#     id              = "1081373"
+#     installation_id = "58130651"
+#     pem_file        = base64decode(var.app_pem_file_base64)
+#   }
+
+#   owner = "osinfra-io"
+# }
+
+provider "github" {
+  token = var.token
   owner = "osinfra-io"
+}
+
+# GitHub Application Data Source
+# https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/app
+
+# Currently private GitHub Apps can only use this endpoint on themselves and if we use a private GitHub App for authentication, we can't
+# use this data source to get the node_id of another GitHub App.
+
+data "github_app" "pr_approve_and_merge_osinfra_io" {
+  slug = "pr-approve-and-merge-osinfra-io"
 }
 
 # Template File Data Source
@@ -100,6 +118,7 @@ resource "github_branch_protection" "this" {
 
   # GitHub pull requests should require at least 2 approvals
   # checkov:skip=CKV_GIT_5: 1 approval is reasonable for a small team
+
   for_each = local.branch_protections
 
   enforce_admins                  = false
@@ -121,7 +140,12 @@ resource "github_branch_protection" "this" {
   }
 
   restrict_pushes {
-    push_allowances = each.value.push_allowances
+    push_allowances = concat(
+      each.value.push_allowances,
+      [
+        data.github_app.pr_approve_and_merge_osinfra_io.node_id
+      ]
+    )
   }
 }
 
@@ -129,7 +153,6 @@ resource "github_branch_protection" "this" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label
 
 resource "github_issue_label" "this" {
-  #for_each = merge(local.repository_default_labels, local.repository_labels)
   for_each = local.repository_labels
 
   name        = each.value.name
