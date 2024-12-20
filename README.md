@@ -77,6 +77,7 @@ Links to documentation and other resources required to develop and iterate in th
 | [github_team_settings.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_settings) | resource |
 | [random_password.this](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 | [time_rotating.this](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/rotating) | resource |
+| [github_app.pr_approve_and_merge_osinfra_io](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/app) | data source |
 | [template_file.security_policy](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
 
 #### Inputs
@@ -84,7 +85,6 @@ Links to documentation and other resources required to develop and iterate in th
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | admins | A set of admins to add to the organization | `set(string)` | n/a | yes |
-| app\_pem\_file\_base64 | The base64 encoded PEM file used for creating a token for the organization-management GitHub App | `string` | n/a | yes |
 | datadog\_webhook\_api\_key | The Datadog API key used for creating webhooks | `string` | n/a | yes |
 | discord\_webhook\_api\_key | The Discord API key used for creating webhooks | `string` | n/a | yes |
 | members | A set of members to add to the organization | `set(string)` | `[]` | no |
@@ -92,4 +92,5 @@ Links to documentation and other resources required to develop and iterate in th
 | repositories | Map of repositories to create | ```map(object({ description = string enable_branch_protection = optional(bool, true) enable_discord_webhook = optional(bool, true) enable_datadog_webhook = optional(bool, true) has_discussions = optional(bool, false) labels = optional(map(object({ color = string description = string })), {} ) is_template = optional(bool, false) push_allowances = optional(list(string), []) required_status_checks_contexts = optional(list(string), []) template = optional(string) topics = optional(list(string)) # In most cases, the visibility of your organizations repository should be private. # However, we are keeping our code public to encourage others to learn from our work. visibility = optional(string, "public") }))``` | n/a | yes |
 | team\_children | Map of child teams to create | ```map(object({ description = string maintainers = optional(set(string), []) members = optional(set(string), []) permission = optional(string, null) parent_team_key = string repositories = optional(set(string), []) }))``` | n/a | yes |
 | team\_parents | Map of parent teams to create | ```map(object({ description = string maintainers = optional(set(string), []) members = optional(set(string), []) permission = optional(string, null) privacy = optional(string, "closed") repositories = optional(set(string), []) review_request_delegation = optional(bool, false) }))``` | n/a | yes |
+| token | The GitHub token used for organization management | `string` | n/a | yes |
 <!-- END_TF_DOCS -->

@@ -6,11 +6,11 @@ variable "admins" {
   type        = set(string)
 }
 
-variable "app_pem_file_base64" {
-  description = "The base64 encoded PEM file used for creating a token for the organization-management GitHub App"
-  type        = string
-  sensitive   = true
-}
+# variable "app_pem_file_base64" {
+#   description = "The base64 encoded PEM file used for creating a token for the organization-management GitHub App"
+#   type        = string
+#   sensitive   = true
+# }
 
 variable "discord_webhook_api_key" {
   description = "The Discord API key used for creating webhooks"
