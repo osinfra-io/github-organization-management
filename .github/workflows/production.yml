@@ -23,9 +23,9 @@ jobs:
       checkout_ref: ${{ github.ref }}
       environment: production
       github_environment: "Production: Main"
-      service_account: plt-gh-organization-github@ptl-lz-terraform-tf62-prod.iam.gserviceaccount.com
+      service_account: plt-gh-organization-github@plt-lz-terraform-tf56-prod.iam.gserviceaccount.com
       terraform_plan_args: -var-file=tfvars/production.tfvars
-      terraform_state_bucket: plt-gh-organization-e194-prod
+      terraform_state_bucket: plt-gh-organization-53a5-prod
       terraform_version: ${{ vars.TERRAFORM_VERSION }}
       terraform_workspace: main-production
       workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
