@@ -190,7 +190,7 @@ resource "github_organization_settings" "this" {
   # curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io
 
   billing_email                                                = "brett@osinfra.io"
-  blog                                                         = "https://www.osinfra.io"
+  blog                                                         = "https://osinfra.io"
   company                                                      = "Open Source Infrastructure (as Code)"
   default_repository_permission                                = "read"
   dependabot_alerts_enabled_for_new_repositories               = true
