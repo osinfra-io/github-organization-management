@@ -248,8 +248,8 @@ repositories = {
     ]
   }
 
-  "gke-info-go" = {
-    description = "An example Go application that shows information about the Google Kubernetes Engine (GKE) cluster."
+  "istio-test" = {
+    description = "An example Istio test application that shows information about the Google Kubernetes Engine (GKE) cluster."
 
     topics = [
       "google-cloud-platform",
@@ -260,22 +260,6 @@ repositories = {
       "terraform"
     ]
 
-    push_allowances = [
-      "osinfra-io/platform-google-cloud-kubernetes"
-    ]
-  }
-
-  "gke-info-java" = {
-    description = "An example Java application that shows information about the Google Kubernetes Engine (GKE) cluster."
-
-    topics = [
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "kubernetes",
-      "osinfra",
-      "platform-team",
-      "terraform"
-    ]
     push_allowances = [
       "osinfra-io/platform-google-cloud-kubernetes"
     ]
@@ -726,8 +710,7 @@ team_children = {
     members         = []
 
     repositories = [
-      "gke-info-go",
-      "gke-info-java",
+      "istio-test",
       "google-cloud-kubernetes",
       "platform-google-cloud-kubernetes"
     ]
@@ -898,8 +881,7 @@ team_parents = {
     permission  = "push"
 
     repositories = [
-      "gke-info-go",
-      "gke-info-java",
+      "istio-test",
       "google-cloud-kubernetes",
       "platform-google-cloud-kubernetes"
     ]
