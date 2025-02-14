@@ -47,7 +47,7 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| github | 6.4.0 |
+| github | 6.5.0 |
 | random | 3.6.3 |
 | template | 2.2.0 |
 | time | 0.12.1 |

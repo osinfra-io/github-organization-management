@@ -820,6 +820,27 @@ team_children = {
 }
 
 team_parents = {
+  "inner-source" = {
+    description = "This is the catch all team for InnerSource collaboration."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "terraform-core-helpers",
+      "terraform-datadog-google-integration",
+      "terraform-google-cloud-sql",
+      "terraform-google-kubernetes-engine",
+      "terraform-google-network",
+      "terraform-google-project",
+      "terraform-google-storage-bucket",
+      "terraform-kubernetes-cert-manager",
+      "terraform-kubernetes-datadog-operator",
+      "terraform-kubernetes-istio",
+      "terraform-kubernetes-opa-gatekeeper"
+    ]
+  }
+
   "owners" = {
     description = "Owners of the osinfra.io organization."
     maintainers = ["brettcurtis"]
