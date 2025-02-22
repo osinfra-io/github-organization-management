@@ -384,6 +384,18 @@ repositories = {
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
+  
+  "inner-source" = {
+    description              = "InnerSource Team: responsible for InnerSource collaboration."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "infrastructure-as-code",
+      "osinfra",
+      "terraform"
+    ]
+  }
 
   "local-development-setup" = {
     description            = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
@@ -398,6 +410,18 @@ repositories = {
     ]
   }
 
+  "openbao" = {
+    description = "OpenBao Infrastructure as Code (IaC) example for the osinfra.io organization."
+
+    topics = [
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+  }
+
   "platform-backstage" = {
     description              = "Platform Team: responsible for Backstage."
     enable_branch_protection = false
@@ -405,6 +429,18 @@ repositories = {
 
     topics = [
       "backstage",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-datadog" = {
+    description              = "Platform Team: responsible for Datadog."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "datadog",
       "osinfra",
       "platform-team"
     ]
@@ -444,6 +480,18 @@ repositories = {
     topics = [
       "google-cloud-landing-zone-platform",
       "google-cloud-platform",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-openbao" = {
+    description              = "Platform Team: responsible for OpenBao."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "openbao",
       "osinfra",
       "platform-team"
     ]
@@ -618,7 +666,7 @@ repositories = {
 
 team_children = {
   "enabling-security-admins" = {
-    description     = "Enabling Team: responsible for Securty repository administration."
+    description     = "Enabling Team: responsible for Security repository administration."
     parent_team_key = "enabling-security"
     permission      = "admin"
     maintainers     = ["brettcurtis"]
@@ -626,6 +674,29 @@ team_children = {
 
     repositories = [
       "enabling-security"
+    ]
+  }
+
+  "inner-source-admins" = {
+    description     = "InnerSource Team: responsible for InnerSource repository administration."
+    parent_team_key = "inner-source"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "inner-source",
+      "terraform-core-helpers",
+      "terraform-datadog-google-integration",
+      "terraform-google-cloud-sql",
+      "terraform-google-kubernetes-engine",
+      "terraform-google-network",
+      "terraform-google-project",
+      "terraform-google-storage-bucket",
+      "terraform-kubernetes-cert-manager",
+      "terraform-kubernetes-datadog-operator",
+      "terraform-kubernetes-istio",
+      "terraform-kubernetes-opa-gatekeeper"
     ]
   }
 
@@ -658,7 +729,8 @@ team_children = {
     members         = []
 
     repositories = [
-      "backstage"
+      "backstage",
+      "platform-backstage"
     ]
   }
 
@@ -678,6 +750,34 @@ team_children = {
 
     repositories = [
       "datadog-organization-management"
+    ]
+  }
+
+  "platform-github-approvers" = {
+    description     = "Platform Team: responsible for GitHub workflow approvals."
+    parent_team_key = "platform-github"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-github-repository-admins" = {
+    description     = "Platform Team: responsible for GitHub repository administration."
+    parent_team_key = "platform-github"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      ".github",
+      ".github-private",
+      "github-misc-called-workflows",
+      "github-organization-management",
+      "github-organization-discussions",
+      "github-terraform-child-module-template",
+      "github-terraform-codespace",
+      "github-terraform-gcp-called-workflows",
+      "github-terraform-gcp-root-module-template",
+      "platform-github"
     ]
   }
 
@@ -756,31 +856,37 @@ team_children = {
     ]
   }
 
-  "platform-github-approvers" = {
-    description     = "Platform Team: responsible for GitHub workflow approvals."
-    parent_team_key = "platform-github"
+  "platform-openbao-approvers-nonprod" = {
+    description     = "Platform Team: responsible for OpenBao workflow approvals in the Non-Production environments."
+    parent_team_key = "platform-openbao"
     maintainers     = ["brettcurtis"]
     members         = []
   }
 
-  "platform-github-repository-admins" = {
-    description     = "Platform Team: responsible for GitHub repository administration."
-    parent_team_key = "platform-github"
+  "platform-openbao-approvers-prod" = {
+    description     = "Platform Team: responsible for OpenBao workflow approvals in the Production environment."
+    parent_team_key = "platform-openbao"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-openbao-approvers-sb" = {
+    description     = "Platform Team: responsible for OpenBao workflow approvals in the Sandbox environment."
+    parent_team_key = "platform-openbao"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-openbao-repository-admins" = {
+    description     = "Platform Team: responsible for OpenBao repository administration."
+    parent_team_key = "platform-openbao"
     permission      = "admin"
     maintainers     = ["brettcurtis"]
     members         = []
 
     repositories = [
-      ".github",
-      ".github-private",
-      "github-misc-called-workflows",
-      "github-organization-management",
-      "github-organization-discussions",
-      "github-terraform-child-module-template",
-      "github-terraform-codespace",
-      "github-terraform-gcp-called-workflows",
-      "github-terraform-gcp-root-module-template",
-      "platform-github"
+      "openbao",
+      "platform-openbao"
     ]
   }
 
@@ -827,6 +933,7 @@ team_parents = {
     permission  = "push"
 
     repositories = [
+      "inner-source",
       "terraform-core-helpers",
       "terraform-datadog-google-integration",
       "terraform-google-cloud-sql",
@@ -854,7 +961,8 @@ team_parents = {
     permission  = "push"
 
     repositories = [
-      "datadog-organization-management"
+      "datadog-organization-management",
+      "platform-datadog"
     ]
 
     review_request_delegation = true
@@ -867,7 +975,8 @@ team_parents = {
     permission  = "push"
 
     repositories = [
-      "backstage"
+      "backstage",
+      "platform-backstage"
     ]
 
     review_request_delegation = true
@@ -924,6 +1033,20 @@ team_parents = {
       "google-cloud-terraform-backend",
       "google-cloud-workload-identity",
       "platform-google-cloud-landing-zone"
+    ]
+
+    review_request_delegation = true
+  }
+
+  "platform-openbao" = {
+    description = "Platform Team: responsible for the OpenBao application and code reviews."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "openbao",
+      "platform-openbao"
     ]
 
     review_request_delegation = true
