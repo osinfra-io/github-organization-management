@@ -49,11 +49,26 @@ repositories = {
     visibility = "private"
   }
 
+  "argo-cd" = {
+    description = "Argo CD Infrastructure as Code (IaC) example for the osinfra.io organization."
+
+    topics = [
+      "argo-cd",
+      "helm",
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "platform-team",
+      "terraform"
+    ]
+  }
+
   "backstage" = {
     description = "Backstage Infrastructure as Code (IaC) example for the osinfra.io organization."
 
     topics = [
       "backstage",
+      "helm",
       "infrastructure-as-code",
       "kubernetes",
       "osinfra",
@@ -252,6 +267,7 @@ repositories = {
     description = "An example Istio test application that shows information about the Google Kubernetes Engine (GKE) cluster."
 
     topics = [
+      "golang",
       "google-cloud-platform",
       "infrastructure-as-code",
       "kubernetes",
@@ -384,7 +400,7 @@ repositories = {
       "osinfra-io/platform-google-cloud-landing-zone"
     ]
   }
-  
+
   "inner-source" = {
     description              = "InnerSource Team: responsible for InnerSource collaboration."
     enable_branch_protection = false
@@ -415,10 +431,23 @@ repositories = {
 
     topics = [
       "infrastructure-as-code",
+      "helm",
       "kubernetes",
       "osinfra",
       "platform-team",
       "terraform"
+    ]
+  }
+
+  "platform-argo-cd" = {
+    description              = "Platform Team: responsible for Argo CD."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "argo-cd",
+      "osinfra",
+      "platform-team"
     ]
   }
 
@@ -502,6 +531,7 @@ repositories = {
     enable_datadog_webhook = false
 
     topics = [
+      "golang",
       "infrastructure-as-code",
       "osinfra",
       "pre-commit",
@@ -697,6 +727,32 @@ team_children = {
       "terraform-kubernetes-datadog-operator",
       "terraform-kubernetes-istio",
       "terraform-kubernetes-opa-gatekeeper"
+    ]
+  }
+  "platform-argo-cd-approvers-prod" = {
+    description     = "Platform Team: responsible for Argo CD workflow approvals in the Production environment."
+    parent_team_key = "platform-argo-cd"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-argo-cd-approvers-sb" = {
+    description     = "Platform Team: responsible for Argo CD workflow approvals in the Sandbox environment."
+    parent_team_key = "platform-argo-cd"
+    maintainers     = ["brettcurtis"]
+    members         = []
+  }
+
+  "platform-argo-cd-repository-admins" = {
+    description     = "Platform Team: responsible for Argo CD repository administration."
+    parent_team_key = "platform-argo-cd"
+    permission      = "admin"
+    maintainers     = ["brettcurtis"]
+    members         = []
+
+    repositories = [
+      "argo-cd",
+      "platform-argo-cd"
     ]
   }
 
@@ -954,15 +1010,15 @@ team_parents = {
     members     = []
   }
 
-  "platform-datadog" = {
-    description = "Platform Team: responsible for the Datadog application and code reviews."
+  "platform-argo-cd" = {
+    description = "Platform Team: responsible for the Argo CD application and code reviews."
     maintainers = ["brettcurtis"]
     members     = []
     permission  = "push"
 
     repositories = [
-      "datadog-organization-management",
-      "platform-datadog"
+      "argo-cd",
+      "platform-argo-cd"
     ]
 
     review_request_delegation = true
@@ -977,6 +1033,20 @@ team_parents = {
     repositories = [
       "backstage",
       "platform-backstage"
+    ]
+
+    review_request_delegation = true
+  }
+
+  "platform-datadog" = {
+    description = "Platform Team: responsible for the Datadog application and code reviews."
+    maintainers = ["brettcurtis"]
+    members     = []
+    permission  = "push"
+
+    repositories = [
+      "datadog-organization-management",
+      "platform-datadog"
     ]
 
     review_request_delegation = true
