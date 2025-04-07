@@ -47,10 +47,9 @@ Links to documentation and other resources required to develop and iterate in th
 
 | Name | Version |
 |------|---------|
-| github | 6.5.0 |
-| random | 3.6.3 |
-| template | 2.2.0 |
-| time | 0.12.1 |
+| github | 6.6.0 |
+| random | 3.7.1 |
+| time | 0.13.0 |
 
 #### Resources
 
@@ -78,7 +77,6 @@ Links to documentation and other resources required to develop and iterate in th
 | [random_password.this](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 | [time_rotating.this](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/rotating) | resource |
 | [github_app.pr_approve_and_merge_osinfra_io](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/app) | data source |
-| [template_file.security_policy](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
 
 #### Inputs
 

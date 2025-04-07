@@ -54,19 +54,6 @@ data "github_app" "pr_approve_and_merge_osinfra_io" {
   slug = "pr-approve-and-merge-osinfra-io"
 }
 
-# Template File Data Source
-# https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file
-
-data "template_file" "security_policy" {
-  for_each = var.repositories
-
-  template = file("${path.module}/markdown/SECURITY.md.tpl")
-
-  vars = {
-    repository = each.key
-  }
-}
-
 # GitHub Actions Organization Permissions Resource
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_permissions
 
@@ -85,7 +72,8 @@ resource "github_actions_organization_permissions" "this" {
       "google-github-actions/*",
       "hashicorp/*",
       "infracost/*",
-      "open-policy-agent/*"
+      "open-policy-agent/*",
+      "projectdiscovery/*"
     ]
 
     verified_allowed = false
@@ -281,8 +269,10 @@ resource "github_repository_file" "release" {
 resource "github_repository_file" "security_policy" {
   for_each = var.repositories
 
-  branch              = "main"
-  content             = data.template_file.security_policy[each.key].rendered
+  branch = "main"
+  content = templatefile("${path.module}/markdown/SECURITY.md.tpl", {
+    repository = each.key
+  })
   file                = "SECURITY.md"
   repository          = each.key
   commit_message      = "Update SECURITY.md"
