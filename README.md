@@ -48,8 +48,8 @@ Links to documentation and other resources required to develop and iterate in th
 | Name | Version |
 |------|---------|
 | github | 6.6.0 |
-| random | 3.7.1 |
-| time | 0.13.0 |
+| random | 3.7.2 |
+| time | 0.13.1 |
 
 #### Resources
 

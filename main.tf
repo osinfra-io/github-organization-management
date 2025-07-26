@@ -68,11 +68,11 @@ resource "github_actions_organization_permissions" "this" {
       "dependabot/*",
       "docker/*",
       "github/*",
-      "githubsecuritylab/*",
       "google-github-actions/*",
       "hashicorp/*",
       "infracost/*",
       "open-policy-agent/*",
+      "opentofu/*",
       "projectdiscovery/*"
     ]
 
