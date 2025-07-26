@@ -552,7 +552,7 @@ repositories = {
   }
 
   "terraform-core-helpers" = {
-    description = "Terraform example module for helpers."
+    description = "OpenTofu example module for helpers."
 
     topics = [
       "infrastructure-as-code",
@@ -563,7 +563,7 @@ repositories = {
   }
 
   "terraform-datadog-google-integration" = {
-    description = "Terraform example module for Datadog Google Cloud Platform integration."
+    description = "OpenTofu example module for Datadog Google Cloud Platform integration."
 
     topics = [
       "datadog",
@@ -576,7 +576,7 @@ repositories = {
   }
 
   "terraform-google-cloud-sql" = {
-    description = "Terraform example module for Google Cloud Platform Cloud SQL instance."
+    description = "OpenTofu example module for Google Cloud Platform Cloud SQL instance."
 
     topics = [
       "google-cloud-platform",
@@ -588,7 +588,7 @@ repositories = {
   }
 
   "terraform-google-kubernetes-engine" = {
-    description = "Terraform example module for Google Cloud Platform Kubernetes Engine cluster."
+    description = "OpenTofu example module for Google Cloud Platform Kubernetes Engine cluster."
 
     topics = [
       "google-cloud-platform",
@@ -601,7 +601,7 @@ repositories = {
   }
 
   "terraform-google-network" = {
-    description = "Terraform example module for Google Cloud Platform network."
+    description = "OpenTofu example module for Google Cloud Platform network."
 
     topics = [
       "google-cloud-platform",
@@ -613,7 +613,7 @@ repositories = {
   }
 
   "opentofu-google-project" = {
-    description = "Terraform example module for Google Cloud Platform project."
+    description = "OpenTofu example module for Google Cloud Platform project."
 
     topics = [
       "google-cloud-platform",
@@ -625,7 +625,7 @@ repositories = {
   }
 
   "terraform-google-storage-bucket" = {
-    description = "Terraform example module for Google Cloud Platform Storage bucket."
+    description = "OpenTofu example module for Google Cloud Platform Storage bucket."
 
     topics = [
       "google-cloud-platform",
@@ -637,7 +637,7 @@ repositories = {
   }
 
   "terraform-kubernetes-cert-manager" = {
-    description = "Terraform example module for Kubernetes cert-manager."
+    description = "OpenTofu example module for Kubernetes cert-manager."
 
     topics = [
       "cert-manager",
@@ -651,7 +651,7 @@ repositories = {
   }
 
   "terraform-kubernetes-datadog-operator" = {
-    description = "Terraform example module for Kubernetes Datadog operator."
+    description = "OpenTofu example module for Kubernetes Datadog operator."
 
     topics = [
       "datadog",
@@ -665,7 +665,7 @@ repositories = {
   }
 
   "terraform-kubernetes-istio" = {
-    description = "Terraform example module for Kubernetes Istio service mesh."
+    description = "OpenTofu example module for Kubernetes Istio service mesh."
 
     topics = [
       "helm",
@@ -679,7 +679,7 @@ repositories = {
   }
 
   "terraform-kubernetes-opa-gatekeeper" = {
-    description = "Terraform example module for Kubernetes Open Policy Agent (OPA) Gatekeeper."
+    description = "OpenTofu example module for Kubernetes Open Policy Agent (OPA) Gatekeeper."
 
     topics = [
       "gatekeeper",
