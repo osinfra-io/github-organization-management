@@ -587,7 +587,7 @@ repositories = {
     ]
   }
 
-  "terraform-google-kubernetes-engine" = {
+  "opentofu-google-kubernetes-engine" = {
     description = "OpenTofu example module for Google Cloud Platform Kubernetes Engine cluster."
 
     topics = [
@@ -719,7 +719,7 @@ team_children = {
       "terraform-core-helpers",
       "terraform-datadog-google-integration",
       "terraform-google-cloud-sql",
-      "terraform-google-kubernetes-engine",
+      "opentofu-google-kubernetes-engine",
       "terraform-google-network",
       "opentofu-google-project",
       "terraform-google-storage-bucket",
@@ -993,7 +993,7 @@ team_parents = {
       "terraform-core-helpers",
       "terraform-datadog-google-integration",
       "terraform-google-cloud-sql",
-      "terraform-google-kubernetes-engine",
+      "opentofu-google-kubernetes-engine",
       "terraform-google-network",
       "opentofu-google-project",
       "terraform-google-storage-bucket",
