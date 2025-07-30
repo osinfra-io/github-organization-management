@@ -664,7 +664,7 @@ repositories = {
     ]
   }
 
-  "terraform-kubernetes-istio" = {
+  "opentofu-kubernetes-istio" = {
     description = "OpenTofu example module for Kubernetes Istio service mesh."
 
     topics = [
@@ -725,7 +725,7 @@ team_children = {
       "terraform-google-storage-bucket",
       "terraform-kubernetes-cert-manager",
       "terraform-kubernetes-datadog-operator",
-      "terraform-kubernetes-istio",
+      "opentofu-kubernetes-istio",
       "terraform-kubernetes-opa-gatekeeper"
     ]
   }
@@ -999,7 +999,7 @@ team_parents = {
       "terraform-google-storage-bucket",
       "terraform-kubernetes-cert-manager",
       "terraform-kubernetes-datadog-operator",
-      "terraform-kubernetes-istio",
+      "opentofu-kubernetes-istio",
       "terraform-kubernetes-opa-gatekeeper"
     ]
   }
