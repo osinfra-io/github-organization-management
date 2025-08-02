@@ -678,7 +678,7 @@ repositories = {
     ]
   }
 
-  "terraform-kubernetes-opa-gatekeeper" = {
+  "opentofu-kubernetes-opa-gatekeeper" = {
     description = "OpenTofu example module for Kubernetes Open Policy Agent (OPA) Gatekeeper."
 
     topics = [
@@ -726,7 +726,7 @@ team_children = {
       "opentofu-kubernetes-cert-manager",
       "terraform-kubernetes-datadog-operator",
       "opentofu-kubernetes-istio",
-      "terraform-kubernetes-opa-gatekeeper"
+      "opentofu-kubernetes-opa-gatekeeper"
     ]
   }
   "platform-argo-cd-approvers-prod" = {
@@ -1000,7 +1000,7 @@ team_parents = {
       "opentofu-kubernetes-cert-manager",
       "terraform-kubernetes-datadog-operator",
       "opentofu-kubernetes-istio",
-      "terraform-kubernetes-opa-gatekeeper"
+      "opentofu-kubernetes-opa-gatekeeper"
     ]
   }
 
