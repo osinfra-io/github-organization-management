@@ -650,7 +650,7 @@ repositories = {
     ]
   }
 
-  "terraform-kubernetes-datadog-operator" = {
+  "opentofu-kubernetes-datadog-operator" = {
     description = "OpenTofu example module for Kubernetes Datadog operator."
 
     topics = [
@@ -724,7 +724,7 @@ team_children = {
       "opentofu-google-project",
       "terraform-google-storage-bucket",
       "opentofu-kubernetes-cert-manager",
-      "terraform-kubernetes-datadog-operator",
+      "opentofu-kubernetes-datadog-operator",
       "opentofu-kubernetes-istio",
       "opentofu-kubernetes-opa-gatekeeper"
     ]
@@ -998,7 +998,7 @@ team_parents = {
       "opentofu-google-project",
       "terraform-google-storage-bucket",
       "opentofu-kubernetes-cert-manager",
-      "terraform-kubernetes-datadog-operator",
+      "opentofu-kubernetes-datadog-operator",
       "opentofu-kubernetes-istio",
       "opentofu-kubernetes-opa-gatekeeper"
     ]
