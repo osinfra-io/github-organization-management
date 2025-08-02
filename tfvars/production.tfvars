@@ -636,7 +636,7 @@ repositories = {
     ]
   }
 
-  "terraform-kubernetes-cert-manager" = {
+  "opentofu-kubernetes-cert-manager" = {
     description = "OpenTofu example module for Kubernetes cert-manager."
 
     topics = [
@@ -723,7 +723,7 @@ team_children = {
       "terraform-google-network",
       "opentofu-google-project",
       "terraform-google-storage-bucket",
-      "terraform-kubernetes-cert-manager",
+      "opentofu-kubernetes-cert-manager",
       "terraform-kubernetes-datadog-operator",
       "opentofu-kubernetes-istio",
       "terraform-kubernetes-opa-gatekeeper"
@@ -997,7 +997,7 @@ team_parents = {
       "terraform-google-network",
       "opentofu-google-project",
       "terraform-google-storage-bucket",
-      "terraform-kubernetes-cert-manager",
+      "opentofu-kubernetes-cert-manager",
       "terraform-kubernetes-datadog-operator",
       "opentofu-kubernetes-istio",
       "terraform-kubernetes-opa-gatekeeper"
