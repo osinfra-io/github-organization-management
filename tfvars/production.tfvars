@@ -575,7 +575,7 @@ repositories = {
     ]
   }
 
-  "terraform-google-cloud-sql" = {
+  "opentofu-google-cloud-sql" = {
     description = "OpenTofu example module for Google Cloud Platform Cloud SQL instance."
 
     topics = [
@@ -718,7 +718,7 @@ team_children = {
       "inner-source",
       "terraform-core-helpers",
       "opentofu-datadog-google-integration",
-      "terraform-google-cloud-sql",
+      "opentofu-google-cloud-sql",
       "opentofu-google-kubernetes-engine",
       "opentofu-google-network",
       "opentofu-google-project",
@@ -992,7 +992,7 @@ team_parents = {
       "inner-source",
       "terraform-core-helpers",
       "opentofu-datadog-google-integration",
-      "terraform-google-cloud-sql",
+      "opentofu-google-cloud-sql",
       "opentofu-google-kubernetes-engine",
       "opentofu-google-network",
       "opentofu-google-project",
