@@ -562,7 +562,7 @@ repositories = {
     ]
   }
 
-  "terraform-datadog-google-integration" = {
+  "opentofu-datadog-google-integration" = {
     description = "OpenTofu example module for Datadog Google Cloud Platform integration."
 
     topics = [
@@ -717,7 +717,7 @@ team_children = {
     repositories = [
       "inner-source",
       "terraform-core-helpers",
-      "terraform-datadog-google-integration",
+      "opentofu-datadog-google-integration",
       "terraform-google-cloud-sql",
       "opentofu-google-kubernetes-engine",
       "terraform-google-network",
@@ -991,7 +991,7 @@ team_parents = {
     repositories = [
       "inner-source",
       "terraform-core-helpers",
-      "terraform-datadog-google-integration",
+      "opentofu-datadog-google-integration",
       "terraform-google-cloud-sql",
       "opentofu-google-kubernetes-engine",
       "terraform-google-network",
