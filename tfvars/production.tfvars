@@ -600,7 +600,7 @@ repositories = {
     ]
   }
 
-  "terraform-google-network" = {
+  "opentofu-google-network" = {
     description = "OpenTofu example module for Google Cloud Platform network."
 
     topics = [
@@ -720,7 +720,7 @@ team_children = {
       "opentofu-datadog-google-integration",
       "terraform-google-cloud-sql",
       "opentofu-google-kubernetes-engine",
-      "terraform-google-network",
+      "opentofu-google-network",
       "opentofu-google-project",
       "opentofu-google-storage-bucket",
       "opentofu-kubernetes-cert-manager",
@@ -994,7 +994,7 @@ team_parents = {
       "opentofu-datadog-google-integration",
       "terraform-google-cloud-sql",
       "opentofu-google-kubernetes-engine",
-      "terraform-google-network",
+      "opentofu-google-network",
       "opentofu-google-project",
       "opentofu-google-storage-bucket",
       "opentofu-kubernetes-cert-manager",
