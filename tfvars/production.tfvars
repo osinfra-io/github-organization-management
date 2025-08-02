@@ -551,7 +551,7 @@ repositories = {
     ]
   }
 
-  "terraform-core-helpers" = {
+  "opentofu-core-helpers" = {
     description = "OpenTofu example module for helpers."
 
     topics = [
@@ -716,7 +716,7 @@ team_children = {
 
     repositories = [
       "inner-source",
-      "terraform-core-helpers",
+      "opentofu-core-helpers",
       "opentofu-datadog-google-integration",
       "opentofu-google-cloud-sql",
       "opentofu-google-kubernetes-engine",
@@ -990,7 +990,7 @@ team_parents = {
 
     repositories = [
       "inner-source",
-      "terraform-core-helpers",
+      "opentofu-core-helpers",
       "opentofu-datadog-google-integration",
       "opentofu-google-cloud-sql",
       "opentofu-google-kubernetes-engine",
