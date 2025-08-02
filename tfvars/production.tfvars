@@ -624,7 +624,7 @@ repositories = {
     ]
   }
 
-  "terraform-google-storage-bucket" = {
+  "opentofu-google-storage-bucket" = {
     description = "OpenTofu example module for Google Cloud Platform Storage bucket."
 
     topics = [
@@ -722,7 +722,7 @@ team_children = {
       "opentofu-google-kubernetes-engine",
       "terraform-google-network",
       "opentofu-google-project",
-      "terraform-google-storage-bucket",
+      "opentofu-google-storage-bucket",
       "opentofu-kubernetes-cert-manager",
       "opentofu-kubernetes-datadog-operator",
       "opentofu-kubernetes-istio",
@@ -996,7 +996,7 @@ team_parents = {
       "opentofu-google-kubernetes-engine",
       "terraform-google-network",
       "opentofu-google-project",
-      "terraform-google-storage-bucket",
+      "opentofu-google-storage-bucket",
       "opentofu-kubernetes-cert-manager",
       "opentofu-kubernetes-datadog-operator",
       "opentofu-kubernetes-istio",
