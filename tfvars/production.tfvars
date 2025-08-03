@@ -225,7 +225,7 @@ repositories = {
     ]
   }
 
-  "github-terraform-gcp-called-workflows" = {
+  "github-opentofu-gcp-called-workflows" = {
     description = "Reusable GitHub Called Workflow examples for Terraform and Google Cloud Platform."
 
     topics = [
@@ -831,7 +831,7 @@ team_children = {
       "github-organization-discussions",
       "github-terraform-child-module-template",
       "github-terraform-codespace",
-      "github-terraform-gcp-called-workflows",
+      "github-opentofu-gcp-called-workflows",
       "github-terraform-gcp-root-module-template",
       "platform-github"
     ]
@@ -1066,7 +1066,7 @@ team_parents = {
       "github-terraform-child-module-template",
       "github-organization-management",
       "github-terraform-codespace",
-      "github-terraform-gcp-called-workflows",
+      "github-opentofu-gcp-called-workflows",
       "github-terraform-gcp-root-module-template",
       "platform-github"
     ]
