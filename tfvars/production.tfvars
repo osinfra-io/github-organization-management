@@ -206,7 +206,7 @@ repositories = {
     ]
   }
 
-  "github-terraform-codespace" = {
+  "github-opentofu-codespace" = {
     description            = "GitHub Codespace example for Terraform Infrastructure as Code (IaC) Development."
     enable_datadog_webhook = false
 
@@ -830,7 +830,7 @@ team_children = {
       "github-organization-management",
       "github-organization-discussions",
       "github-terraform-child-module-template",
-      "github-terraform-codespace",
+      "github-opentofu-codespace",
       "github-opentofu-gcp-called-workflows",
       "github-terraform-gcp-root-module-template",
       "platform-github"
@@ -1065,7 +1065,7 @@ team_parents = {
       "github-organization-discussions",
       "github-terraform-child-module-template",
       "github-organization-management",
-      "github-terraform-codespace",
+      "github-opentofu-codespace",
       "github-opentofu-gcp-called-workflows",
       "github-terraform-gcp-root-module-template",
       "platform-github"
