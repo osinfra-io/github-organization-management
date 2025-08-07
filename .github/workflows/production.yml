@@ -12,27 +12,26 @@ on:
 # caller workflow level or in the specific job that calls the reusable workflow.
 
 permissions:
+  contents: read
   id-token: write
 
 jobs:
   main:
     name: "Main"
-    uses: osinfra-io/github-opentofu-gcp-called-workflows/.github/workflows/plan-and-apply.yml@v0.2.7
+    uses: osinfra-io/github-opentofu-gcp-called-workflows/.github/workflows/plan-and-apply.yml@367d86eecaab18bb7fae7f5fa17fe7001df13f16
     if: github.actor != 'osinfra-sa'
     with:
       checkout_ref: ${{ github.ref }}
-      environment: production
       github_environment: "Production: Main"
-      service_account: plt-gh-organization-github@plt-lz-terraform-tf56-prod.iam.gserviceaccount.com
-      terraform_plan_args: -var-file=tfvars/production.tfvars
-      terraform_state_bucket: plt-gh-organization-53a5-prod
-      terraform_version: ${{ vars.TERRAFORM_VERSION }}
-      terraform_workspace: main-production
+      service_account: plt-gh-organization-github@plt-lz-backend-tf5f-prod.iam.gserviceaccount.com
+      opentofu_plan_args: -var-file=tfvars/production.tfvars
+      opentofu_state_bucket: plt-gh-organization-ec8a-prod
+      opentofu_version: ${{ vars.OPENTOFU_VERSION }}
+      opentofu_workspace: main-production
       workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
     secrets:
       gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
-      infracost_api_key: ${{ secrets.INFRACOST_API_KEY }}
-      terraform_plan_secret_args: >-
+      opentofu_plan_secret_args: >-
         -var=token=${{ secrets.TOKEN }}
         -var=datadog_webhook_api_key=${{ secrets.DATADOG_WEBHOOK_API_KEY }}
         -var=discord_webhook_api_key=${{ secrets.DISCORD_WEBHOOK_API_KEY }}

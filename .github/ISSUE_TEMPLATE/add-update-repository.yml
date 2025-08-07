@@ -55,7 +55,7 @@ body:
     attributes:
       label: "Topics:"
       description: Add topics to your repository. This will help others find your repository.
-      placeholder: terraform, github-actions, ...
+      placeholder: opentofu, github-actions, ...
     validations:
       required: false
 

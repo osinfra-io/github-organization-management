@@ -59,7 +59,7 @@ repositories = {
       "kubernetes",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
   }
 
@@ -73,7 +73,7 @@ repositories = {
       "kubernetes",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
   }
 
@@ -87,7 +87,7 @@ repositories = {
       "kubernetes",
       "osinfra",
       "stream-aligned-team",
-      "terraform"
+      "opentofu"
     ]
   }
 
@@ -99,7 +99,7 @@ repositories = {
       "datadog",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
   }
 
@@ -179,7 +179,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -188,7 +188,7 @@ repositories = {
   }
 
   "github-terraform-child-module-template" = {
-    description            = "Terraform child module template for GitHub repositories."
+    description            = "OpenTofu child module template for GitHub repositories."
     enable_datadog_webhook = false
     is_template            = true
 
@@ -198,7 +198,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -207,7 +207,7 @@ repositories = {
   }
 
   "github-opentofu-codespace" = {
-    description            = "GitHub Codespace example for Terraform Infrastructure as Code (IaC) Development."
+    description            = "GitHub Codespace example for OpenTofu Infrastructure as Code (IaC) Development."
     enable_datadog_webhook = false
 
     topics = [
@@ -217,7 +217,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -226,7 +226,7 @@ repositories = {
   }
 
   "github-opentofu-gcp-called-workflows" = {
-    description = "Reusable GitHub Called Workflow examples for Terraform and Google Cloud Platform."
+    description = "Reusable GitHub Called Workflow examples for OpenTofu and Google Cloud Platform."
 
     topics = [
       "github",
@@ -235,7 +235,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -244,7 +244,7 @@ repositories = {
   }
 
   "github-terraform-gcp-root-module-template" = {
-    description            = "Terraform Google Cloud Platform root module template for GitHub repositories."
+    description            = "OpenTofu Google Cloud Platform root module template for GitHub repositories."
     enable_datadog_webhook = false
     is_template            = true
 
@@ -255,7 +255,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -273,7 +273,7 @@ repositories = {
       "kubernetes",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -290,7 +290,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -307,7 +307,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -325,7 +325,7 @@ repositories = {
       "kubernetes",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -342,7 +342,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -359,7 +359,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -367,8 +367,8 @@ repositories = {
     ]
   }
 
-  "google-cloud-terraform-backend" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform Terraform backend."
+  "google-cloud-opentofu-backend" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform OpenTofu backend."
 
     topics = [
       "google-cloud-landing-zone-platform",
@@ -376,7 +376,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -393,7 +393,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
 
     push_allowances = [
@@ -409,7 +409,7 @@ repositories = {
     topics = [
       "infrastructure-as-code",
       "osinfra",
-      "terraform"
+      "opentofu"
     ]
   }
 
@@ -422,7 +422,7 @@ repositories = {
       "infrastructure-as-code",
       "local-development",
       "osinfra",
-      "terraform"
+      "opentofu"
     ]
   }
 
@@ -435,7 +435,7 @@ repositories = {
       "kubernetes",
       "osinfra",
       "platform-team",
-      "terraform"
+      "opentofu"
     ]
   }
 
@@ -535,7 +535,7 @@ repositories = {
       "infrastructure-as-code",
       "osinfra",
       "pre-commit",
-      "terraform"
+      "opentofu"
     ]
   }
 
@@ -557,8 +557,8 @@ repositories = {
     topics = [
       "infrastructure-as-code",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -570,8 +570,8 @@ repositories = {
       "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -582,8 +582,8 @@ repositories = {
       "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -595,8 +595,8 @@ repositories = {
       "infrastructure-as-code",
       "kubernetes",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -607,8 +607,8 @@ repositories = {
       "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -619,8 +619,8 @@ repositories = {
       "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -631,8 +631,8 @@ repositories = {
       "google-cloud-platform",
       "infrastructure-as-code",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -645,8 +645,8 @@ repositories = {
       "infrastructure-as-code",
       "kubernetes",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -659,8 +659,8 @@ repositories = {
       "helm",
       "kubernetes",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -673,8 +673,8 @@ repositories = {
       "istio",
       "kubernetes",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 
@@ -688,8 +688,8 @@ repositories = {
       "kubernetes",
       "opa",
       "osinfra",
-      "terraform",
-      "terraform-child-module"
+      "opentofu",
+      "opentofu-child-module"
     ]
   }
 }
@@ -906,7 +906,7 @@ team_children = {
       "google-cloud-kubernetes",
       "google-cloud-networking",
       "google-cloud-services",
-      "google-cloud-terraform-backend",
+      "google-cloud-opentofu-backend",
       "google-cloud-workload-identity",
       "platform-google-cloud-landing-zone"
     ]
@@ -1100,7 +1100,7 @@ team_parents = {
       "google-cloud-hierarchy",
       "google-cloud-networking",
       "google-cloud-services",
-      "google-cloud-terraform-backend",
+      "google-cloud-opentofu-backend",
       "google-cloud-workload-identity",
       "platform-google-cloud-landing-zone"
     ]

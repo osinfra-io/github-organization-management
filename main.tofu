@@ -1,5 +1,5 @@
-# Required Providers
-# https://www.terraform.io/docs/language/providers/requirements.html#requiring-providers
+# Requiring Providers
+# https://opentofu.org/docs/language/providers/requirements#requiring-providers
 
 terraform {
   required_providers {
@@ -8,14 +8,14 @@ terraform {
     }
 
     # Random Provider
-    # https://registry.terraform.io/providers/hashicorp/random/latest/docs
+    # https://search.opentofu.org/provider/hashicorp/random/latest/docs
 
     random = {
       source = "hashicorp/random"
     }
 
     # Time Provider
-    # https://registry.terraform.io/providers/hashicorp/time/latest/docs
+    # https://search.opentofu.org/provider/hashicorp/time/latest/docs
 
     time = {
       source = "hashicorp/time"
@@ -24,7 +24,7 @@ terraform {
 }
 
 # Github Provider
-# https://registry.terraform.io/providers/integrations/github/latest/docs
+# https://search.opentofu.org/provider/integrations/github/latest/docs
 
 # Some API operations may not be available when using a GitHub App installation configuration. For more information, refer to the list of
 # supported operations: https://docs.github.com/en/rest/authentication/endpoints-available-for-github-app-installation-access-tokens
@@ -45,7 +45,7 @@ provider "github" {
 }
 
 # GitHub Application Data Source
-# https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/app
+# https://search.opentofu.org/provider/integrations/github/latest/docs/data-sources/app
 
 # Currently private GitHub Apps can only use this endpoint on themselves and if we use a private GitHub App for authentication, we can't
 # use this data source to get the node_id of another GitHub App.
@@ -55,7 +55,7 @@ data "github_app" "pr_approve_and_merge_osinfra_io" {
 }
 
 # GitHub Actions Organization Permissions Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_permissions
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/actions_organization_permissions
 
 resource "github_actions_organization_permissions" "this" {
   allowed_actions = "selected"
@@ -69,8 +69,6 @@ resource "github_actions_organization_permissions" "this" {
       "docker/*",
       "github/*",
       "google-github-actions/*",
-      "hashicorp/*",
-      "infracost/*",
       "open-policy-agent/*",
       "opentofu/*",
       "projectdiscovery/*"
@@ -84,7 +82,7 @@ resource "github_actions_organization_permissions" "this" {
 
 
 # Github Actions Secret Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/actions_organization_secret
 
 resource "github_actions_organization_secret" "this" {
 
@@ -100,7 +98,7 @@ resource "github_actions_organization_secret" "this" {
 }
 
 # Github Branch Protection Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/branch_protection
 
 resource "github_branch_protection" "this" {
 
@@ -138,7 +136,7 @@ resource "github_branch_protection" "this" {
 }
 
 # GitHub Issue Labels Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/issue_label
 
 resource "github_issue_label" "this" {
   for_each = local.repository_labels
@@ -150,7 +148,7 @@ resource "github_issue_label" "this" {
 }
 
 # GitHub Membership Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/membership
 
 resource "github_membership" "this" {
   for_each = local.users
@@ -160,19 +158,19 @@ resource "github_membership" "this" {
 }
 
 # Github Organization Security Manager Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_security_manager
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/organization_security_manager
 
 resource "github_organization_security_manager" "this" {
   team_slug = github_team.parents["enabling-security"].slug
 }
 
 # Github Organization Settings Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/organization_settings
 
 resource "github_organization_settings" "this" {
 
   # If you need to import the organization settings, you can do so with the following command:
-  # terraform import github_organization_settings.this <org_id>
+  # tofu import github_organization_settings.this <org_id>
 
   # To get the organization id, you can run the following curl command with a token that has the read:org scope against your existing organization.
   # curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io
@@ -204,7 +202,7 @@ resource "github_organization_settings" "this" {
 }
 
 # Github Repository Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/repository
 
 resource "github_repository" "this" {
 
@@ -247,7 +245,7 @@ resource "github_repository" "this" {
 }
 
 # GitHub Repository File Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/repository_file
 
 resource "github_repository_file" "release" {
   for_each = var.repositories
@@ -286,7 +284,7 @@ resource "github_repository_file" "security_policy" {
 }
 
 # Github Repository Webhook Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_webhook
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/repository_webhook
 
 resource "github_repository_webhook" "discord" {
   for_each = local.discord_webhooks
@@ -339,10 +337,10 @@ resource "github_repository_webhook" "datadog" {
 }
 
 # Github Team Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/team
 
 # If you need to import a team, you can do so with the following command:
-# terraform import github_team.this\[\"google-cloud-platform\"\] <team_id>
+# tofu import github_team.this\[\"google-cloud-platform\"\] <team_id>
 
 # To get the team ids, you can run the following curl command with a token that has the read:org scope against your own organization.
 # curl -H "Authorization: token $GITHUB_READ_ORG_TOKEN" https://api.github.com/orgs/osinfra-io/teams
@@ -365,7 +363,7 @@ resource "github_team" "children" {
 }
 
 # GitHub Team Membership Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_members
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/team_members
 
 resource "github_team_members" "parents" {
   for_each = var.team_parents
@@ -416,7 +414,7 @@ resource "github_team_members" "children" {
 }
 
 # Github Team Repository Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/team_repository
 
 resource "github_team_repository" "children" {
   for_each = local.child_team_repositories
@@ -435,7 +433,7 @@ resource "github_team_repository" "parents" {
 }
 
 # GitHub Team Settings Resource
-# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_settings
+# https://search.opentofu.org/provider/integrations/github/latest/docs/resources/team_settings
 
 resource "github_team_settings" "this" {
   for_each = local.review_request_delegations
@@ -450,7 +448,7 @@ resource "github_team_settings" "this" {
 }
 
 # Random Password Resource
-# https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password
+# https://search.opentofu.org/provider/hashicorp/random/latest/docs/resources/password
 
 resource "random_password" "this" {
   for_each = var.organization_secrets
@@ -463,7 +461,7 @@ resource "random_password" "this" {
 }
 
 # Time Rotating Resource
-# https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/rotating
+# https://search.opentofu.org/provider/hashicorp/time/latest/docs/resources/rotating
 
 resource "time_rotating" "this" {
   rotation_days = 5
