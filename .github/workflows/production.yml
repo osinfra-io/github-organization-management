@@ -25,7 +25,7 @@ jobs:
       github_environment: "Production: Main"
       service_account: plt-gh-organization-github@plt-lz-backend-tf5f-prod.iam.gserviceaccount.com
       opentofu_plan_args: -var-file=tfvars/production.tfvars
-      opentofu_state_bucket: plt-gh-organization-ec8a-prod
+      opentofu_state_bucket: plt-gh-organization-d3c2-prod
       opentofu_version: ${{ vars.OPENTOFU_VERSION }}
       opentofu_workspace: main-production
       workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
