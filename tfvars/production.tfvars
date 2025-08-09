@@ -187,7 +187,7 @@ repositories = {
     ]
   }
 
-  "github-terraform-child-module-template" = {
+  "github-opentofu-child-module-template" = {
     description            = "OpenTofu child module template for GitHub repositories."
     enable_datadog_webhook = false
     is_template            = true
@@ -243,7 +243,7 @@ repositories = {
     ]
   }
 
-  "github-terraform-gcp-root-module-template" = {
+  "github-opentofu-gcp-root-module-template" = {
     description            = "OpenTofu Google Cloud Platform root module template for GitHub repositories."
     enable_datadog_webhook = false
     is_template            = true
@@ -829,10 +829,10 @@ team_children = {
       "github-misc-called-workflows",
       "github-organization-management",
       "github-organization-discussions",
-      "github-terraform-child-module-template",
+      "github-opentofu-child-module-template",
       "github-opentofu-codespace",
       "github-opentofu-gcp-called-workflows",
-      "github-terraform-gcp-root-module-template",
+      "github-opentofu-gcp-root-module-template",
       "platform-github"
     ]
   }
@@ -1063,11 +1063,11 @@ team_parents = {
       ".github-private",
       "github-misc-called-workflows",
       "github-organization-discussions",
-      "github-terraform-child-module-template",
+      "github-opentofu-child-module-template",
       "github-organization-management",
       "github-opentofu-codespace",
       "github-opentofu-gcp-called-workflows",
-      "github-terraform-gcp-root-module-template",
+      "github-opentofu-gcp-root-module-template",
       "platform-github"
     ]
 
