@@ -21,7 +21,7 @@ We focus on the core fundamental practice of cloud engineering, Infrastructure a
 
 To avoid slowing down stream-aligned teams, we want to open up the possibility for contributions. The Open Source Infrastructure (as Code) model allows team members external to the platform team to contribute with only a slight increase in cognitive load. This section is for developers who want to contribute to this repository, describing the tools used, the skills, and the knowledge required, along with OpenTofu documentation.
 
-See the documentation for setting up a local development environment [here](https://docs.osinfra.io/fundamentals/development-setup).
+See the [documentation](https://docs.osinfra.io/fundamentals/development-setup) for setting up a development environment.
 
 ### 🛠️ Tools
 
@@ -37,5 +37,3 @@ Links to documentation and other resources required to develop and iterate in th
 - [organization membership](https://docs.github.com/en/organizations/managing-membership-in-your-organization)
 - [repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories)
 - [teams](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/managing-teams-in-your-organization)
-
-### 📓 OpenTofu Documentation
