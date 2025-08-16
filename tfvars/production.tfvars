@@ -152,60 +152,6 @@ repositories = {
     ]
   }
 
-  "github-organization-discussions" = {
-    description              = "This repository is for osinfra.io GitHub organization discussions."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-    has_discussions          = true
-
-    topics = [
-      "github",
-      "github-organization-management-platform",
-      "osinfra",
-      "platform-team"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-github"
-    ]
-  }
-
-  "github-organization-management" = {
-    description = "Infrastructure as Code (IaC) example for a GitHub organization."
-
-    topics = [
-      "github",
-      "github-organization-management-platform",
-      "infrastructure-as-code",
-      "osinfra",
-      "platform-team",
-      "opentofu"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-github"
-    ]
-  }
-
-  "github-opentofu-child-module-template" = {
-    description            = "OpenTofu child module template for GitHub repositories."
-    enable_datadog_webhook = false
-    is_template            = true
-
-    topics = [
-      "github",
-      "github-organization-management-platform",
-      "infrastructure-as-code",
-      "osinfra",
-      "platform-team",
-      "opentofu"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-github"
-    ]
-  }
-
   "github-opentofu-codespace" = {
     description            = "GitHub Codespace example for OpenTofu Infrastructure as Code (IaC) Development."
     enable_datadog_webhook = false
@@ -243,15 +189,30 @@ repositories = {
     ]
   }
 
-  "github-opentofu-gcp-root-module-template" = {
-    description            = "OpenTofu Google Cloud Platform root module template for GitHub repositories."
-    enable_datadog_webhook = false
-    is_template            = true
+  "github-organization-discussions" = {
+    description              = "This repository is for osinfra.io GitHub organization discussions."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+    has_discussions          = true
 
     topics = [
       "github",
       "github-organization-management-platform",
-      "google-cloud-platform",
+      "osinfra",
+      "platform-team"
+    ]
+
+    push_allowances = [
+      "osinfra-io/platform-github"
+    ]
+  }
+
+  "github-organization-management" = {
+    description = "Infrastructure as Code (IaC) example for a GitHub organization."
+
+    topics = [
+      "github",
+      "github-organization-management-platform",
       "infrastructure-as-code",
       "osinfra",
       "platform-team",
@@ -260,24 +221,6 @@ repositories = {
 
     push_allowances = [
       "osinfra-io/platform-github"
-    ]
-  }
-
-  "istio-test" = {
-    description = "An example Istio test application that shows information about the Google Kubernetes Engine (GKE) cluster."
-
-    topics = [
-      "golang",
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "kubernetes",
-      "osinfra",
-      "platform-team",
-      "opentofu"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-google-cloud-kubernetes"
     ]
   }
 
@@ -350,8 +293,8 @@ repositories = {
     ]
   }
 
-  "google-cloud-services" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform services."
+  "google-cloud-opentofu-backend" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform OpenTofu backend."
 
     topics = [
       "google-cloud-landing-zone-platform",
@@ -367,8 +310,8 @@ repositories = {
     ]
   }
 
-  "google-cloud-opentofu-backend" = {
-    description = "Infrastructure as Code (IaC) example for Google Cloud Platform OpenTofu backend."
+  "google-cloud-services" = {
+    description = "Infrastructure as Code (IaC) example for Google Cloud Platform services."
 
     topics = [
       "google-cloud-landing-zone-platform",
@@ -413,6 +356,24 @@ repositories = {
     ]
   }
 
+  "istio-test" = {
+    description = "An example Istio test application that shows information about the Google Kubernetes Engine (GKE) cluster."
+
+    topics = [
+      "golang",
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "kubernetes",
+      "osinfra",
+      "platform-team",
+      "opentofu"
+    ]
+
+    push_allowances = [
+      "osinfra-io/platform-google-cloud-kubernetes"
+    ]
+  }
+
   "local-development-setup" = {
     description            = "Local development environment setup scripts example for working with Infrastructure as Code (IaC)."
     enable_datadog_webhook = false
@@ -439,115 +400,19 @@ repositories = {
     ]
   }
 
-  "platform-argo-cd" = {
-    description              = "Platform Team: responsible for Argo CD."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-
-    topics = [
-      "argo-cd",
-      "osinfra",
-      "platform-team"
-    ]
-  }
-
-  "platform-backstage" = {
-    description              = "Platform Team: responsible for Backstage."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
+  "opentofu-child-module-backstage-template" = {
+    description = "OpenTofu child module Backstage template."
 
     topics = [
       "backstage",
-      "osinfra",
-      "platform-team"
-    ]
-  }
-
-  "platform-datadog" = {
-    description              = "Platform Team: responsible for Datadog."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-
-    topics = [
-      "datadog",
-      "osinfra",
-      "platform-team"
-    ]
-  }
-
-  "platform-github" = {
-    description              = "Platform Team: responsible for the GitHub organization."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-
-    topics = [
-      "github",
-      "osinfra",
-      "platform-team"
-    ]
-  }
-
-  "platform-google-cloud-kubernetes" = {
-    description              = "Platform Team: responsible for the Google Kubernetes."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-
-    topics = [
-      "google-cloud-kubernetes-platform",
-      "google-cloud-platform",
-      "kubernetes",
-      "osinfra",
-      "platform-team"
-    ]
-  }
-
-  "platform-google-cloud-landing-zone" = {
-    description              = "Platform Team: responsible for the Google Cloud Landing Zone."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-
-    topics = [
-      "google-cloud-landing-zone-platform",
-      "google-cloud-platform",
-      "osinfra",
-      "platform-team"
-    ]
-  }
-
-  "platform-openbao" = {
-    description              = "Platform Team: responsible for OpenBao."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-
-    topics = [
-      "openbao",
-      "osinfra",
-      "platform-team"
-    ]
-  }
-
-  "pre-commit-hooks" = {
-    description            = "Pre-commit hooks for Infrastructure as Code (IaC) tools."
-    enable_datadog_webhook = false
-
-    topics = [
-      "golang",
       "infrastructure-as-code",
       "osinfra",
-      "pre-commit",
+      "platform-team",
       "opentofu"
     ]
-  }
 
-  "stream-customer-trust" = {
-    description              = "Stream Aligned Team: responsible for the Customer Trust stream."
-    enable_branch_protection = false
-    enable_datadog_webhook   = false
-
-    topics = [
-      "customer-trust",
-      "osinfra",
-      "stream-aligned-team"
+    push_allowances = [
+      "osinfra-io/platform-github"
     ]
   }
 
@@ -572,6 +437,23 @@ repositories = {
       "osinfra",
       "opentofu",
       "opentofu-child-module"
+    ]
+  }
+
+  "opentofu-gcp-root-module-backstage-template" = {
+    description = "OpenTofu Google Cloud Platform root module Backstage template."
+
+    topics = [
+      "backstage",
+      "google-cloud-platform",
+      "infrastructure-as-code",
+      "osinfra",
+      "platform-team",
+      "opentofu"
+    ]
+
+    push_allowances = [
+      "osinfra-io/platform-backstage"
     ]
   }
 
@@ -692,6 +574,118 @@ repositories = {
       "opentofu-child-module"
     ]
   }
+
+  "platform-argo-cd" = {
+    description              = "Platform Team: responsible for Argo CD."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "argo-cd",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-backstage" = {
+    description              = "Platform Team: responsible for Backstage."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "backstage",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-datadog" = {
+    description              = "Platform Team: responsible for Datadog."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "datadog",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-github" = {
+    description              = "Platform Team: responsible for the GitHub organization."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "github",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-google-cloud-kubernetes" = {
+    description              = "Platform Team: responsible for the Google Kubernetes."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "google-cloud-kubernetes-platform",
+      "google-cloud-platform",
+      "kubernetes",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-google-cloud-landing-zone" = {
+    description              = "Platform Team: responsible for the Google Cloud Landing Zone."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "google-cloud-landing-zone-platform",
+      "google-cloud-platform",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "platform-openbao" = {
+    description              = "Platform Team: responsible for OpenBao."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "openbao",
+      "osinfra",
+      "platform-team"
+    ]
+  }
+
+  "pre-commit-hooks" = {
+    description            = "Pre-commit hooks for Infrastructure as Code (IaC) tools."
+    enable_datadog_webhook = false
+
+    topics = [
+      "golang",
+      "infrastructure-as-code",
+      "osinfra",
+      "pre-commit",
+      "opentofu"
+    ]
+  }
+
+  "stream-customer-trust" = {
+    description              = "Stream Aligned Team: responsible for the Customer Trust stream."
+    enable_branch_protection = false
+    enable_datadog_webhook   = false
+
+    topics = [
+      "customer-trust",
+      "osinfra",
+      "stream-aligned-team"
+    ]
+  }
 }
 
 team_children = {
@@ -786,6 +780,8 @@ team_children = {
 
     repositories = [
       "backstage",
+      "opentofu-child-module-backstage-template",
+      "opentofu-gcp-root-module-backstage-template",
       "platform-backstage"
     ]
   }
@@ -829,10 +825,8 @@ team_children = {
       "github-misc-called-workflows",
       "github-organization-management",
       "github-organization-discussions",
-      "github-opentofu-child-module-template",
       "github-opentofu-codespace",
       "github-opentofu-gcp-called-workflows",
-      "github-opentofu-gcp-root-module-template",
       "platform-github"
     ]
   }
@@ -1032,6 +1026,8 @@ team_parents = {
 
     repositories = [
       "backstage",
+      "opentofu-child-module-backstage-template",
+      "opentofu-gcp-root-module-backstage-template",
       "platform-backstage"
     ]
 
@@ -1063,11 +1059,9 @@ team_parents = {
       ".github-private",
       "github-misc-called-workflows",
       "github-organization-discussions",
-      "github-opentofu-child-module-template",
       "github-organization-management",
       "github-opentofu-codespace",
       "github-opentofu-gcp-called-workflows",
-      "github-opentofu-gcp-root-module-template",
       "platform-github"
     ]
 
