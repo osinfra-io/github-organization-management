@@ -61,6 +61,10 @@ repositories = {
       "platform-team",
       "opentofu"
     ]
+
+    push_allowances = [
+      "osinfra-io/platform-argo-cd"
+    ]
   }
 
   "backstage" = {
@@ -74,6 +78,25 @@ repositories = {
       "osinfra",
       "platform-team",
       "opentofu"
+    ]
+
+    push_allowances = [
+      "osinfra-io/platform-backstage"
+    ]
+  }
+
+  "backstage-github-repository-templates" = {
+    description = "Backstage GitHub repository templates."
+
+    topics = [
+      "backstage",
+      "github",
+      "osinfra",
+      "platform-team",
+    ]
+
+    push_allowances = [
+      "osinfra-io/platform-backstage"
     ]
   }
 
@@ -400,22 +423,6 @@ repositories = {
     ]
   }
 
-  "opentofu-child-module-backstage-template" = {
-    description = "OpenTofu child module Backstage template."
-
-    topics = [
-      "backstage",
-      "infrastructure-as-code",
-      "osinfra",
-      "platform-team",
-      "opentofu"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-github"
-    ]
-  }
-
   "opentofu-core-helpers" = {
     description = "OpenTofu example module for helpers."
 
@@ -437,23 +444,6 @@ repositories = {
       "osinfra",
       "opentofu",
       "opentofu-child-module"
-    ]
-  }
-
-  "opentofu-gcp-root-module-backstage-template" = {
-    description = "OpenTofu Google Cloud Platform root module Backstage template."
-
-    topics = [
-      "backstage",
-      "google-cloud-platform",
-      "infrastructure-as-code",
-      "osinfra",
-      "platform-team",
-      "opentofu"
-    ]
-
-    push_allowances = [
-      "osinfra-io/platform-backstage"
     ]
   }
 
@@ -780,8 +770,7 @@ team_children = {
 
     repositories = [
       "backstage",
-      "opentofu-child-module-backstage-template",
-      "opentofu-gcp-root-module-backstage-template",
+      "backstage-github-repository-templates",
       "platform-backstage"
     ]
   }
@@ -1026,8 +1015,7 @@ team_parents = {
 
     repositories = [
       "backstage",
-      "opentofu-child-module-backstage-template",
-      "opentofu-gcp-root-module-backstage-template",
+      "backstage-github-repository-templates",
       "platform-backstage"
     ]
 
