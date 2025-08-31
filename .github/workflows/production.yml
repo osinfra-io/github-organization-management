@@ -18,19 +18,19 @@ permissions:
 jobs:
   main:
     name: "Main"
-    uses: osinfra-io/github-opentofu-gcp-called-workflows/.github/workflows/plan-and-apply.yml@367d86eecaab18bb7fae7f5fa17fe7001df13f16
+    uses: osinfra-io/github-opentofu-gcp-called-workflows/.github/workflows/plan-and-apply.yml@e3c59e43f2458550c7f13b6369fb6978b6f42c6e # v0.2.9
     if: github.actor != 'osinfra-sa'
     with:
       checkout_ref: ${{ github.ref }}
       github_environment: "Production: Main"
       service_account: plt-gh-organization-github@plt-lz-backend-tf5f-prod.iam.gserviceaccount.com
+      opentofu_kms_encryption_key: projects/plt-lz-backend-tf5f-prod/locations/us/keyRings/state-encryption/cryptoKeys/default
       opentofu_plan_args: -var-file=tfvars/production.tfvars
       opentofu_state_bucket: plt-gh-organization-d3c2-prod
       opentofu_version: ${{ vars.OPENTOFU_VERSION }}
       opentofu_workspace: main-production
       workload_identity_provider: projects/134040294660/locations/global/workloadIdentityPools/github-actions/providers/github-actions-oidc
     secrets:
-      gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
       opentofu_plan_secret_args: >-
         -var=token=${{ secrets.TOKEN }}
         -var=datadog_webhook_api_key=${{ secrets.DATADOG_WEBHOOK_API_KEY }}
