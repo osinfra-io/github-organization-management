@@ -490,3 +490,9 @@ resource "random_password" "this" {
 resource "time_rotating" "this" {
   rotation_days = 5
 }
+
+resource "null_resource" "force_apply" {
+  triggers = {
+    always_run = timestamp()
+  }
+}
