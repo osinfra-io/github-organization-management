@@ -8,6 +8,6 @@ permissions:
 jobs:
   dependabot:
     name: Dependabot
-    uses: osinfra-io/github-misc-called-workflows/.github/workflows/dependabot.yml@74be43075871503be235fcb4b0f3d01bb502c970
+    uses: osinfra-io/github-misc-called-workflows/.github/workflows/dependabot.yml@3f58f13c9ff1c2c4a94cecad4bab5d3e78d69bce
     secrets:
       pr_approve_and_merge_pem: ${{ secrets.PR_APPROVE_AND_MERGE_PEM }}
